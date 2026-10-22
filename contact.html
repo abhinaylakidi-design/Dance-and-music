@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact | Little Rhythm</title>
+  <meta
+    name="description"
+    content="Contact Little Rhythm to explore dance and music classes, plan a studio visit, or ask about your child's creative journey."
+  >
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="contact.css">
+  <script src="contact.js" defer></script>
+</head>
+
+<body>
+  <!-- ICON LIBRARY -->
+  <svg class="svg-library" xmlns="http://www.w3.org/2000/svg"
+       aria-hidden="true">
+    <symbol id="sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="4"/>
+      <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>
+    </symbol>
+    <symbol id="moon" viewBox="0 0 24 24">
+      <path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/>
+    </symbol>
+    <symbol id="direction" viewBox="0 0 24 24">
+      <path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/>
+    </symbol>
+    <symbol id="menu" viewBox="0 0 24 24">
+      <path d="M4 6h16M4 12h16M4 18h16"/>
+    </symbol>
+    <symbol id="close" viewBox="0 0 24 24">
+      <path d="m6 6 12 12M18 6 6 18"/>
+    </symbol>
+    <symbol id="chevron" viewBox="0 0 24 24">
+      <path d="m6 9 6 6 6-6"/>
+    </symbol>
+    <symbol id="arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14m-6-6 6 6-6 6"/>
+    </symbol>
+    <symbol id="music" viewBox="0 0 24 24">
+      <path d="M9 18V5l12-2v13M9 9l12-2"/>
+      <ellipse cx="6" cy="18" rx="3" ry="3"/>
+      <ellipse cx="18" cy="16" rx="3" ry="3"/>
+    </symbol>
+    <symbol id="sparkles" viewBox="0 0 24 24">
+      <path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"/>
+    </symbol>
+    <symbol id="heart" viewBox="0 0 24 24">
+      <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/>
+    </symbol>
+    <symbol id="users" viewBox="0 0 24 24">
+      <circle cx="9" cy="7" r="4"/>
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2m20 0v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+    </symbol>
+    <symbol id="check" viewBox="0 0 24 24">
+      <path d="m5 12 4 4L19 6"/>
+    </symbol>
+    <symbol id="calendar" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="16" rx="2"/>
+      <path d="M16 3v4M8 3v4M3 11h18"/>
+    </symbol>
+    <symbol id="clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 7v5l3 2"/>
+    </symbol>
+    <symbol id="pin" viewBox="0 0 24 24">
+      <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/>
+      <circle cx="12" cy="10" r="3"/>
+    </symbol>
+    <symbol id="phone" viewBox="0 0 24 24">
+      <path d="m5 3 4 1 1 5-3 2a16 16 0 0 0 6 6l2-3 5 1 1 4c-1 5-8 2-12-2S2 4 5 3Z"/>
+    </symbol>
+    <symbol id="mail" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" rx="2"/>
+      <path d="m3 7 9 6 9-6"/>
+    </symbol>
+    <symbol id="instagram" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <path d="M17.5 6.5h.01"/>
+    </symbol>
+    <symbol id="facebook" viewBox="0 0 24 24">
+      <path d="M14 21v-8h3l.5-4H14V7c0-1 .3-2 2-2h2V1.5A22 22 0 0 0 15 1c-3 0-5 2-5 5v3H7v4h3v8"/>
+    </symbol>
+    <symbol id="youtube" viewBox="0 0 24 24">
+      <rect x="2" y="5" width="20" height="14" rx="4"/>
+      <path d="m10 9 5 3-5 3V9Z"/>
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- SAME HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Little Rhythm home">
+        <span class="brand-mark">
+          <img src="images/logo.png" alt="" data-fallback>
+        </span>
+        <span class="brand-copy">
+          <strong>Little<span>Rhythm</span></strong>
+          <small>DANCE & MUSIC ACADEMY</small>
+        </span>
+      </a>
+
+      <nav id="navigation" class="navigation" aria-label="Main navigation">
+        <div class="home-group">
+          <div class="home-control">
+            <a class="nav-link" href="index.html">Home</a>
+            <button id="homeToggle" class="dropdown-toggle" type="button"
+                    aria-label="Show home pages" aria-expanded="false"
+                    aria-controls="homeDropdown">
+              <svg class="icon" aria-hidden="true"><use href="#chevron"/></svg>
+            </button>
+          </div>
+
+          <div id="homeDropdown" class="home-dropdown" hidden>
+            <a href="index.html">Home 1 — Classic</a>
+            <a href="home2.html">Home 2 — Premium</a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="programs.html">Programs</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="instructors.html">Instructors</a>
+        <a class="nav-link" href="events.html">Events</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="dashboard.html">Dashboard</a>
+        <a class="button button-primary nav-cta" href="signup.html">Join Now</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button preference-button" id="themeToggle"
+                type="button" aria-label="Switch to dark mode"
+                title="Switch to dark mode">
+          <svg class="icon" aria-hidden="true"><use href="#moon"/></svg>
+        </button>
+
+        <button class="icon-button preference-button" id="directionToggle"
+                type="button" aria-label="Switch to right-to-left layout"
+                title="Switch to right-to-left layout" aria-pressed="false">
+          <svg class="icon" aria-hidden="true"><use href="#direction"/></svg>
+        </button>
+
+        <a class="button button-primary header-cta" href="signup.html">Join Now</a>
+
+        <button class="icon-button menu-toggle" id="menuToggle" type="button"
+                aria-label="Open navigation" aria-expanded="false"
+                aria-controls="navigation">
+          <svg class="icon" aria-hidden="true"><use href="#menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 1. FULL-DISPLAY HERO -->
+    <section class="contact-hero" aria-labelledby="heroTitle">
+      <div class="container contact-hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">
+            <svg class="icon" aria-hidden="true"><use href="#sparkles"/></svg>
+            EVERY GREAT JOURNEY STARTS WITH HELLO
+          </span>
+
+          <h1 id="heroTitle">
+            Little questions.<br>
+            Beautiful <em>beginnings.</em>
+          </h1>
+
+          <p>
+            Curious about a class? Planning their first visit?
+            Let’s talk about the little things that could become
+            something wonderful.
+          </p>
+
+          <div class="button-row">
+            <a class="button button-primary" href="#enquiry">
+              Start a conversation
+              <svg class="icon directional" aria-hidden="true">
+                <use href="#arrow"/>
+              </svg>
+            </a>
+            <a class="button button-secondary" href="#visit">Plan your visit</a>
+          </div>
+
+          <div class="hero-details">
+            <span><i></i> Dance & music</span>
+            <span><i></i> Ages 3–16</span>
+            <span><i></i> Beginners welcome</span>
+          </div>
+        </div>
+
+        <div class="hello-art reveal" aria-hidden="true">
+          <span class="orbit orbit-one"></span>
+          <span class="orbit orbit-two"></span>
+          <span class="floating-note note-one">♪</span>
+          <span class="floating-note note-two">♫</span>
+
+          <div class="hello-card">
+            <span class="hello-icon">
+              <svg class="icon"><use href="#heart"/></svg>
+            </span>
+            <span class="card-kicker">A WARM WELCOME AWAITS</span>
+            <span class="hello-word">Hello<em>!</em></span>
+            <p>A little conversation.<br>A world of possibilities.</p>
+            <div class="hello-divider"></div>
+            <span class="hello-signature">Your next chapter starts here.</span>
+          </div>
+
+          <div class="floating-label">
+            <svg class="icon"><use href="#music"/></svg>
+            Let’s find their rhythm
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CONTACT OPTIONS -->
+    <section class="section section-alt" aria-labelledby="connectTitle">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <span class="eyebrow">LET’S CONNECT</span>
+          <h2 id="connectTitle">A friendly face.<br><em>A helpful answer.</em></h2>
+          <p>Choose how you’d like to begin. We’re here to help you explore.</p>
+        </div>
+
+        <div class="three-grid">
+          <article class="contact-card reveal">
+            <span class="feature-icon">
+              <svg class="icon" aria-hidden="true"><use href="#mail"/></svg>
+            </span>
+            <h3>Write to us</h3>
+            <p>Share your questions about programs, age groups, or getting started.</p>
+            <a class="text-link" href="mailto:hello@littlerhythm.example">
+              hello@littlerhythm.example
+            </a>
+          </article>
+
+          <article class="contact-card reveal">
+            <span class="feature-icon">
+              <svg class="icon" aria-hidden="true"><use href="#phone"/></svg>
+            </span>
+            <h3>Let’s have a chat</h3>
+            <p>Speak with our team about finding a comfortable starting point.</p>
+            <!-- Replace with your real number and a matching tel: link. -->
+            <span class="text-link">+91 XXXXX XXXXX</span>
+          </article>
+
+          <article class="contact-card reveal">
+            <span class="feature-icon">
+              <svg class="icon" aria-hidden="true"><use href="#pin"/></svg>
+            </span>
+            <h3>Say hello in person</h3>
+            <p>Arrange a visit and get a feel for the space before joining a class.</p>
+            <a class="text-link" href="#visit">
+              Explore your visit
+              <svg class="icon directional" aria-hidden="true">
+                <use href="#arrow"/>
+              </svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. ENQUIRY FORM -->
+    <section class="section" id="enquiry" aria-labelledby="enquiryTitle">
+      <div class="container enquiry-grid">
+        <div class="enquiry-copy reveal">
+          <span class="eyebrow">TELL US A LITTLE</span>
+          <h2 id="enquiryTitle">Their next adventure<br>starts with <em>you.</em></h2>
+
+          <p>
+            Tell us what your child enjoys and what you’d like to explore.
+            You don’t need to have everything figured out.
+          </p>
+
+          <ul class="check-list">
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#check"/></svg>
+              Ask about dance, music, or both
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#check"/></svg>
+              Discuss age groups and experience
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#check"/></svg>
+              Enquire about visits and introductory classes
+            </li>
+          </ul>
+
+          <div class="gentle-note">
+            <svg class="icon" aria-hidden="true"><use href="#heart"/></svg>
+            <p>
+              Every child begins differently. Let’s find a first step
+              that feels right for yours.
+            </p>
+          </div>
+        </div>
+
+        <form id="contactForm" class="enquiry-form reveal">
+          <h3>Let’s start a conversation</h3>
+          <p class="form-intro">Fields marked * are required.</p>
+
+          <div class="field">
+            <label for="parentName">Parent / guardian name *</label>
+            <input id="parentName" name="parentName" type="text"
+                   autocomplete="name" maxlength="100" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email address *</label>
+            <input id="email" name="email" type="email"
+                   autocomplete="email" maxlength="150" required>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone number <span>(optional)</span></label>
+            <input id="phone" name="phone" type="tel"
+                   autocomplete="tel" maxlength="30">
+          </div>
+
+          <div class="field">
+            <label for="age">Child’s age group *</label>
+            <select id="age" name="age" required>
+              <option value="">Select an age group</option>
+              <option>3–5 years</option>
+              <option>6–8 years</option>
+              <option>9–12 years</option>
+              <option>13–16 years</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="interest">Interested in *</label>
+            <select id="interest" name="interest" required>
+              <option value="">Choose an interest</option>
+              <option>Dance programs</option>
+              <option>Music programs</option>
+              <option>Dance and music</option>
+              <option>Studio visit</option>
+              <option>Workshops and events</option>
+              <option>Help choosing a program</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Your message *</label>
+            <textarea id="message" name="message" rows="5"
+                      maxlength="2000" required
+                      placeholder="What would you like to know?"></textarea>
+          </div>
+
+          <label class="consent">
+            <input name="consent" type="checkbox" required>
+            <span>
+              I agree to be contacted about this enquiry and have read
+              the <a href="privacy.html">Privacy Policy</a>. *
+            </span>
+          </label>
+
+          <button class="button button-primary" type="submit">
+            Prepare email enquiry
+            <svg class="icon directional" aria-hidden="true">
+              <use href="#arrow"/>
+            </svg>
+          </button>
+
+          <p class="form-note">
+            Opens your email app with a draft. Review and send it to
+            complete your enquiry.
+          </p>
+          <p id="formStatus" class="form-status" role="status"
+             aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- 4. VISIT THE STUDIO -->
+    <section class="section section-alt" id="visit" aria-labelledby="visitTitle">
+      <div class="container visit-grid">
+        <div class="studio-visual reveal">
+          <svg class="studio-symbol" aria-hidden="true">
+            <use href="#music"/>
+          </svg>
+          <span class="card-kicker">MOVEMENT · MELODY · BELONGING</span>
+          <h3>A space for<br><em>little possibilities.</em></h3>
+          <p>Come curious. Leave inspired.</p>
+          <span class="studio-dot dot-one"></span>
+          <span class="studio-dot dot-two"></span>
+        </div>
+
+        <div class="visit-copy reveal">
+          <span class="eyebrow">COME SAY HELLO</span>
+          <h2 id="visitTitle">Feel the warmth.<br><em>Find the rhythm.</em></h2>
+          <p>
+            A studio visit is a lovely way to ask questions, explore the
+            learning environment, and talk about your child’s interests.
+          </p>
+
+          <!-- Sample address: replace before publishing. -->
+          <div class="visit-address">
+            <span class="feature-icon">
+              <svg class="icon" aria-hidden="true"><use href="#pin"/></svg>
+            </span>
+            <div>
+              <h3>Little Rhythm Academy</h3>
+              <p>
+                123 Melody Lane, Creative District,<br>
+                Hyderabad, Telangana
+              </p>
+            </div>
+          </div>
+
+          <p>
+            Please arrange your visit with our team so we can make time
+            to welcome you and answer your questions.
+          </p>
+
+          <a class="button button-primary" href="#enquiry">
+            Enquire about a visit
+            <svg class="icon directional" aria-hidden="true">
+              <use href="#arrow"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. HOURS & VISIT CHECKLIST -->
+    <section class="section" aria-labelledby="hoursTitle">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow">MAKE A LITTLE TIME</span>
+            <h2 id="hoursTitle">A visit that feels<br><em>easy from the start.</em></h2>
+          </div>
+          <p>
+            Check our enquiry hours and a few helpful notes before
+            planning your first visit.
+          </p>
+        </div>
+
+        <div class="two-grid">
+          <article class="hours-card reveal">
+            <span class="feature-icon">
+              <svg class="icon" aria-hidden="true"><use href="#clock"/></svg>
+            </span>
+            <h3>Enquiry hours</h3>
+            <dl class="hours-list">
+              <div><dt>Monday–Friday</dt><dd>9:00 AM–7:00 PM</dd></div>
+              <div><dt>Saturday</dt><dd>9:00 AM–7:00 PM</dd></div>
+              <div><dt>Sunday</dt><dd>By arrangement</dd></div>
+            </dl>
+            <p class="small-copy">
+              Class timings vary by program. Ask our team about current
+              schedules and holiday hours.
+            </p>
+          </article>
+
+          <article class="hours-card reveal">
+            <span class="feature-icon">
+              <svg class="icon" aria-hidden="true"><use href="#calendar"/></svg>
+            </span>
+            <h3>Before you arrive</h3>
+            <ul class="check-list">
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#check"/></svg>
+                Confirm your visit time with our team
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#check"/></svg>
+                Bring your questions and your child’s interests
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#check"/></svg>
+                Ask about clothing if a trial is arranged
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#check"/></svg>
+                Share any support or access needs in advance
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. HOW TO BEGIN -->
+    <section class="section section-alt" aria-labelledby="stepsTitle">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <span class="eyebrow">SMALL STEPS. HAPPY STARTS.</span>
+          <h2 id="stepsTitle">From a first hello<br>to <em>their first beat.</em></h2>
+          <p>A simple way to explore what comes next.</p>
+        </div>
+
+        <div class="three-grid">
+          <article class="step-card reveal">
+            <span class="step-number">01</span>
+            <span class="card-kicker">SHARE</span>
+            <h3>Tell us about them</h3>
+            <p>
+              Share their age, interests, and experience so far.<br>
+              Tell us a favourite song, style, or instrument.<br>
+              We’ll help find a welcoming place to begin.
+            </p>
+          </article>
+
+          <article class="step-card reveal">
+            <span class="step-number">02</span>
+            <span class="card-kicker">EXPLORE</span>
+            <h3>Find a possible fit</h3>
+            <p>
+              Discuss programs, current timings, and availability with
+              our team. Ask about an introductory class or studio visit.
+            </p>
+          </article>
+
+          <article class="step-card reveal">
+            <span class="step-number">03</span>
+            <span class="card-kicker">BEGIN</span>
+            <h3>Take their first step</h3>
+            <p>
+              Once details are confirmed, get ready to explore<br>
+              a new class, meet their teacher, and try something<br>
+              joyful at a pace that feels right for your child.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section class="section" aria-labelledby="faqTitle">
+      <div class="container faq-grid">
+        <div class="faq-intro reveal">
+          <span class="eyebrow">A LITTLE CLARITY</span>
+          <h2 id="faqTitle">Questions are<br><em>always welcome.</em></h2>
+          <p>
+            Here are a few helpful starting points. For details about a
+            specific program, send us an enquiry.
+          </p>
+          <a class="text-link" href="#enquiry">
+            Ask your question
+            <svg class="icon directional" aria-hidden="true">
+              <use href="#arrow"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="faq-list reveal">
+          <details>
+            <summary>My child is a beginner. Where should we start?</summary>
+            <p>
+              Tell us their age and what they enjoy. Our team can discuss
+              suitable starting options and explain what each class involves.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can we visit before choosing a program?</summary>
+            <p>
+              Contact our team to arrange a visit. Please confirm the time
+              before arriving so someone is available to welcome you.
+            </p>
+          </details>
+
+          <details>
+            <summary>How do I ask about an introductory class?</summary>
+            <p>
+              Choose the program you’re interested in on the enquiry form
+              and mention that you would like an introductory class.
+              Our team will confirm availability and any applicable fee.
+            </p>
+          </details>
+
+          <details>
+            <summary>Where can I find fees and class timings?</summary>
+            <p>
+              Fees and schedules depend on the program and age group.
+              Contact the academy for current details before enrolling.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can my child explore both dance and music?</summary>
+            <p>
+              Share both interests with us. We can discuss available
+              programs and whether their schedules can work together.
+            </p>
+          </details>
+
+          <details>
+            <summary>What if my child needs extra support?</summary>
+            <p>
+              Let us know about any support, sensory, mobility, or learning
+              needs when enquiring so we can discuss suitable arrangements.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. SAME FINAL CTA -->
+    <section class="section final-section" aria-labelledby="finalTitle">
+      <div class="container">
+        <div class="final-cta reveal">
+          <svg class="icon final-icon" aria-hidden="true">
+            <use href="#sparkles"/>
+          </svg>
+
+          <span class="eyebrow">
+            A NEW CHAPTER STARTS WITH A LITTLE CURIOSITY
+          </span>
+
+          <h2 id="finalTitle">
+            Let’s find what makes<br>their eyes <em>light up.</em>
+          </h2>
+
+          <p>
+            Explore a world of movement, melody, friendship,
+            and possibilities.
+          </p>
+
+          <a class="button button-primary" href="programs.html">
+            Discover their next adventure
+            <svg class="icon directional" aria-hidden="true">
+              <use href="#arrow"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SAME FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Little Rhythm home">
+          <span class="brand-mark">
+            <img src="images/logo.png" alt="" data-fallback>
+          </span>
+          <span class="brand-copy">
+            <strong>Little<span>Rhythm</span></strong>
+            <small>DANCE & MUSIC ACADEMY</small>
+          </span>
+        </a>
+
+        <p>
+          A joyful space where children discover their rhythm,
+          express themselves, and grow in confidence.
+        </p>
+
+        <!-- Replace with the academy's actual profile URLs. -->
+        <div class="social-links" aria-label="Social media">
+          <a href="https://www.instagram.com/" target="_blank"
+             rel="noopener noreferrer" aria-label="Instagram">
+            <svg class="icon" aria-hidden="true"><use href="#instagram"/></svg>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank"
+             rel="noopener noreferrer" aria-label="Facebook">
+            <svg class="icon" aria-hidden="true"><use href="#facebook"/></svg>
+          </a>
+          <a href="https://www.youtube.com/" target="_blank"
+             rel="noopener noreferrer" aria-label="YouTube">
+            <svg class="icon" aria-hidden="true"><use href="#youtube"/></svg>
+          </a>
+          <a href="mailto:hello@littlerhythm.example" aria-label="Email us">
+            <svg class="icon" aria-hidden="true"><use href="#mail"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About us</a>
+        <a href="services.html">Our services</a>
+        <a href="instructors.html">Our instructors</a>
+        <a href="events.html">Events & recitals</a>
+        <a href="contact.html" aria-current="page">Contact us</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Our Programs</h3>
+        <a href="programs.html#ballet">Ballet & contemporary</a>
+        <a href="programs.html#hiphop">Hip-hop & Bollywood</a>
+        <a href="programs.html#classical">Classical foundations</a>
+        <a href="programs.html#piano">Piano & keyboard</a>
+        <a href="programs.html#guitar">Guitar & violin</a>
+        <a href="programs.html#vocals">Vocals & percussion</a>
+      </div>
+
+      <div class="footer-column contact-column">
+        <h3>Contact Us</h3>
+
+        <!-- Replace sample contact details before publishing. -->
+        <div class="contact-item">
+          <svg class="icon" aria-hidden="true"><use href="#pin"/></svg>
+          <span>
+            123 Melody Lane, Creative District,<br>
+            Hyderabad, Telangana
+          </span>
+        </div>
+
+        <div class="contact-item">
+          <svg class="icon" aria-hidden="true"><use href="#phone"/></svg>
+          <span>+91 XXXXX XXXXX</span>
+        </div>
+
+        <a class="contact-item" href="mailto:hello@littlerhythm.example">
+          <svg class="icon" aria-hidden="true"><use href="#mail"/></svg>
+          <span>hello@littlerhythm.example</span>
+        </a>
+
+        <div class="contact-item">
+          <svg class="icon" aria-hidden="true"><use href="#clock"/></svg>
+          <span>Mon–Sat: 9:00 AM–7:00 PM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> Little Rhythm. All rights reserved.</p>
+      <div>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

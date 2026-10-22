@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sign Up | Little Rhythm</title>
+
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="stylesheet" href="signup.css">
+  <script src="signup.js" defer></script>
+</head>
+
+<body>
+  <!-- TOP-RIGHT CONTROLS -->
+  <div class="page-controls" aria-label="Display preferences">
+    <button
+      class="icon-button"
+      id="directionToggle"
+      type="button"
+      aria-label="Switch to right-to-left layout"
+      aria-pressed="false"
+      title="Switch layout direction"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/>
+      </svg>
+    </button>
+
+    <button
+      class="icon-button"
+      id="themeToggle"
+      type="button"
+      aria-label="Switch to dark mode"
+      title="Switch to dark mode"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          class="moon-icon"
+          d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"
+        />
+        <g class="sun-icon">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>
+        </g>
+      </svg>
+    </button>
+  </div>
+
+  <main class="auth-page">
+    <section class="auth-card signup-card" aria-labelledby="pageTitle">
+      <a class="brand" href="index.html" aria-label="Little Rhythm home">
+        <img
+          class="brand-logo"
+          src="images/logo.png"
+          alt=""
+          width="68"
+          height="68"
+        >
+        <span class="brand-copy">
+          <span class="brand-name">Little <span>Rhythm</span></span>
+          <span class="brand-caption">DANCE &amp; MUSIC ACADEMY</span>
+        </span>
+      </a>
+
+      <div class="auth-heading">
+        <span class="eyebrow">A LITTLE STEP. A BRIGHT BEGINNING.</span>
+        <h1 id="pageTitle">Find your rhythm.</h1>
+        <p>Create your parent or guardian account.</p>
+      </div>
+
+      <div class="social-options" aria-label="Other sign-up options">
+        <button class="social-button" type="button" data-provider="Google">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#4285F4" d="M21.6 12.23c0-.71-.06-1.39-.18-2.05H12v3.88h5.38a4.6 4.6 0 0 1-2 3.02v2.51h3.24c1.9-1.75 2.98-4.33 2.98-7.36Z"/>
+            <path fill="#34A853" d="M12 22c2.7 0 4.96-.9 6.62-2.41l-3.24-2.51c-.9.6-2.05.97-3.38.97-2.6 0-4.81-1.76-5.6-4.13H3.06v2.59A10 10 0 0 0 12 22Z"/>
+            <path fill="#FBBC05" d="M6.4 13.92A6 6 0 0 1 6.08 12c0-.67.11-1.31.32-1.92V7.49H3.06A10 10 0 0 0 2 12c0 1.61.39 3.14 1.06 4.51l3.34-2.59Z"/>
+            <path fill="#EA4335" d="M12 5.95c1.47 0 2.79.51 3.82 1.51l2.87-2.87A9.6 9.6 0 0 0 12 2a10 10 0 0 0-8.94 5.49l3.34 2.59c.79-2.37 3-4.13 5.6-4.13Z"/>
+          </svg>
+          <span>Google</span>
+        </button>
+
+        <button class="social-button" type="button" data-provider="Apple">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M17.05 12.54c.03 3.16 2.77 4.21 2.8 4.23-.02.07-.44 1.5-1.45 2.98-.88 1.28-1.79 2.55-3.23 2.58-1.41.03-1.87-.84-3.49-.84-1.61 0-2.12.81-3.46.87-1.39.05-2.45-1.39-3.34-2.67-1.82-2.63-3.21-7.43-1.34-10.67a5.17 5.17 0 0 1 4.39-2.66c1.37-.03 2.67.93 3.5.93.84 0 2.4-1.15 4.04-.98.69.03 2.62.28 3.86 2.1-.1.06-2.3 1.34-2.28 4.13ZM14.39 4.57c.74-.9 1.24-2.16 1.1-3.41-1.07.04-2.37.71-3.14 1.61-.69.79-1.3 2.06-1.14 3.28 1.2.09 2.43-.61 3.18-1.48Z"/>
+          </svg>
+          <span>Apple</span>
+        </button>
+      </div>
+
+      <div class="divider"><span>or sign up with email</span></div>
+
+      <form id="authForm" data-signup>
+        <div class="field">
+          <label for="fullName">Parent / guardian full name</label>
+          <input
+            id="fullName"
+            name="fullName"
+            type="text"
+            placeholder="Enter your full name"
+            autocomplete="name"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <label for="email">Email address</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="password-field">
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Create a password"
+              autocomplete="new-password"
+              minlength="8"
+              aria-describedby="passwordHelp"
+              required
+            >
+            <button
+              class="password-toggle"
+              type="button"
+              data-password="password"
+              aria-label="Show password"
+              aria-controls="password"
+              aria-pressed="false"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/>
+                <circle cx="12" cy="12" r="3"/>
+                <path class="eye-slash" d="m3 3 18 18"/>
+              </svg>
+            </button>
+          </div>
+          <small id="passwordHelp">Use at least 8 characters.</small>
+        </div>
+
+        <div class="field">
+          <label for="confirmPassword">Confirm password</label>
+          <div class="password-field">
+            <input
+              id="confirmPassword"
+              name="confirmPassword"
+              type="password"
+              placeholder="Re-enter your password"
+              autocomplete="new-password"
+              minlength="8"
+              required
+            >
+            <button
+              class="password-toggle"
+              type="button"
+              data-password="confirmPassword"
+              aria-label="Show password"
+              aria-controls="confirmPassword"
+              aria-pressed="false"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/>
+                <circle cx="12" cy="12" r="3"/>
+                <path class="eye-slash" d="m3 3 18 18"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <button class="submit-button" type="submit">Create Account</button>
+      </form>
+
+      <p class="form-status" id="formStatus" role="status"></p>
+
+      <p class="auth-switch">
+        Already have an account?
+        <a href="login.html">Sign in</a>
+      </p>
+
+      <a class="back-link" href="index.html">Back to home</a>
+    </section>
+  </main>
+</body>
+</html>

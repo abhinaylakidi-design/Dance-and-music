@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Events & Recitals | Little Rhythm</title>
+  <meta
+    name="description"
+    content="Explore Little Rhythm dance showcases, music recitals, creative workshops, and family studio days."
+  >
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="events.css">
+  <script src="events.js" defer></script>
+</head>
+
+<body>
+  <!-- SVG ICON LIBRARY -->
+  <svg
+    class="svg-library"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <symbol id="sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="4"/>
+      <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>
+    </symbol>
+
+    <symbol id="moon" viewBox="0 0 24 24">
+      <path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/>
+    </symbol>
+
+    <symbol id="direction" viewBox="0 0 24 24">
+      <path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/>
+    </symbol>
+
+    <symbol id="menu" viewBox="0 0 24 24">
+      <path d="M4 6h16M4 12h16M4 18h16"/>
+    </symbol>
+
+    <symbol id="close" viewBox="0 0 24 24">
+      <path d="m6 6 12 12M18 6 6 18"/>
+    </symbol>
+
+    <symbol id="chevron" viewBox="0 0 24 24">
+      <path d="m6 9 6 6 6-6"/>
+    </symbol>
+
+    <symbol id="arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14m-6-6 6 6-6 6"/>
+    </symbol>
+
+    <symbol id="music" viewBox="0 0 24 24">
+      <path d="M9 18V5l12-2v13M9 9l12-2"/>
+      <ellipse cx="6" cy="18" rx="3" ry="3"/>
+      <ellipse cx="18" cy="16" rx="3" ry="3"/>
+    </symbol>
+
+    <symbol id="sparkles" viewBox="0 0 24 24">
+      <path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"/>
+    </symbol>
+
+    <symbol id="heart" viewBox="0 0 24 24">
+      <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/>
+    </symbol>
+
+    <symbol id="users" viewBox="0 0 24 24">
+      <circle cx="9" cy="7" r="4"/>
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2m20 0v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+    </symbol>
+
+    <symbol id="check" viewBox="0 0 24 24">
+      <path d="m5 12 4 4L19 6"/>
+    </symbol>
+
+    <symbol id="calendar" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="16" rx="2"/>
+      <path d="M16 3v4M8 3v4M3 11h18"/>
+    </symbol>
+
+    <symbol id="clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 7v5l3 2"/>
+    </symbol>
+
+    <symbol id="pin" viewBox="0 0 24 24">
+      <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/>
+      <circle cx="12" cy="10" r="3"/>
+    </symbol>
+
+    <symbol id="phone" viewBox="0 0 24 24">
+      <path d="m5 3 4 1 1 5-3 2a16 16 0 0 0 6 6l2-3 5 1 1 4c-1 5-8 2-12-2S2 4 5 3Z"/>
+    </symbol>
+
+    <symbol id="mail" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" rx="2"/>
+      <path d="m3 7 9 6 9-6"/>
+    </symbol>
+
+    <symbol id="instagram" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <path d="M17.5 6.5h.01"/>
+    </symbol>
+
+    <symbol id="facebook" viewBox="0 0 24 24">
+      <path d="M14 21v-8h3l.5-4H14V7c0-1 .3-2 2-2h2V1.5A22 22 0 0 0 15 1c-3 0-5 2-5 5v3H7v4h3v8"/>
+    </symbol>
+
+    <symbol id="youtube" viewBox="0 0 24 24">
+      <rect x="2" y="5" width="20" height="14" rx="4"/>
+      <path d="m10 9 5 3-5 3V9Z"/>
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- SAME HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Little Rhythm home">
+        <span class="brand-mark">
+          <img src="images/logo.png" alt="" data-fallback>
+        </span>
+
+        <span class="brand-copy">
+          <strong>Little<span>Rhythm</span></strong>
+          <small>DANCE & MUSIC ACADEMY</small>
+        </span>
+      </a>
+
+      <nav
+        id="navigation"
+        class="navigation"
+        aria-label="Main navigation"
+      >
+        <div class="home-group">
+          <div class="home-control">
+            <a class="nav-link" href="index.html">Home</a>
+
+            <button
+              id="homeToggle"
+              class="dropdown-toggle"
+              type="button"
+              aria-label="Show home pages"
+              aria-expanded="false"
+              aria-controls="homeDropdown"
+            >
+              <svg class="icon" aria-hidden="true">
+                <use href="#chevron"/>
+              </svg>
+            </button>
+          </div>
+
+          <div id="homeDropdown" class="home-dropdown" hidden>
+            <a href="index.html">Home 1 — Classic</a>
+            <a href="home2.html">Home 2 — Premium</a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="programs.html">Programs</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="instructors.html">Instructors</a>
+        <a class="nav-link active" href="events.html" aria-current="page">
+          Events
+        </a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="dashboard.html">Dashboard</a>
+
+        <a class="button button-primary nav-cta" href="signup.html">
+          Join Now
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          class="icon-button preference-button"
+          id="themeToggle"
+          type="button"
+          aria-label="Switch to dark mode"
+          title="Switch to dark mode"
+        >
+          <svg class="icon" aria-hidden="true">
+            <use href="#moon"/>
+          </svg>
+        </button>
+
+        <button
+          class="icon-button preference-button"
+          id="directionToggle"
+          type="button"
+          aria-label="Switch to right-to-left layout"
+          title="Switch to right-to-left layout"
+          aria-pressed="false"
+        >
+          <svg class="icon" aria-hidden="true">
+            <use href="#direction"/>
+          </svg>
+        </button>
+
+        <a class="button button-primary header-cta" href="signup.html">
+          Join Now
+        </a>
+
+        <button
+          class="icon-button menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          <svg class="icon" aria-hidden="true">
+            <use href="#menu"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 1. PREMIUM FULL-DISPLAY HERO -->
+    <section class="event-hero" aria-labelledby="heroTitle">
+      <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+      <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-heading reveal">
+          <span class="hero-label">
+            <span class="live-dot" aria-hidden="true"></span>
+            EVENTS & RECITALS
+          </span>
+
+          <h1 id="heroTitle">
+            Little performers.<br>
+            <em>Unforgettable</em> moments.
+          </h1>
+
+          <p>
+            The first brave step. A melody shared with family.
+            A room full of applause. Discover the experiences
+            that turn learning into lasting memories.
+          </p>
+
+          <div class="button-row">
+            <a class="button button-primary" href="#calendar">
+              Explore our events
+              <svg class="icon directional" aria-hidden="true">
+                <use href="#arrow"/>
+              </svg>
+            </a>
+            <a class="button button-secondary" href="#recitals">
+              Discover recitals
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-stage reveal">
+          <div class="stage-image">
+            <img
+              src="./images/event.jpg"
+              alt="Dancers sharing a performance on a theatre stage"
+              width="1800"
+              height="800"
+              fetchpriority="high"
+              data-fallback
+            >
+            <span class="stage-caption">A LITTLE COURAGE. A BEAUTIFUL BEGINNING.</span>
+          </div>
+
+          <div class="stage-ticket">
+            <svg class="icon" aria-hidden="true">
+              <use href="#sparkles"/>
+            </svg>
+            <div>
+              <small>MORE THAN A PERFORMANCE</small>
+              <strong>A moment to grow.</strong>
+            </div>
+            <a href="#dance" aria-label="Explore dance showcases">
+              <svg class="icon directional" aria-hidden="true">
+                <use href="#arrow"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. EVENT CALENDAR -->
+    <section
+      class="section section-alt"
+      id="calendar"
+      aria-labelledby="calendarTitle"
+    >
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow">MAKE ROOM FOR SOMETHING SPECIAL</span>
+            <h2 id="calendarTitle">Find their next <em>moment.</em></h2>
+          </div>
+          <p>
+            Explore our event formats. Confirmed dates, venues,
+            and registration details will be announced by the academy.
+          </p>
+        </div>
+
+        <div class="filter-bar reveal" role="group" aria-label="Filter events">
+          <button class="filter-button active" type="button"
+            data-filter="all" aria-pressed="true">All events</button>
+          <button class="filter-button" type="button"
+            data-filter="dance" aria-pressed="false">Dance</button>
+          <button class="filter-button" type="button"
+            data-filter="music" aria-pressed="false">Music</button>
+          <button class="filter-button" type="button"
+            data-filter="workshops" aria-pressed="false">Workshops</button>
+          <button class="filter-button" type="button"
+            data-filter="family" aria-pressed="false">Family</button>
+        </div>
+
+        <p class="filter-status" id="filterStatus" aria-live="polite">
+          Showing all 4 event formats.
+        </p>
+
+        <div class="event-grid">
+          <article class="listing-card reveal" data-category="dance">
+            <div class="listing-art dance-art">
+              <svg class="icon" aria-hidden="true">
+                <use href="#sparkles"/>
+              </svg>
+              <span>01 / DANCE</span>
+              <span class="announcement">Dates to be announced</span>
+            </div>
+            <div class="listing-body">
+              <span class="card-kicker">DANCE SHOWCASE</span>
+              <h3>Small Steps, Big Stage</h3>
+              <p>
+                A celebration of movement, expression, and the
+                confidence built one rehearsal at a time.
+              </p>
+              <div class="listing-meta">
+                <svg class="icon" aria-hidden="true"><use href="#users"/></svg>
+                <span>Participating dance batches</span>
+              </div>
+              <a class="text-link" href="#dance">
+                Explore the showcase
+                <svg class="icon directional" aria-hidden="true"><use href="#arrow"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="listing-card reveal" data-category="music">
+            <div class="listing-art music-art">
+              <svg class="icon" aria-hidden="true">
+                <use href="#music"/>
+              </svg>
+              <span>02 / MUSIC</span>
+              <span class="announcement">Dates to be announced</span>
+            </div>
+            <div class="listing-body">
+              <span class="card-kicker">MUSIC RECITAL</span>
+              <h3>Every Note, A New Story</h3>
+              <p>
+                Piano, strings, percussion, and young voices
+                come together in a supportive recital setting.
+              </p>
+              <div class="listing-meta">
+                <svg class="icon" aria-hidden="true"><use href="#music"/></svg>
+                <span>Instrumental & vocal learners</span>
+              </div>
+              <a class="text-link" href="#recitals">
+                Explore music recitals
+                <svg class="icon directional" aria-hidden="true"><use href="#arrow"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="listing-card reveal" data-category="workshops">
+            <div class="listing-art workshop-art">
+              <svg class="icon" aria-hidden="true">
+                <use href="#calendar"/>
+              </svg>
+              <span>03 / DISCOVER</span>
+              <span class="announcement">Sessions to be announced</span>
+            </div>
+            <div class="listing-body">
+              <span class="card-kicker">CREATIVE WORKSHOPS</span>
+              <h3>A Little Creative Escape</h3>
+              <p>
+                Explore fresh rhythms, playful choreography,
+                and new artistic ideas beyond the usual class.
+              </p>
+              <div class="listing-meta">
+                <svg class="icon" aria-hidden="true"><use href="#sparkles"/></svg>
+                <span>Age groups vary by session</span>
+              </div>
+              <a class="text-link" href="#workshops">
+                Discover workshops
+                <svg class="icon directional" aria-hidden="true"><use href="#arrow"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="listing-card reveal" data-category="family">
+            <div class="listing-art family-art">
+              <svg class="icon" aria-hidden="true">
+                <use href="#heart"/>
+              </svg>
+              <span>04 / TOGETHER</span>
+              <span class="announcement">Dates to be announced</span>
+            </div>
+            <div class="listing-body">
+              <span class="card-kicker">FAMILY STUDIO DAY</span>
+              <h3>Share Their Little World</h3>
+              <p>
+                Step inside the learning journey and enjoy
+                creative moments with your young performer.
+              </p>
+              <div class="listing-meta">
+                <svg class="icon" aria-hidden="true"><use href="#users"/></svg>
+                <span>Children & accompanying families</span>
+              </div>
+              <a class="text-link" href="#family">
+                Explore family days
+                <svg class="icon directional" aria-hidden="true"><use href="#arrow"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. DANCE SHOWCASE -->
+    <section class="section" id="dance" aria-labelledby="danceTitle">
+      <div class="container split-layout">
+        <div class="editorial-visual reveal">
+          <img
+            src="./images/hip hop.jpg"
+            alt="Dance performers expressing movement together"
+            loading="lazy"
+            width="1000"
+            height="1100"
+            data-fallback
+          >
+          <div class="visual-label">
+            <span>THE DANCE SHOWCASE</span>
+            <strong>From practice<br>to possibility.</strong>
+          </div>
+          <span class="visual-number" aria-hidden="true">01</span>
+        </div>
+
+        <div class="section-copy reveal">
+          <span class="eyebrow">FINDING CONFIDENCE IN MOVEMENT</span>
+          <h2 id="danceTitle">
+            Every brave step<br>deserves its <em>spotlight.</em>
+          </h2>
+          <p>
+            Our dance showcases bring classroom learning to life.
+            Children explore timing, teamwork, and expression while
+            preparing something they can proudly share.
+          </p>
+
+          <div class="detail-list">
+            <article class="detail-item">
+              <span class="feature-icon">
+                <svg class="icon" aria-hidden="true"><use href="#sparkles"/></svg>
+              </span>
+              <div>
+                <h3>Different styles. Shared joy.</h3>
+                <p>
+                  Ballet, contemporary, hip-hop, Bollywood, and
+                  classical foundations, depending on participating batches.
+                </p>
+              </div>
+            </article>
+
+            <article class="detail-item">
+              <span class="feature-icon">
+                <svg class="icon" aria-hidden="true"><use href="#users"/></svg>
+              </span>
+              <div>
+                <h3>Rehearsed with encouragement</h3>
+                <p>
+                  Guided practice helps learners understand entrances,
+                  formations, and how to support their group.
+                </p>
+              </div>
+            </article>
+
+            <article class="detail-item">
+              <span class="feature-icon">
+                <svg class="icon" aria-hidden="true"><use href="#heart"/></svg>
+              </span>
+              <div>
+                <h3>Progress worth celebrating</h3>
+                <p>
+                  The focus is preparation, participation, and the
+                  courage to express something new.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <a class="button button-primary" href="contact.html">
+            Ask about participation
+            <svg class="icon directional" aria-hidden="true"><use href="#arrow"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. MUSIC RECITALS -->
+    <section
+      class="section section-alt"
+      id="music"
+      aria-labelledby="musicTitle"
+    >
+      <div class="container" id="recitals">
+        <div class="section-heading centered reveal">
+          <span class="eyebrow">A STAGE FOR EVERY LITTLE MELODY</span>
+          <h2 id="musicTitle">Where practice becomes <em>music.</em></h2>
+          <p>
+            A welcoming opportunity to listen, perform, and share
+            the musical skills developed throughout the learning journey.
+          </p>
+        </div>
+
+        <div class="recital-layout">
+          <div class="recital-photo reveal">
+            <img
+              src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&w=1100&q=85"
+              alt="Piano keyboard ready for a musical performance"
+              loading="lazy"
+              width="1100"
+              height="900"
+              data-fallback
+            >
+            <div class="recital-caption">
+              <svg class="icon" aria-hidden="true"><use href="#music"/></svg>
+              <span>Small notes.<br><strong>Meaningful milestones.</strong></span>
+            </div>
+          </div>
+
+          <div class="recital-cards">
+            <article class="recital-card reveal">
+              <span class="mini-number">01</span>
+              <div>
+                <span class="card-kicker">KEYS & STRINGS</span>
+                <h3>Instrumental stories</h3>
+                <p>
+                  Prepared pieces for piano, keyboard, guitar, or violin,
+                  selected to suit each learner’s current stage.
+                </p>
+              </div>
+            </article>
+
+            <article class="recital-card reveal">
+              <span class="mini-number">02</span>
+              <div>
+                <span class="card-kicker">VOICE & EXPRESSION</span>
+                <h3>A voice of their own</h3>
+                <p>
+                  Vocal performances that encourage clear expression,
+                  musical listening, and confidence in sharing a song.
+                </p>
+              </div>
+            </article>
+
+            <article class="recital-card reveal">
+              <span class="mini-number">03</span>
+              <div>
+                <span class="card-kicker">RHYTHM & CONNECTION</span>
+                <h3>Better together</h3>
+                <p>
+                  Group pieces and rhythmic activities that explore
+                  keeping time and listening to fellow musicians.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. WORKSHOPS -->
+    <section
+      class="section"
+      id="workshops"
+      aria-labelledby="workshopsTitle"
+    >
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow">TRY SOMETHING WONDERFULLY NEW</span>
+            <h2 id="workshopsTitle">A little curiosity.<br>A lot of <em>discovery.</em></h2>
+          </div>
+          <p>
+            Short creative experiences make space for fresh interests,
+            playful experiments, and learning alongside new friends.
+          </p>
+        </div>
+
+        <div class="three-grid">
+          <article class="workshop-card reveal">
+            <div class="workshop-top">
+              <span class="feature-icon">
+                <svg class="icon" aria-hidden="true"><use href="#sparkles"/></svg>
+              </span>
+              <span class="workshop-index">01</span>
+            </div>
+            <span class="card-kicker">MOVE & IMAGINE</span>
+            <h3>Storytelling Through Dance</h3>
+            <p>
+              Turn characters, feelings, and simple stories into
+              expressive movements and playful choreography.
+            </p>
+            <ul class="check-list">
+              <li>Creative movement prompts</li>
+              <li>Guided improvisation</li>
+              <li>A relaxed group sharing</li>
+            </ul>
+            <a class="text-link" href="contact.html">
+              Ask about the next session
+              <svg class="icon directional" aria-hidden="true"><use href="#arrow"/></svg>
+            </a>
+          </article>
+
+          <article class="workshop-card reveal">
+            <div class="workshop-top">
+              <span class="feature-icon">
+                <svg class="icon" aria-hidden="true"><use href="#music"/></svg>
+              </span>
+              <span class="workshop-index">02</span>
+            </div>
+            <span class="card-kicker">LISTEN & CREATE</span>
+            <h3>Rhythm Explorers</h3>
+            <p>
+              Discover patterns through clapping games, body
+              percussion, and simple musical conversations.
+            </p>
+            <ul class="check-list">
+              <li>Listening and rhythm games</li>
+              <li>Call-and-response activities</li>
+              <li>Collaborative music making</li>
+            </ul>
+            <a class="text-link" href="contact.html">
+              Ask about the next session
+              <svg class="icon directional" aria-hidden="true"><use href="#arrow"/></svg>
+            </a>
+          </article>
+
+          <article class="workshop-card reveal">
+            <div class="workshop-top">
+              <span class="feature-icon">
+                <svg class="icon" aria-hidden="true"><use href="#heart"/></svg>
+              </span>
+              <span class="workshop-index">03</span>
+            </div>
+            <span class="card-kicker">EXPRESS & CONNECT</span>
+            <h3>Stage Confidence Lab</h3>
+            <p>
+              Explore stage presence with friendly introductions,
+              expression games, and small group activities.
+            </p>
+            <ul class="check-list">
+              <li>Simple performance exercises</li>
+              <li>Encouraging peer participation</li>
+              <li>Manageable creative challenges</li>
+            </ul>
+            <a class="text-link" href="contact.html">
+              Ask about the next session
+              <svg class="icon directional" aria-hidden="true"><use href="#arrow"/></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. FAMILY STUDIO DAYS -->
+    <section
+      class="section section-alt"
+      id="family"
+      aria-labelledby="familyTitle"
+    >
+      <div class="container family-layout">
+        <div class="section-copy reveal">
+          <span class="eyebrow">THEIR WORLD. A LITTLE CLOSER.</span>
+          <h2 id="familyTitle">
+            Some memories<br>are better made <em>together.</em>
+          </h2>
+          <p>
+            Family studio days offer a closer look at how children
+            learn, practice, and express themselves. Share their
+            excitement and celebrate the small steps behind every milestone.
+          </p>
+          <a class="button button-primary" href="contact.html">
+            Ask about family events
+            <svg class="icon directional" aria-hidden="true"><use href="#arrow"/></svg>
+          </a>
+        </div>
+
+        <div class="family-steps">
+          <article class="family-step reveal">
+            <span>01</span>
+            <div>
+              <h3>Step into the studio</h3>
+              <p>
+                Discover familiar class activities and see how
+                guided practice supports growing skills.
+              </p>
+            </div>
+            <svg class="icon" aria-hidden="true"><use href="#users"/></svg>
+          </article>
+
+          <article class="family-step reveal">
+            <span>02</span>
+            <div>
+              <h3>Create a little together</h3>
+              <p>
+                Join age-appropriate movement or rhythm activities
+                when included in the session plan.
+              </p>
+            </div>
+            <svg class="icon" aria-hidden="true"><use href="#music"/></svg>
+          </article>
+
+          <article class="family-step reveal">
+            <span>03</span>
+            <div>
+              <h3>Celebrate their progress</h3>
+              <p>
+                Enjoy informal sharing and talk with the team
+                about your child’s learning journey.
+              </p>
+            </div>
+            <svg class="icon" aria-hidden="true"><use href="#heart"/></svg>
+          </article>
+        </div>
+      </div>
+    </section>
+
+   
+    <!-- 8. SAME FINAL CTA -->
+    <section class="section final-section" aria-labelledby="finalTitle">
+      <div class="container">
+        <div class="final-cta reveal">
+          <svg class="icon final-icon" aria-hidden="true">
+            <use href="#sparkles"/>
+          </svg>
+
+          <span class="eyebrow">
+            A NEW CHAPTER STARTS WITH A LITTLE CURIOSITY
+          </span>
+
+          <h2 id="finalTitle">
+            Let’s find what makes<br>their eyes <em>light up.</em>
+          </h2>
+
+          <p>
+            Explore a world of movement, melody, friendship,
+            and possibilities.
+          </p>
+
+          <a class="button button-primary" href="programs.html">
+            Discover their next adventure
+            <svg class="icon directional" aria-hidden="true">
+              <use href="#arrow"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SAME FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Little Rhythm home">
+          <span class="brand-mark">
+            <img src="images/logo.png" alt="" data-fallback>
+          </span>
+          <span class="brand-copy">
+            <strong>Little<span>Rhythm</span></strong>
+            <small>DANCE & MUSIC ACADEMY</small>
+          </span>
+        </a>
+
+        <p>
+          A joyful space where children discover their rhythm,
+          express themselves, and grow in confidence.
+        </p>
+
+        <!-- Replace with your academy's social profile URLs. -->
+        <div class="social-links" aria-label="Social media">
+          <a href="https://www.instagram.com/" target="_blank"
+            rel="noopener noreferrer" aria-label="Instagram">
+            <svg class="icon" aria-hidden="true"><use href="#instagram"/></svg>
+          </a>
+
+          <a href="https://www.facebook.com/" target="_blank"
+            rel="noopener noreferrer" aria-label="Facebook">
+            <svg class="icon" aria-hidden="true"><use href="#facebook"/></svg>
+          </a>
+
+          <a href="https://www.youtube.com/" target="_blank"
+            rel="noopener noreferrer" aria-label="YouTube">
+            <svg class="icon" aria-hidden="true"><use href="#youtube"/></svg>
+          </a>
+
+          <a href="mailto:hello@littlerhythm.example" aria-label="Email us">
+            <svg class="icon" aria-hidden="true"><use href="#mail"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About us</a>
+        <a href="services.html">Our services</a>
+        <a href="instructors.html">Our instructors</a>
+        <a href="events.html">Events & recitals</a>
+        <a href="contact.html">Contact us</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Our Programs</h3>
+        <a href="programs.html#ballet">Ballet & contemporary</a>
+        <a href="programs.html#hiphop">Hip-hop & Bollywood</a>
+        <a href="programs.html#classical">Classical foundations</a>
+        <a href="programs.html#piano">Piano & keyboard</a>
+        <a href="programs.html#guitar">Guitar & violin</a>
+        <a href="programs.html#vocals">Vocals & percussion</a>
+      </div>
+
+      <div class="footer-column contact-column">
+        <h3>Contact Us</h3>
+
+        <!-- Replace sample contact details before publishing. -->
+        <div class="contact-item">
+          <svg class="icon" aria-hidden="true"><use href="#pin"/></svg>
+          <span>
+            123 Melody Lane, Creative District,<br>
+            Hyderabad, Telangana
+          </span>
+        </div>
+
+        <div class="contact-item">
+          <svg class="icon" aria-hidden="true"><use href="#phone"/></svg>
+          <span>+91 XXXXX XXXXX</span>
+        </div>
+
+        <a class="contact-item" href="mailto:hello@littlerhythm.example">
+          <svg class="icon" aria-hidden="true"><use href="#mail"/></svg>
+          <span>hello@littlerhythm.example</span>
+        </a>
+
+        <div class="contact-item">
+          <svg class="icon" aria-hidden="true"><use href="#clock"/></svg>
+          <span>Mon–Sat: 9:00 AM–7:00 PM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>
+        © <span id="year">2026</span> Little Rhythm.
+        All rights reserved.
+      </p>
+
+      <div>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

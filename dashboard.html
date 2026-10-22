@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Parent Dashboard | Little Rhythm</title>
+
+  <meta
+    name="description"
+    content="Little Rhythm parent dashboard for classes, learning progress, resources, payments, and family details."
+  >
+
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="dashboard.js" defer></script>
+</head>
+
+<body>
+  <svg
+    class="svg-library"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <symbol id="sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="4"/>
+      <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>
+    </symbol>
+
+    <symbol id="moon" viewBox="0 0 24 24">
+      <path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/>
+    </symbol>
+
+    <symbol id="direction" viewBox="0 0 24 24">
+      <path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/>
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="dashboard-layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="images/logo.png" alt="">
+        </span>
+
+        <span class="brand-copy">
+          Little <strong>Rhythm</strong>
+          <small>Kids Dance & Music Academy</small>
+        </span>
+      </a>
+
+      <div class="sidebar-caption">
+        <span>FAMILY SPACE</span>
+        <span class="demo-label">DEMO</span>
+      </div>
+
+      <nav
+        class="sidebar-navigation"
+        id="sidebarNavigation"
+        aria-label="Dashboard sections"
+      >
+        <button type="button" data-page="overview">
+          <span aria-hidden="true">◫</span>
+          Overview
+        </button>
+
+        <button type="button" data-page="classes">
+          <span aria-hidden="true">♫</span>
+          My Classes
+        </button>
+
+        <button type="button" data-page="progress">
+          <span aria-hidden="true">↗</span>
+          Learning Progress
+        </button>
+
+        <button type="button" data-page="payments">
+          <span aria-hidden="true">▤</span>
+          Payments
+        </button>
+
+        <button type="button" data-page="resources">
+          <span aria-hidden="true">◇</span>
+          Resources
+        </button>
+
+        <button type="button" data-page="profile">
+          <span aria-hidden="true">○</span>
+          Family Profile
+        </button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="support-card">
+          <strong>A little help?</strong>
+
+          <p>
+            Find practice activities and helpful notes for your little star.
+          </p>
+
+          <button type="button" data-page="resources">
+            Visit resource center ↗
+          </button>
+        </div>
+
+        <button class="logout-button" id="logoutButton" type="button">
+          <span aria-hidden="true">↪</span>
+          Log out
+        </button>
+      </div>
+    </aside>
+
+    <button
+      class="sidebar-overlay"
+      id="sidebarOverlay"
+      type="button"
+      aria-label="Close sidebar"
+      hidden
+    ></button>
+
+    <!-- MAIN WORKSPACE -->
+    <div class="workspace">
+      <header class="dashboard-header">
+        <div class="header-start">
+          <button
+            class="icon-button menu-button"
+            id="menuToggle"
+            type="button"
+            aria-label="Open sidebar"
+            aria-expanded="false"
+            aria-controls="sidebar"
+          >
+            ☰
+          </button>
+
+          <div class="breadcrumb">
+            <span>My academy</span>
+            <span aria-hidden="true">/</span>
+            <strong id="breadcrumbCurrent">Overview</strong>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <button
+            class="icon-button preference-button"
+            id="themeToggle"
+            type="button"
+            aria-label="Switch to dark mode"
+            title="Switch to dark mode"
+          >
+            <svg class="icon" aria-hidden="true">
+              <use href="#moon"/>
+            </svg>
+          </button>
+
+          <button
+            class="icon-button preference-button"
+            id="directionToggle"
+            type="button"
+            aria-label="Switch to right-to-left layout"
+            title="Switch to right-to-left layout"
+            aria-pressed="false"
+          >
+            <svg class="icon" aria-hidden="true">
+              <use href="#direction"/>
+            </svg>
+          </button>
+
+          <div class="notification-wrapper">
+            <button
+              class="icon-button"
+              id="notificationToggle"
+              type="button"
+              aria-label="Notifications, 2 unread"
+              aria-expanded="false"
+              aria-controls="notificationPanel"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                aria-hidden="true"
+              >
+                <path
+                  d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"
+                />
+                <path d="M10 21h4"/>
+              </svg>
+
+              <span
+                class="notification-dot"
+                id="notificationDot"
+              ></span>
+            </button>
+
+            <section
+              class="notification-panel"
+              id="notificationPanel"
+              aria-labelledby="notificationHeading"
+              hidden
+            >
+              <div class="section-heading">
+                <h2 id="notificationHeading">Notifications</h2>
+                <span class="badge" id="notificationCount">2 new</span>
+              </div>
+
+              <article class="notification-item">
+                <strong>Ready for the stage?</strong>
+                <p>Winter showcase rehearsals begin November 7.</p>
+                <small>Academy announcement · Sample</small>
+              </article>
+
+              <article class="notification-item">
+                <strong>A new practice note</strong>
+                <p>Maya shared a piano activity for Jamie.</p>
+                <small>Teacher update · Sample</small>
+              </article>
+
+              <button
+                class="text-button"
+                id="markNotificationsRead"
+                type="button"
+              >
+                Mark all as read
+              </button>
+            </section>
+          </div>
+
+          <button
+            class="profile-button"
+            type="button"
+            data-page="profile"
+            aria-label="Open family profile"
+          >
+            <span class="avatar" id="headerAvatar">AP</span>
+
+            <span class="profile-copy">
+              <strong id="headerProfileName">Avery Parker</strong>
+              <small>Parent account</small>
+            </span>
+          </button>
+        </div>
+      </header>
+
+      <main id="main" tabindex="-1">
+        <div class="page-heading">
+          <div>
+            <p class="eyebrow">LITTLE STEPS. BIG POSSIBILITIES.</p>
+            <h1 id="pageTitle">Parent Dashboard</h1>
+
+            <p id="pageDescription">
+              Welcome back, Avery. A little progress, a whole lot to celebrate.
+            </p>
+          </div>
+
+          <span class="sample-indicator">Sample family · Demo data</span>
+        </div>
+
+        <div id="pageContent"></div>
+
+        <footer class="dashboard-footer">
+          © <span id="year"></span> Little Rhythm.
+          Growing confidence, one little beat at a time.
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <!-- LOGOUT -->
+  <dialog class="logout-dialog" id="logoutDialog">
+    <h2>Log out of your dashboard?</h2>
+
+    <p>
+      This ends your demo session. Your saved profile stays on this device.
+    </p>
+
+    <div class="button-row">
+      <button id="cancelLogout" type="button">Stay here</button>
+
+      <button
+        class="button-primary"
+        id="confirmLogout"
+        type="button"
+      >
+        Log out
+      </button>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>

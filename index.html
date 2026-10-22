@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Little Rhythm | Kids Dance & Music Academy</title>
+  <meta
+    name="description"
+    content="Explore dance, music, creative workshops, and performance programs for children aged 3–16 at Little Rhythm."
+  >
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <!-- SVG ICONS -->
+  <svg
+    class="svg-library"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <symbol id="sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="4"/>
+      <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>
+    </symbol>
+
+    <symbol id="moon" viewBox="0 0 24 24">
+      <path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/>
+    </symbol>
+
+    <symbol id="direction" viewBox="0 0 24 24">
+      <path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/>
+    </symbol>
+
+    <symbol id="menu" viewBox="0 0 24 24">
+      <path d="M4 6h16M4 12h16M4 18h16"/>
+    </symbol>
+
+    <symbol id="close" viewBox="0 0 24 24">
+      <path d="m6 6 12 12M18 6 6 18"/>
+    </symbol>
+
+    <symbol id="chevron" viewBox="0 0 24 24">
+      <path d="m6 9 6 6 6-6"/>
+    </symbol>
+
+    <symbol id="arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14m-6-6 6 6-6 6"/>
+    </symbol>
+
+    <symbol id="music" viewBox="0 0 24 24">
+      <path d="M9 18V5l12-2v13M9 9l12-2"/>
+      <ellipse cx="6" cy="18" rx="3" ry="3"/>
+      <ellipse cx="18" cy="16" rx="3" ry="3"/>
+    </symbol>
+
+    <symbol id="sparkles" viewBox="0 0 24 24">
+      <path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"/>
+    </symbol>
+
+    <symbol id="heart" viewBox="0 0 24 24">
+      <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/>
+    </symbol>
+
+    <symbol id="users" viewBox="0 0 24 24">
+      <circle cx="9" cy="7" r="4"/>
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2m20 0v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+    </symbol>
+
+    <symbol id="check" viewBox="0 0 24 24">
+      <path d="m5 12 4 4L19 6"/>
+    </symbol>
+
+    <symbol id="calendar" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="16" rx="2"/>
+      <path d="M16 3v4M8 3v4M3 11h18"/>
+    </symbol>
+
+    <symbol id="clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 7v5l3 2"/>
+    </symbol>
+
+    <symbol id="pin" viewBox="0 0 24 24">
+      <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/>
+      <circle cx="12" cy="10" r="3"/>
+    </symbol>
+
+    <symbol id="phone" viewBox="0 0 24 24">
+      <path d="m5 3 4 1 1 5-3 2a16 16 0 0 0 6 6l2-3 5 1 1 4c-1 5-8 2-12-2S2 4 5 3Z"/>
+    </symbol>
+
+    <symbol id="mail" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" rx="2"/>
+      <path d="m3 7 9 6 9-6"/>
+    </symbol>
+
+    <symbol id="instagram" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <path d="M17.5 6.5h.01"/>
+    </symbol>
+
+    <symbol id="facebook" viewBox="0 0 24 24">
+      <path d="M14 21v-8h3l.5-4H14V7c0-1 .3-2 2-2h2V1.5A22 22 0 0 0 15 1c-3 0-5 2-5 5v3H7v4h3v8"/>
+    </symbol>
+
+    <symbol id="youtube" viewBox="0 0 24 24">
+      <rect x="2" y="5" width="20" height="14" rx="4"/>
+      <path d="m10 9 5 3-5 3V9Z"/>
+    </symbol>
+
+    <symbol id="book" viewBox="0 0 24 24">
+      <path d="M12 5c-3-2-6-2-10-1v15c4-1 7-1 10 1 3-2 6-2 10-1V4c-4-1-7-1-10 1Zm0 0v15"/>
+    </symbol>
+
+    <symbol id="award" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="5"/>
+      <path d="m8 12-2 9 6-3 6 3-2-9"/>
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Little Rhythm home">
+        <span class="brand-mark">
+          <img src="images/logo.png" alt="" data-fallback>
+        </span>
+
+        <span class="brand-copy">
+          <strong>Little<span>Rhythm</span></strong>
+          <small>DANCE & MUSIC ACADEMY</small>
+        </span>
+      </a>
+
+      <nav
+        id="navigation"
+        class="navigation"
+        aria-label="Main navigation"
+      >
+        <div class="home-group">
+          <div class="home-control">
+            <a
+              class="nav-link active"
+              href="index.html"
+              aria-current="page"
+            >
+              Home
+            </a>
+
+            <button
+              id="homeToggle"
+              class="dropdown-toggle"
+              type="button"
+              aria-label="Show home pages"
+              aria-expanded="false"
+              aria-controls="homeDropdown"
+            >
+              <svg class="icon" aria-hidden="true">
+                <use href="#chevron"/>
+              </svg>
+            </button>
+          </div>
+
+          <div id="homeDropdown" class="home-dropdown" hidden>
+            <a href="index.html">Home 1 — Classic</a>
+            <a href="home2.html">Home 2 — Premium</a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="programs.html">Programs</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="instructors.html">Instructors</a>
+        <a class="nav-link" href="events.html">Events</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="dashboard.html">Dashboard</a>
+
+        <a class="button button-primary nav-cta" href="signup.html">
+          Join Now
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          class="icon-button preference-button"
+          id="themeToggle"
+          type="button"
+          aria-label="Switch to dark mode"
+          title="Switch to dark mode"
+        >
+          <svg class="icon" aria-hidden="true">
+            <use href="#moon"/>
+          </svg>
+        </button>
+
+        <button
+          class="icon-button preference-button"
+          id="directionToggle"
+          type="button"
+          aria-label="Switch to right-to-left layout"
+          title="Switch to right-to-left layout"
+          aria-pressed="false"
+        >
+          <svg class="icon" aria-hidden="true">
+            <use href="#direction"/>
+          </svg>
+        </button>
+
+        <a class="button button-primary header-cta" href="signup.html">
+          Join Now
+        </a>
+
+        <button
+          class="icon-button menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          <svg class="icon" aria-hidden="true">
+            <use href="#menu"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 1. HERO -->
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">
+            <svg class="icon" aria-hidden="true">
+              <use href="#sparkles"/>
+            </svg>
+            LITTLE STEPS. BIG POSSIBILITIES.
+          </span>
+
+          <h1 id="heroTitle">
+            A little rhythm.<br>
+            A whole lot of <em>confidence.</em>
+          </h1>
+
+          <p>
+            A happy place for growing dancers, curious musicians, and
+            wonderfully expressive kids. Let their next adventure begin
+            with a beat.
+          </p>
+
+          <div class="button-row">
+            <a class="button button-primary" href="programs.html">
+              Find their program
+              <svg class="icon directional" aria-hidden="true">
+                <use href="#arrow"/>
+              </svg>
+            </a>
+
+            <a class="button button-secondary" href="#performances">
+              See our little stars
+            </a>
+          </div>
+
+          <div class="hero-details">
+            <span><i></i> Ages 3–16</span>
+            <span><i></i> Beginner friendly</span>
+            <span><i></i> A place to belong</span>
+          </div>
+        </div>
+
+        <div class="hero-art">
+          <div class="hero-image-wrap">
+            <img
+              class="hero-image"
+              src="./images/ballet2.jpg"
+              alt="Dancers expressing themselves during a performance"
+              fetchpriority="high"
+              width="1000"
+              height="1200"
+              data-fallback
+            >
+
+            <div class="image-caption">
+              <span class="caption-icon">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#music"/>
+                </svg>
+              </span>
+
+              <div>
+                <strong>Find their happy rhythm</strong>
+                <small>Dance · Music · Friendship</small>
+              </div>
+            </div>
+          </div>
+
+          <span class="floating-note note-one" aria-hidden="true">♪</span>
+          <span class="floating-note note-two" aria-hidden="true">♫</span>
+
+          <div class="floating-label">
+            <svg class="icon" aria-hidden="true">
+              <use href="#sparkles"/>
+            </svg>
+            Made for little dreamers
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT -->
+    <section class="section about-section" aria-labelledby="aboutTitle">
+      <div class="container about-grid">
+        <div class="about-visual reveal">
+          <img
+            src="./images/dance.jpg"
+            alt="Dancers practicing together in a studio"
+            loading="lazy"
+            width="600"
+            height="600"
+            data-fallback
+          >
+
+          <div class="about-stamp">
+            <svg class="icon" aria-hidden="true">
+              <use href="#heart"/>
+            </svg>
+            <span>Room to grow.<br>Freedom to shine.</span>
+          </div>
+        </div>
+
+        <div class="about-copy reveal">
+          <span class="eyebrow">WELCOME TO LITTLE RHYTHM</span>
+
+          <h2 id="aboutTitle">
+            Big dreams deserve a <em>joyful beginning.</em>
+          </h2>
+
+          <p>
+            Some children find their voice in a song. Others find it
+            through movement. Here, every creative journey has a place
+            to begin.
+          </p>
+
+          <p>
+            Our dance and music experiences combine playful exploration
+            with clear guidance, helping young learners build skills,
+            friendships, and confidence.
+          </p>
+
+          <p>
+            From a first creative class to a developing passion, children
+            can explore dance, music, or both. Every lesson offers a
+            balance of discovery, practice, and small achievements
+            worth celebrating.
+          </p>
+
+          <div class="about-values">
+            <span>
+              <svg class="icon" aria-hidden="true">
+                <use href="#check"/>
+              </svg>
+              Age-based learning
+            </span>
+
+            <span>
+              <svg class="icon" aria-hidden="true">
+                <use href="#check"/>
+              </svg>
+              Encouraging guidance
+            </span>
+
+            <span>
+              <svg class="icon" aria-hidden="true">
+                <use href="#check"/>
+              </svg>
+              Creative expression
+            </span>
+
+            <span>
+              <svg class="icon" aria-hidden="true">
+                <use href="#check"/>
+              </svg>
+              Shared celebrations
+            </span>
+          </div>
+
+          <a class="button button-primary" href="about.html">
+            Discover our story
+            <svg class="icon directional" aria-hidden="true">
+              <use href="#arrow"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. DANCE PROGRAMS -->
+    <section
+      class="section section-alt"
+      id="dance"
+      aria-labelledby="danceTitle"
+    >
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow">MOVE TO YOUR OWN BEAT</span>
+            <h2 id="danceTitle">
+              Little feet.<br><em>Limitless expression.</em>
+            </h2>
+          </div>
+
+          <p>
+            From playful first steps to expressive choreography, explore
+            dance programs that nurture coordination, creativity, and
+            the confidence to be themselves.
+          </p>
+        </div>
+
+        <div class="three-grid">
+          <article class="image-card reveal">
+            <div class="card-picture">
+              <img
+                src="images/ballet dance.jpg"
+                alt="Ballet dancers practicing graceful movements"
+                loading="lazy"
+                width="600"
+                height="400"
+                data-fallback
+              >
+              <span class="card-number">01</span>
+              <span class="image-tag">Ages 4–8</span>
+            </div>
+
+            <div class="card-body">
+              <span class="card-kicker">BALANCE & GRACE</span>
+              <h3>Little Ballet</h3>
+              <p>
+                Discover first positions, posture, gentle stretches,
+                and imaginative movement through a playful
+                introduction to ballet.
+              </p>
+
+              <ul class="program-points">
+                <li>Balance, coordination, and body awareness</li>
+                <li>Simple sequences and musical listening</li>
+                <li>Creative storytelling through movement</li>
+              </ul>
+
+              <a class="text-link" href="programs.html#ballet">
+                Explore ballet
+                <svg class="icon directional" aria-hidden="true">
+                  <use href="#arrow"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="image-card reveal">
+            <div class="card-picture">
+              <img
+                src="images/hip hop.jpg"
+                alt="Dancers practicing energetic hip-hop movements"
+                loading="lazy"
+                width="800"
+                height="600"
+                data-fallback
+              >
+              <span class="card-number">02</span>
+              <span class="image-tag">Ages 6–16</span>
+            </div>
+
+            <div class="card-body">
+              <span class="card-kicker">ENERGY & PERSONALITY</span>
+              <h3>Hip-Hop Explorers</h3>
+              <p>
+                Find the beat with lively grooves, footwork, freestyle,
+                and upbeat combinations that leave room for
+                individual personality.
+              </p>
+
+              <ul class="program-points">
+                <li>Rhythm, stamina, and coordination</li>
+                <li>Foundational grooves and combinations</li>
+                <li>Freestyle games and group routines</li>
+              </ul>
+
+              <a class="text-link" href="programs.html#hiphop">
+                Explore hip-hop
+                <svg class="icon directional" aria-hidden="true">
+                  <use href="#arrow"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="image-card reveal">
+            <div class="card-picture">
+              <img
+                src="images/contempory.jpg"
+                alt="Dancers expressing a story through contemporary movement"
+                loading="lazy"
+                width="800"
+                height="600"
+                data-fallback
+              >
+              <span class="card-number">03</span>
+              <span class="image-tag">Ages 8–16</span>
+            </div>
+
+            <div class="card-body">
+              <span class="card-kicker">MOVEMENT & STORYTELLING</span>
+              <h3>Contemporary Creators</h3>
+              <p>
+                Connect technique with emotion through flowing
+                sequences, floorwork, creative exploration,
+                and expressive choreography.
+              </p>
+
+              <ul class="program-points">
+                <li>Control, transitions, and musicality</li>
+                <li>Creative tasks and improvisation</li>
+                <li>Storytelling through individual movement</li>
+              </ul>
+
+              <a class="text-link" href="programs.html#contemporary">
+                Explore contemporary
+                <svg class="icon directional" aria-hidden="true">
+                  <use href="#arrow"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="image-card reveal">
+            <div class="program-illustration">
+              <svg class="icon" aria-hidden="true">
+                <use href="#sparkles"/>
+              </svg>
+              <span>EXPRESSION · ENERGY · JOY</span>
+            </div>
+
+            <div class="card-body">
+              <span class="card-kicker">AGES 5–16</span>
+              <h3>Bollywood Beats</h3>
+              <p>
+                Explore expressive gestures, lively steps, and
+                storytelling through age-appropriate Bollywood
+                routines and joyful group choreography.
+              </p>
+
+              <ul class="program-points">
+                <li>Expressions and rhythmic movement</li>
+                <li>Fun combinations and choreography</li>
+                <li>Teamwork and performance confidence</li>
+              </ul>
+
+              <a class="text-link" href="programs.html#bollywood">
+                Explore Bollywood
+                <svg class="icon directional" aria-hidden="true">
+                  <use href="#arrow"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="image-card reveal">
+            <div class="program-illustration secondary-illustration">
+              <svg class="icon" aria-hidden="true">
+                <use href="#award"/>
+              </svg>
+              <span>TRADITION · RHYTHM · EXPRESSION</span>
+            </div>
+
+            <div class="card-body">
+              <span class="card-kicker">AGES 6–16</span>
+              <h3>Classical Foundations</h3>
+              <p>
+                Begin a thoughtful introduction to classical dance
+                through posture, hand gestures, rhythm patterns,
+                and expressive storytelling.
+              </p>
+
+              <ul class="program-points">
+                <li>Foundational posture and movement</li>
+                <li>Rhythm practice and expressive gestures</li>
+                <li>Appreciation of artistic traditions</li>
+              </ul>
+
+              <a class="text-link" href="programs.html#classical">
+                Explore classical dance
+                <svg class="icon directional" aria-hidden="true">
+                  <use href="#arrow"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="image-card reveal">
+            <div class="program-illustration">
+              <svg class="icon" aria-hidden="true">
+                <use href="#heart"/>
+              </svg>
+              <span>MOVE · PLAY · DISCOVER</span>
+            </div>
+
+            <div class="card-body">
+              <span class="card-kicker">AGES 3–5</span>
+              <h3>Tiny Movers</h3>
+              <p>
+                A gentle first step into dance through action songs,
+                movement games, imaginative stories, and
+                easy-to-follow routines.
+              </p>
+
+              <ul class="program-points">
+                <li>Listening and spatial awareness</li>
+                <li>Simple movement and coordination</li>
+                <li>Playful participation with other children</li>
+              </ul>
+
+              <a class="text-link" href="programs.html#tiny-movers">
+                Explore early dance
+                <svg class="icon directional" aria-hidden="true">
+                  <use href="#arrow"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="learning-note reveal">
+          <div class="note-heading">
+            <svg class="icon" aria-hidden="true">
+              <use href="#sparkles"/>
+            </svg>
+            <h3>A pathway for every little dancer.</h3>
+          </div>
+          <p>
+            Start with playful foundations, build technique through
+            guided practice, and grow into expressive routines.
+            Placement considers age, previous experience, and comfort
+            with movement.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. MUSIC PROGRAMS -->
+    <section
+      class="section music-section"
+      id="music"
+      aria-labelledby="musicTitle"
+    >
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow">EVERY NOTE IS A NEW DISCOVERY</span>
+            <h2 id="musicTitle">
+              Find the sound that<br>makes them <em>sparkle.</em>
+            </h2>
+          </div>
+
+          <p>
+            Help curious listeners become confident music makers with
+            instrumental lessons, singing, rhythm games, and creative
+            musical exploration.
+          </p>
+        </div>
+
+        <div class="music-layout">
+          <div class="music-feature reveal">
+            <img
+              src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&w=1100&q=85"
+              alt="Piano keyboard ready for musical practice"
+              loading="lazy"
+              width="1000"
+              height="1100"
+              data-fallback
+            >
+
+            <div class="music-feature-caption">
+              <svg class="icon" aria-hidden="true">
+                <use href="#music"/>
+              </svg>
+              <h3>Small notes.<br>Beautiful beginnings.</h3>
+              <p>
+                Listening, technique, creativity, and a love
+                for making music.
+              </p>
+            </div>
+          </div>
+
+          <div class="music-options">
+            <article class="music-card reveal">
+              <span class="number-icon">01</span>
+              <div>
+                <span class="card-kicker">AGES 5–16</span>
+                <h3>Piano & Keyboard</h3>
+                <p>
+                  Explore melody, rhythm, hand coordination, and
+                  musical patterns through enjoyable pieces and
+                  manageable practice goals.
+                </p>
+                <a class="text-link" href="programs.html#piano">
+                  Discover piano
+                  <svg class="icon directional" aria-hidden="true">
+                    <use href="#arrow"/>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="music-card reveal">
+              <span class="number-icon">02</span>
+              <div>
+                <span class="card-kicker">AGES 7–16</span>
+                <h3>Acoustic Guitar</h3>
+                <p>
+                  Begin with comfortable playing posture, simple
+                  chords, strumming patterns, and familiar songs
+                  while building steady practice habits.
+                </p>
+                <a class="text-link" href="programs.html#guitar">
+                  Discover guitar
+                  <svg class="icon directional" aria-hidden="true">
+                    <use href="#arrow"/>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="music-card reveal">
+              <span class="number-icon">03</span>
+              <div>
+                <span class="card-kicker">AGES 6–16</span>
+                <h3>Vocals & Singing</h3>
+                <p>
+                  Discover pitch, breathing, clear diction, and
+                  expression through age-appropriate songs,
+                  listening exercises, and group singing.
+                </p>
+                <a class="text-link" href="programs.html#vocals">
+                  Discover vocals
+                  <svg class="icon directional" aria-hidden="true">
+                    <use href="#arrow"/>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="music-card reveal">
+              <span class="number-icon">04</span>
+              <div>
+                <span class="card-kicker">AGES 6–16</span>
+                <h3>Drums & Percussion</h3>
+                <p>
+                  Build a strong sense of rhythm with steady beats,
+                  hand coordination, simple patterns, and
+                  collaborative percussion activities.
+                </p>
+                <a class="text-link" href="programs.html#drums">
+                  Discover percussion
+                  <svg class="icon directional" aria-hidden="true">
+                    <use href="#arrow"/>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="music-card reveal">
+              <span class="number-icon">05</span>
+              <div>
+                <span class="card-kicker">AGES 7–16</span>
+                <h3>Violin Foundations</h3>
+                <p>
+                  Learn instrument care, comfortable posture, bow
+                  control, and simple melodies with patient guidance
+                  and a steady learning pace.
+                </p>
+                <a class="text-link" href="programs.html#violin">
+                  Discover violin
+                  <svg class="icon directional" aria-hidden="true">
+                    <use href="#arrow"/>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="music-card reveal">
+              <span class="number-icon">06</span>
+              <div>
+                <span class="card-kicker">AGES 3–5</span>
+                <h3>Little Music Makers</h3>
+                <p>
+                  Sing, clap, move, and discover sound through action
+                  songs, simple percussion, musical stories,
+                  and playful listening games.
+                </p>
+                <a class="text-link" href="programs.html#early-music">
+                  Discover early music
+                  <svg class="icon directional" aria-hidden="true">
+                    <use href="#arrow"/>
+                  </svg>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="learning-note reveal">
+          <div class="note-heading">
+            <svg class="icon" aria-hidden="true">
+              <use href="#music"/>
+            </svg>
+            <h3>More than learning a song.</h3>
+          </div>
+          <p>
+            Music learning brings together listening, rhythm, technique,
+            creative exploration, and regular home practice. Speak with
+            the team about instrument suitability before choosing or
+            purchasing an instrument.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SERVICES & LEARNING PATHWAYS -->
+    <section
+      class="section section-alt"
+      id="services"
+      aria-labelledby="servicesTitle"
+    >
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <span class="eyebrow">
+            THOUGHTFULLY MADE FOR GROWING MINDS
+          </span>
+          <h2 id="servicesTitle">
+            More possibilities.<br>More reasons to <em>love learning.</em>
+          </h2>
+          <p>
+            Flexible learning experiences support different interests,
+            learning paces, and family routines—from a first trial
+            session to preparation for the stage.
+          </p>
+        </div>
+
+        <div class="three-grid">
+          <article class="service-card reveal">
+            <span class="feature-icon">
+              <svg class="icon" aria-hidden="true">
+                <use href="#users"/>
+              </svg>
+            </span>
+            <h3>Group Classes</h3>
+            <p>
+              Age-based batches bring together guided practice,
+              creative activities, teamwork, and opportunities
+              to make new friends.
+            </p>
+            <a class="text-link" href="services.html#group">
+              Explore group classes
+              <svg class="icon directional" aria-hidden="true">
+                <use href="#arrow"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="feature-icon">
+              <svg class="icon" aria-hidden="true">
+                <use href="#music"/>
+              </svg>
+            </span>
+            <h3>Individual Lessons</h3>
+            <p>
+              Personalized one-to-one guidance builds skills,<br>
+              nurtures confidence, and makes practice feel<br>
+              rewarding at every learner's own pace.
+            </p>
+            <a class="text-link" href="services.html#individual">
+              Explore private lessons
+              <svg class="icon directional" aria-hidden="true">
+                <use href="#arrow"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="feature-icon">
+              <svg class="icon" aria-hidden="true">
+                <use href="#sparkles"/>
+              </svg>
+            </span>
+            <h3>Creative Workshops</h3>
+            <p>
+              Short themed experiences introduce new dance styles,
+              musical ideas, improvisation, and exciting ways
+              to express creativity.
+            </p>
+            <a class="text-link" href="services.html#workshops">
+              Explore workshops
+              <svg class="icon directional" aria-hidden="true">
+                <use href="#arrow"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="feature-icon">
+              <svg class="icon" aria-hidden="true">
+                <use href="#calendar"/>
+              </svg>
+            </span>
+            <h3>Parent Connection</h3>
+            <p>
+              Access enrollment, class schedules, attendance,
+              recital information, and fee management through
+              the parent dashboard.
+            </p>
+            <a class="text-link" href="dashboard.html">
+              View dashboard
+              <svg class="icon directional" aria-hidden="true">
+                <use href="#arrow"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="feature-icon">
+              <svg class="icon" aria-hidden="true">
+                <use href="#heart"/>
+              </svg>
+            </span>
+            <h3>Trial & Program Guidance</h3>
+            <p>
+              Explore your child’s interests, discuss previous
+              experience, and find a comfortable starting point
+              with guidance from the team.
+            </p>
+            <a class="text-link" href="services.html#trial">
+              Ask about a trial
+              <svg class="icon directional" aria-hidden="true">
+                <use href="#arrow"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="feature-icon">
+              <svg class="icon" aria-hidden="true">
+                <use href="#book"/>
+              </svg>
+            </span>
+            <h3>Holiday Creative Camps</h3>
+            <p>
+              Discover movement games, musical exploration,
+              storytelling, and shared mini performances
+              through themed holiday sessions.
+            </p>
+            <a class="text-link" href="services.html#camps">
+              Explore holiday camps
+              <svg class="icon directional" aria-hidden="true">
+                <use href="#arrow"/>
+              </svg>
+            </a>
+          </article>
+
+        </div>
+
+        <div class="pathway-heading reveal">
+          <span class="eyebrow">GROWING AT THEIR OWN PACE</span>
+          <h3>A little guidance for every age.</h3>
+        </div>
+
+        <div class="age-pathways">
+          <article class="pathway-card reveal">
+            <span class="pathway-number">01</span>
+            <span class="card-kicker">AGES 3–5</span>
+            <h3>Discover & Play</h3>
+            <p>
+              Build familiarity with music and movement through action
+              songs, imagination, simple rhythms, and playful routines.
+            </p>
+            <span class="pathway-focus">
+              Focus: curiosity & participation
+            </span>
+          </article>
+
+          <article class="pathway-card reveal">
+            <span class="pathway-number">02</span>
+            <span class="card-kicker">AGES 6–9</span>
+            <h3>Build & Explore</h3>
+            <p>
+              Build dance and music foundations through<br>
+              guided practice and fun challenges, while<br>
+              growing confidence with every class.
+            </p>
+            <span class="pathway-focus">
+              Focus: foundations & confidence
+            </span>
+          </article>
+
+          <article class="pathway-card reveal">
+            <span class="pathway-number">03</span>
+            <span class="card-kicker">AGES 10–16</span>
+            <h3>Develop & Express</h3>
+            <p>
+              Refine technique and discover personal style<br>
+              through focused practice, choreography,<br>
+              and creative work with others.
+            </p>
+            <span class="pathway-focus">
+              Focus: technique & individuality
+            </span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. PERFORMANCES -->
+    <section
+      class="section performances-section"
+      id="performances"
+      aria-labelledby="performancesTitle"
+    >
+      <div class="container">
+        <div class="performance-heading reveal">
+          <span class="eyebrow">THE MOMENTS THEY WILL REMEMBER</span>
+          <h2 id="performancesTitle">
+            A little courage.<br>A stage full of <em>possibilities.</em>
+          </h2>
+          <p>
+            From studio sharing sessions to recitals, every performance
+            is an opportunity to celebrate effort, enjoy creating
+            together, and discover the joy of sharing a new skill.
+          </p>
+        </div>
+
+        <div class="performance-gallery">
+          <a
+            class="gallery-card gallery-large reveal"
+            href="events.html#dance"
+          >
+            <img
+              src="./images/ballet2.jpg"
+              alt="Dancers performing a coordinated routine on stage"
+              loading="lazy"
+              width="1100"
+              height="900"
+              data-fallback
+            >
+
+            <div class="gallery-caption">
+              <span>DANCE SHOWCASE</span>
+              <h3>Moving together. Shining together.</h3>
+              <svg class="icon directional" aria-hidden="true">
+                <use href="#arrow"/>
+              </svg>
+            </div>
+          </a>
+
+          <a class="gallery-card reveal" href="events.html#music">
+            <img
+              src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=800&q=85"
+              alt="Microphone prepared for a vocal performance"
+              loading="lazy"
+              width="800"
+              height="900"
+              data-fallback
+            >
+
+            <div class="gallery-caption">
+              <span>MUSIC RECITAL</span>
+              <h3>Every voice has a moment.</h3>
+              <svg class="icon directional" aria-hidden="true">
+                <use href="#arrow"/>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <div class="age-pathways">
+          <article class="pathway-card reveal">
+            <span class="feature-icon">
+              <svg class="icon" aria-hidden="true">
+                <use href="#check"/>
+              </svg>
+            </span>
+            <h3>Practice with purpose</h3>
+            <p>
+              Break a routine or musical piece into small, achievable
+              steps and build confidence through repetition.
+            </p>
+          </article>
+
+          <article class="pathway-card reveal">
+            <span class="feature-icon">
+              <svg class="icon" aria-hidden="true">
+                <use href="#users"/>
+              </svg>
+            </span>
+            <h3>Rehearse together</h3>
+            <p>
+              Explore entrances, timing, teamwork, and listening
+              while learning how to support fellow performers.
+            </p>
+          </article>
+
+          <article class="pathway-card reveal">
+            <span class="feature-icon">
+              <svg class="icon" aria-hidden="true">
+                <use href="#heart"/>
+              </svg>
+            </span>
+            <h3>Celebrate progress</h3>
+            <p>
+              Recognize preparation, effort, and the courage to
+              share something new with an encouraging audience.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. INSTRUCTORS -->
+    <section
+      class="section section-alt"
+      aria-labelledby="instructorsTitle"
+    >
+      <div class="container instructor-layout">
+        <div class="instructor-intro reveal">
+          <span class="eyebrow">GUIDANCE WITH HEART</span>
+
+          <h2 id="instructorsTitle">
+            Behind every brave step,<br>an <em>encouraging teacher.</em>
+          </h2>
+
+          <p>
+            Discover the teaching specialties behind our programs and
+            meet the people who help young learners find
+            their confidence.
+          </p>
+
+          <p>
+            Clear demonstrations, manageable goals, and thoughtful
+            feedback help children understand what they are learning
+            and enjoy the process of improving.
+          </p>
+
+          <ul class="program-points instructor-points">
+            <li>Step-by-step demonstrations and practice goals</li>
+            <li>Encouragement for different learning paces</li>
+            <li>Technique supported by creative exercises</li>
+            <li>Parent conversations about progress and next steps</li>
+          </ul>
+
+          <a class="button button-primary" href="instructors.html">
+            Meet our instructors
+            <svg class="icon directional" aria-hidden="true">
+              <use href="#arrow"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="instructor-cards">
+          <article class="mentor-card reveal">
+            <span class="feature-icon">
+              <svg class="icon" aria-hidden="true">
+                <use href="#sparkles"/>
+              </svg>
+            </span>
+            <div>
+              <span class="card-kicker">DANCE FACULTY</span>
+              <h3>Movement with meaning</h3>
+              <p>
+                Technique, coordination, musicality, and expression
+                taught through structured, creative lessons that make
+                space for each child’s personality.
+              </p>
+              <a class="text-link" href="instructors.html#dance">
+                Meet the dance team
+                <svg class="icon directional" aria-hidden="true">
+                  <use href="#arrow"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="mentor-card reveal">
+            <span class="feature-icon">
+              <svg class="icon" aria-hidden="true">
+                <use href="#music"/>
+              </svg>
+            </span>
+            <div>
+              <span class="card-kicker">MUSIC FACULTY</span>
+              <h3>Make every note count</h3>
+              <p>
+                Patient guidance helps children build musical
+                understanding, steady practice habits, and the
+                confidence to play or sing with others.
+              </p>
+              <a class="text-link" href="instructors.html#music">
+                Meet the music team
+                <svg class="icon directional" aria-hidden="true">
+                  <use href="#arrow"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="mentor-card reveal">
+            <span class="feature-icon">
+              <svg class="icon" aria-hidden="true">
+                <use href="#heart"/>
+              </svg>
+            </span>
+            <div>
+              <span class="card-kicker">EARLY LEARNING</span>
+              <h3>Small steps, thoughtful support</h3>
+              <p>
+                Playful routines, simple instructions, and familiar
+                activities help younger children settle in and
+                participate with growing independence.
+              </p>
+              <a class="text-link" href="programs.html#early-music">
+                Explore early learning
+                <svg class="icon directional" aria-hidden="true">
+                  <use href="#arrow"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. EVENTS -->
+    <section
+      class="section events-section"
+      aria-labelledby="eventsTitle"
+    >
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow">
+              SAVE A LITTLE SPACE FOR SOMETHING SPECIAL
+            </span>
+            <h2 id="eventsTitle">Beyond the <em>classroom.</em></h2>
+          </div>
+
+          <a class="text-link" href="events.html">
+            View event calendar
+            <svg class="icon directional" aria-hidden="true">
+              <use href="#arrow"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="three-grid">
+          <article class="event-card reveal">
+            <div class="event-top">
+              <span class="feature-icon">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#music"/>
+                </svg>
+              </span>
+              <span class="event-type">PERFORM</span>
+            </div>
+
+            <h3>Recital Celebrations</h3>
+            <p>
+              Share progress with family and friends through
+              thoughtfully prepared dance routines, instrumental
+              pieces, and vocal performances.
+            </p>
+
+            <div class="event-meta">
+              <svg class="icon" aria-hidden="true">
+                <use href="#calendar"/>
+              </svg>
+              <span>Dates published in the event calendar</span>
+            </div>
+
+            <a class="text-link" href="events.html#recitals">
+              Explore recitals
+              <svg class="icon directional" aria-hidden="true">
+                <use href="#arrow"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="event-card reveal">
+            <div class="event-top">
+              <span class="feature-icon">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#sparkles"/>
+                </svg>
+              </span>
+              <span class="event-type">DISCOVER</span>
+            </div>
+
+            <h3>Holiday Workshops</h3>
+            <p>
+              Try a fresh creative experience with themed sessions
+              exploring new movements, melodies, improvisation,
+              and artistic ideas.
+            </p>
+
+            <div class="event-meta">
+              <svg class="icon" aria-hidden="true">
+                <use href="#clock"/>
+              </svg>
+              <span>Check available workshop sessions</span>
+            </div>
+
+            <a class="text-link" href="events.html#workshops">
+              Explore workshops
+              <svg class="icon directional" aria-hidden="true">
+                <use href="#arrow"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="event-card reveal">
+            <div class="event-top">
+              <span class="feature-icon">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#heart"/>
+                </svg>
+              </span>
+              <span class="event-type">CONNECT</span>
+            </div>
+
+            <h3>Family Studio Days</h3>
+            <p>
+              Take a closer look at the learning journey, enjoy
+              shared creative activities, and celebrate little
+              achievements together.
+            </p>
+
+            <div class="event-meta">
+              <svg class="icon" aria-hidden="true">
+                <use href="#users"/>
+              </svg>
+              <span>Family participation details online</span>
+            </div>
+
+            <a class="text-link" href="events.html#family">
+              Explore family events
+              <svg class="icon directional" aria-hidden="true">
+                <use href="#arrow"/>
+              </svg>
+            </a>
+          </article>
+        </div>
+
+        <div class="learning-note next-steps reveal">
+          <div>
+            <div class="note-heading">
+              <svg class="icon" aria-hidden="true">
+                <use href="#sparkles"/>
+              </svg>
+              <h3>Their next chapter starts here.</h3>
+            </div>
+            <p>
+              Explore an interest, speak with the team about age and
+              experience, and choose a suitable starting pathway.
+              Ask about batch availability and trial sessions.
+            </p>
+          </div>
+
+          <a class="button button-primary" href="services.html#trial">
+            Explore a trial session
+            <svg class="icon directional" aria-hidden="true">
+              <use href="#arrow"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FINAL CTA -->
+    <section class="section final-section" aria-labelledby="finalTitle">
+      <div class="container">
+        <div class="final-cta reveal">
+          <svg class="icon final-icon" aria-hidden="true">
+            <use href="#sparkles"/>
+          </svg>
+
+          <span class="eyebrow">
+            A NEW CHAPTER STARTS WITH A LITTLE CURIOSITY
+          </span>
+
+          <h2 id="finalTitle">
+            Let’s find what makes<br>their eyes <em>light up.</em>
+          </h2>
+
+          <p>
+            Explore a world of movement, melody, friendship,
+            and possibilities.
+          </p>
+
+          <a class="button button-primary" href="programs.html">
+            Discover their next adventure
+            <svg class="icon directional" aria-hidden="true">
+              <use href="#arrow"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Little Rhythm home">
+          <span class="brand-mark">
+            <img src="images/logo.png" alt="" data-fallback>
+          </span>
+          <span class="brand-copy">
+            <strong>Little<span>Rhythm</span></strong>
+            <small>DANCE & MUSIC ACADEMY</small>
+          </span>
+        </a>
+
+        <p>
+          A joyful space where children discover their rhythm,
+          express themselves, and grow in confidence.
+        </p>
+
+        <!-- Replace these with your academy's social profile URLs. -->
+        <div class="social-links" aria-label="Social media">
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <svg class="icon" aria-hidden="true">
+              <use href="#instagram"/>
+            </svg>
+          </a>
+
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <svg class="icon" aria-hidden="true">
+              <use href="#facebook"/>
+            </svg>
+          </a>
+
+          <a
+            href="https://www.youtube.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+          >
+            <svg class="icon" aria-hidden="true">
+              <use href="#youtube"/>
+            </svg>
+          </a>
+
+          <a
+            href="mailto:hello@littlerhythm.example"
+            aria-label="Email us"
+          >
+            <svg class="icon" aria-hidden="true">
+              <use href="#mail"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About us</a>
+        <a href="services.html">Our services</a>
+        <a href="instructors.html">Our instructors</a>
+        <a href="events.html">Events & recitals</a>
+        <a href="contact.html">Contact us</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Our Programs</h3>
+        <a href="programs.html#ballet">Ballet & contemporary</a>
+        <a href="programs.html#hiphop">Hip-hop & Bollywood</a>
+        <a href="programs.html#classical">Classical foundations</a>
+        <a href="programs.html#piano">Piano & keyboard</a>
+        <a href="programs.html#guitar">Guitar & violin</a>
+        <a href="programs.html#vocals">Vocals & percussion</a>
+      </div>
+
+      <div class="footer-column contact-column">
+        <h3>Contact Us</h3>
+
+        <!-- Replace sample contact details before publishing. -->
+        <div class="contact-item">
+          <svg class="icon" aria-hidden="true">
+            <use href="#pin"/>
+          </svg>
+          <span>
+            123 Melody Lane, Creative District,<br>
+            Hyderabad, Telangana
+          </span>
+        </div>
+
+        <div class="contact-item">
+          <svg class="icon" aria-hidden="true">
+            <use href="#phone"/>
+          </svg>
+          <span>+91 XXXXX XXXXX</span>
+        </div>
+
+        <a
+          class="contact-item"
+          href="mailto:hello@littlerhythm.example"
+        >
+          <svg class="icon" aria-hidden="true">
+            <use href="#mail"/>
+          </svg>
+          <span>hello@littlerhythm.example</span>
+        </a>
+
+        <div class="contact-item">
+          <svg class="icon" aria-hidden="true">
+            <use href="#clock"/>
+          </svg>
+          <span>Mon–Sat: 9:00 AM–7:00 PM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>
+        © <span id="year">2026</span> Little Rhythm.
+        All rights reserved.
+      </p>
+
+      <div>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Services | Little Rhythm</title>
+  <meta name="description" content="Explore Little Rhythm’s creative learning services for children and families.">
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="services.css">
+  <script src="services.js" defer></script>
+</head>
+
+<body>
+  <!-- SVG ICONS -->
+  <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5" />
+    </symbol>
+
+    <symbol id="moon" viewBox="0 0 24 24">
+      <path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z" />
+    </symbol>
+
+    <symbol id="direction" viewBox="0 0 24 24">
+      <path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4" />
+    </symbol>
+
+    <symbol id="menu" viewBox="0 0 24 24">
+      <path d="M4 6h16M4 12h16M4 18h16" />
+    </symbol>
+
+    <symbol id="close" viewBox="0 0 24 24">
+      <path d="m6 6 12 12M18 6 6 18" />
+    </symbol>
+
+    <symbol id="chevron" viewBox="0 0 24 24">
+      <path d="m6 9 6 6 6-6" />
+    </symbol>
+
+    <symbol id="arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14m-6-6 6 6-6 6" />
+    </symbol>
+
+    <symbol id="music" viewBox="0 0 24 24">
+      <path d="M9 18V5l12-2v13M9 9l12-2" />
+      <ellipse cx="6" cy="18" rx="3" ry="3" />
+      <ellipse cx="18" cy="16" rx="3" ry="3" />
+    </symbol>
+
+    <symbol id="sparkles" viewBox="0 0 24 24">
+      <path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z" />
+    </symbol>
+
+    <symbol id="heart" viewBox="0 0 24 24">
+      <path
+        d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z" />
+    </symbol>
+
+    <symbol id="users" viewBox="0 0 24 24">
+      <circle cx="9" cy="7" r="4" />
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2m20 0v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+    </symbol>
+
+    <symbol id="check" viewBox="0 0 24 24">
+      <path d="m5 12 4 4L19 6" />
+    </symbol>
+
+    <symbol id="calendar" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="16" rx="2" />
+      <path d="M16 3v4M8 3v4M3 11h18" />
+    </symbol>
+
+    <symbol id="clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3 2" />
+    </symbol>
+
+    <symbol id="pin" viewBox="0 0 24 24">
+      <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z" />
+      <circle cx="12" cy="10" r="3" />
+    </symbol>
+
+    <symbol id="phone" viewBox="0 0 24 24">
+      <path d="m5 3 4 1 1 5-3 2a16 16 0 0 0 6 6l2-3 5 1 1 4c-1 5-8 2-12-2S2 4 5 3Z" />
+    </symbol>
+
+    <symbol id="mail" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="m3 7 9 6 9-6" />
+    </symbol>
+
+    <symbol id="instagram" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <path d="M17.5 6.5h.01" />
+    </symbol>
+
+    <symbol id="facebook" viewBox="0 0 24 24">
+      <path d="M14 21v-8h3l.5-4H14V7c0-1 .3-2 2-2h2V1.5A22 22 0 0 0 15 1c-3 0-5 2-5 5v3H7v4h3v8" />
+    </symbol>
+
+    <symbol id="youtube" viewBox="0 0 24 24">
+      <rect x="2" y="5" width="20" height="14" rx="4" />
+      <path d="m10 9 5 3-5 3V9Z" />
+    </symbol>
+
+    <symbol id="book" viewBox="0 0 24 24">
+      <path d="M12 5c-3-2-6-2-10-1v15c4-1 7-1 10 1 3-2 6-2 10-1V4c-4-1-7-1-10 1Zm0 0v15" />
+    </symbol>
+
+    <symbol id="award" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="5" />
+      <path d="m8 12-2 9 6-3 6 3-2-9" />
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Little Rhythm home">
+        <span class="brand-mark">
+          <img src="images/logo.png" alt="" data-fallback>
+        </span>
+
+        <span class="brand-copy">
+          <strong>Little<span>Rhythm</span></strong>
+          <small>DANCE & MUSIC ACADEMY</small>
+        </span>
+      </a>
+
+      <nav id="navigation" class="navigation" aria-label="Main navigation">
+        <div class="home-group">
+          <div class="home-control">
+            <a class="nav-link" href="index.html">
+              Home
+            </a>
+
+            <button id="homeToggle" class="dropdown-toggle" type="button" aria-label="Show home pages"
+              aria-expanded="false" aria-controls="homeDropdown">
+              <svg class="icon" aria-hidden="true">
+                <use href="#chevron" />
+              </svg>
+            </button>
+          </div>
+
+          <div id="homeDropdown" class="home-dropdown" hidden>
+            <a href="index.html">Home 1 — Classic</a>
+            <a href="home2.html">Home 2 — Premium</a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="programs.html">Programs</a>
+        <a class="nav-link" href="service.html">Services</a>
+        <a class="nav-link" href="instructors.html">Instructors</a>
+        <a class="nav-link" href="events.html">Events</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="dashboard.html">Dashboard</a>
+
+        <a class="button button-primary nav-cta" href="signup.html">
+          Join Now
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button preference-button" id="themeToggle" type="button" aria-label="Switch to dark mode"
+          title="Switch to dark mode">
+          <svg class="icon" aria-hidden="true">
+            <use href="#moon" />
+          </svg>
+        </button>
+
+        <button class="icon-button preference-button" id="directionToggle" type="button"
+          aria-label="Switch to right-to-left layout" title="Switch to right-to-left layout" aria-pressed="false">
+          <svg class="icon" aria-hidden="true">
+            <use href="#direction" />
+          </svg>
+        </button>
+
+        <a class="button button-primary header-cta" href="signup.html">
+          Join Now
+        </a>
+
+        <button class="icon-button menu-toggle" id="menuToggle" type="button" aria-label="Open navigation"
+          aria-expanded="false" aria-controls="navigation">
+          <svg class="icon" aria-hidden="true">
+            <use href="#menu" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="premium-hero">
+      <div class="container premium-grid">
+        <div>
+        <span
+            class="eyebrow">MADE FOR THEIR NEXT LITTLE LEAP</span>
+          <h1>More ways to grow.<br>More room to <em>shine.</em></h1>
+          <p>From their very first beat to a moment on stage, find a creative experience that meets your child where
+            they are.</p>
+          <div class="button-row"><a class="button button-primary" href="#services">Explore our services ↗</a><a
+              class="button button-secondary" href="#gallery">A glimpse of the joy</a></div>
+          <div class="hero-details"><span>Ages 3–16</span><span>Dance & music</span><span>Thoughtful guidance</span>
+          </div>
+        </div>
+        <div class="editorial-image"><img
+            src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1400&q=85"
+            alt="Dancers sharing an expressive performance" data-fallback fetchpriority="high">
+          <div class="editorial-label"><span class="eyebrow">A LITTLE RHYTHM, EVERY DAY</span><strong>Small
+              steps.<br>Beautiful possibilities.</strong></div><span class="orbit" aria-hidden="true">♫</span>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="eyebrow">THOUGHTFULLY MADE FOR GROWING MINDS</span>
+            <h2>A possibility for<br><em>every little personality.</em></h2>
+          </div>
+          <p>Explore six ways to learn, connect, and create. Choose a service to see its own experience, benefits, and
+            pricing.</p>
+        </div>
+        <div class="offerings">
+          <article class="offering reveal" id="group">
+            <div class="offering-top"><span class="service-index">01</span><span class="pill">Ages 3–16</span></div>
+            <h3>Group Classes</h3>
+            <p>Age-based dance and music classes blend guided practice, creative games, and the joy of learning with
+              friends.</p>
+            <div class="offering-meta">60 minutes · 8 classes / month</div><a class="text-link"
+              href="service%20detail.html?service=group" aria-label="View service: Group Classes">View Service <span
+                aria-hidden="true">↗</span></a>
+          </article>
+          <article class="offering reveal" id="individual">
+            <div class="offering-top"><span class="service-index">02</span><span class="pill">Ages 5–16</span></div>
+            <h3>Individual Lessons</h3>
+            <p>One-to-one dance or music guidance gives your child space to ask questions, build technique, and discover
+              a practice routine that suits them.</p>
+            <div class="offering-meta">45 minutes · 4 private lessons</div><a class="text-link"
+              href="service%20detail.html?service=individual" aria-label="View service: Individual Lessons">View Service
+              <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="offering reveal" id="workshops">
+            <div class="offering-top"><span class="service-index">03</span><span class="pill">Ages 4–16</span></div>
+            <h3>Creative Workshops</h3>
+            <p>Themed dance and music workshops invite curious children to experiment with movement, sound,
+              storytelling, and improvisation.</p>
+            <div class="offering-meta">90 minutes · One themed workshop</div><a class="text-link"
+              href="service%20detail.html?service=workshops" aria-label="View service: Creative Workshops">View Service
+              <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="offering reveal" id="parent">
+            <div class="offering-top"><span class="service-index">04</span><span class="pill">Parents & carers</span>
+            </div>
+            <h3>Parent Connection</h3>
+            <p>Stay connected to your child’s learning through schedule information, attendance updates, progress
+              conversations, and recital communication.</p>
+            <div class="offering-meta">Ongoing support · Included with enrollment</div><a class="text-link"
+              href="service%20detail.html?service=parent" aria-label="View service: Parent Connection">View Service
+              <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="offering reveal" id="trial">
+            <div class="offering-top"><span class="service-index">05</span><span class="pill">Ages 3–16</span></div>
+            <h3>Trial & Program Guidance</h3>
+            <p>A friendly introduction helps your child explore their interests while our team guides you toward a
+              suitable dance or music pathway.</p>
+            <div class="offering-meta">30 minutes · One introductory session</div><a class="text-link"
+              href="service%20detail.html?service=trial" aria-label="View service: Trial & Program Guidance">View
+              Service <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="offering reveal" id="camps">
+            <div class="offering-top"><span class="service-index">06</span><span class="pill">Ages 4–12</span></div>
+            <h3>Holiday Creative Camps</h3>
+            <p>Themed holiday sessions bring together dance, musical play, storytelling, and mini performances for a
+              memorable creative break.</p>
+            <div class="offering-meta">3 hours / day · Five-day camp</div><a class="text-link"
+              href="service%20detail.html?service=camps" aria-label="View service: Holiday Creative Camps">View Service
+              <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="eyebrow">OUR CREATIVE WORLD</span>
+            <h2>Moments made<br>to <em>remember.</em></h2>
+          </div>
+          <p>A visual moodboard of movement, music, and shared creativity. Replace these reference photographs with your
+            academy’s own work.</p>
+        </div>
+        <div class="work-gallery">
+          <figure><img
+              src="./images/guiter.jpg"
+              alt="Expressive dancers on stage" loading="lazy" data-fallback>
+            <figcaption>
+              <h3>The joy of movement</h3>
+            </figcaption>
+          </figure>
+          <figure><img
+              src="./images/vocals 1.jpg"
+              alt="A collaborative learning space" loading="lazy" data-fallback>
+            <figcaption>
+              <h3>Space to discover</h3>
+            </figcaption>
+          </figure>
+          <figure><img
+              src="./images/small moves.jpg"
+              alt="Dancers moving together" loading="lazy" data-fallback>
+            <figcaption>
+              <h3>Growing together</h3>
+            </figcaption>
+          </figure>
+          <figure><img
+              src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1400&q=85"
+              alt="A music studio with instruments" loading="lazy" data-fallback>
+            <figcaption>
+              <h3>Every note, a new beginning</h3>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section class="section section-alt" id="faqs">
+      <div class="container faq-layout">
+        <div><span class="eyebrow">A LITTLE CLARITY</span>
+          <h2>Good questions.<br><em>Helpful answers.</em></h2>
+          <p>Let’s make the next step feel easy.</p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>How do I choose a service?</summary>
+            <p>Start with your child’s interests and comfort. Trial & Program Guidance is a friendly first step if you
+              are unsure.</p>
+          </details>
+          <details>
+            <summary>Are these suitable for beginners?</summary>
+            <p>Yes. We recommend an age-appropriate starting point and discuss any experience needed for a specific
+              session.</p>
+          </details>
+          <details>
+            <summary>How do bookings work?</summary>
+            <p>Send an enquiry using the contact page. A place is confirmed only after the academy checks availability
+              and shares the final fees.</p>
+          </details>
+          <details>
+            <summary>Can siblings choose different services?</summary>
+            <p>Yes. Each child can follow a different creative pathway. Ask the team about compatible schedules.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+    <section class="section final-section" aria-labelledby="finalTitle">
+      <div class="container">
+        <div class="final-cta reveal">
+          <svg class="icon final-icon" aria-hidden="true">
+            <use href="#sparkles"/>
+          </svg>
+
+          <span class="eyebrow">LET’S FIND THEIR HAPPY PLACE</span>
+
+          <h2 id="finalTitle">
+            Their next chapter<br>starts with <em>a little rhythm.</em>
+          </h2>
+
+          <p>
+            Tell us what makes your child light up. We’ll help you find
+            a comfortable place to begin.
+          </p>
+
+          <a class="button button-primary" id="serviceEnquiry" href="contact.html">
+            Let’s talk
+            <svg class="icon directional" aria-hidden="true">
+              <use href="#arrow"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Little Rhythm home">
+          <span class="brand-mark">
+            <img src="images/logo.png" alt="" data-fallback>
+          </span>
+          <span class="brand-copy">
+            <strong>Little<span>Rhythm</span></strong>
+            <small>DANCE & MUSIC ACADEMY</small>
+          </span>
+        </a>
+
+        <p>
+          A joyful space where children discover their rhythm,
+          express themselves, and grow in confidence.
+        </p>
+
+        <!-- Replace these with your academy's social profile URLs. -->
+        <div class="social-links" aria-label="Social media">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg class="icon" aria-hidden="true">
+              <use href="#instagram" />
+            </svg>
+          </a>
+
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg class="icon" aria-hidden="true">
+              <use href="#facebook" />
+            </svg>
+          </a>
+
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg class="icon" aria-hidden="true">
+              <use href="#youtube" />
+            </svg>
+          </a>
+
+          <a href="mailto:hello@littlerhythm.example" aria-label="Email us">
+            <svg class="icon" aria-hidden="true">
+              <use href="#mail" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About us</a>
+        <a href="service.html">Our services</a>
+        <a href="instructors.html">Our instructors</a>
+        <a href="events.html">Events & recitals</a>
+        <a href="contact.html">Contact us</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Our Programs</h3>
+        <a href="programs.html#ballet">Ballet & contemporary</a>
+        <a href="programs.html#hiphop">Hip-hop & Bollywood</a>
+        <a href="programs.html#classical">Classical foundations</a>
+        <a href="programs.html#piano">Piano & keyboard</a>
+        <a href="programs.html#guitar">Guitar & violin</a>
+        <a href="programs.html#vocals">Vocals & percussion</a>
+      </div>
+
+      <div class="footer-column contact-column">
+        <h3>Contact Us</h3>
+
+        <!-- Replace sample contact details before publishing. -->
+        <div class="contact-item">
+          <svg class="icon" aria-hidden="true">
+            <use href="#pin" />
+          </svg>
+          <span>
+            123 Melody Lane, Creative District,<br>
+            Hyderabad, Telangana
+          </span>
+        </div>
+
+        <div class="contact-item">
+          <svg class="icon" aria-hidden="true">
+            <use href="#phone" />
+          </svg>
+          <span>+91 XXXXX XXXXX</span>
+        </div>
+
+        <a class="contact-item" href="mailto:hello@littlerhythm.example">
+          <svg class="icon" aria-hidden="true">
+            <use href="#mail" />
+          </svg>
+          <span>hello@littlerhythm.example</span>
+        </a>
+
+        <div class="contact-item">
+          <svg class="icon" aria-hidden="true">
+            <use href="#clock" />
+          </svg>
+          <span>Mon–Sat: 9:00 AM–7:00 PM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>
+        © <span id="year">2026</span> Little Rhythm.
+        All rights reserved.
+      </p>
+
+      <div>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Little Rhythm | Home 2 — Premium</title>
+
+  <meta
+    name="description"
+    content="Discover a creative world of movement, sound, storytelling, and joyful learning at Little Rhythm."
+  >
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="home2.css">
+
+  <script src="home2.js" defer></script>
+</head>
+
+<body>
+  <!-- SVG ICONS -->
+  <svg
+    class="svg-library"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <symbol id="sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="4"/>
+      <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>
+    </symbol>
+
+    <symbol id="moon" viewBox="0 0 24 24">
+      <path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/>
+    </symbol>
+
+    <symbol id="direction" viewBox="0 0 24 24">
+      <path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/>
+    </symbol>
+
+    <symbol id="menu" viewBox="0 0 24 24">
+      <path d="M4 6h16M4 12h16M4 18h16"/>
+    </symbol>
+
+    <symbol id="close" viewBox="0 0 24 24">
+      <path d="m6 6 12 12M18 6 6 18"/>
+    </symbol>
+
+    <symbol id="chevron" viewBox="0 0 24 24">
+      <path d="m6 9 6 6 6-6"/>
+    </symbol>
+
+    <symbol id="arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14m-6-6 6 6-6 6"/>
+    </symbol>
+
+    <symbol id="music" viewBox="0 0 24 24">
+      <path d="M9 18V5l12-2v13M9 9l12-2"/>
+      <ellipse cx="6" cy="18" rx="3" ry="3"/>
+      <ellipse cx="18" cy="16" rx="3" ry="3"/>
+    </symbol>
+
+    <symbol id="sparkles" viewBox="0 0 24 24">
+      <path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"/>
+    </symbol>
+
+    <symbol id="heart" viewBox="0 0 24 24">
+      <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/>
+    </symbol>
+
+    <symbol id="users" viewBox="0 0 24 24">
+      <circle cx="9" cy="7" r="4"/>
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2m20 0v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+    </symbol>
+
+    <symbol id="check" viewBox="0 0 24 24">
+      <path d="m5 12 4 4L19 6"/>
+    </symbol>
+
+    <symbol id="clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 7v5l3 2"/>
+    </symbol>
+
+    <symbol id="pin" viewBox="0 0 24 24">
+      <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/>
+      <circle cx="12" cy="10" r="3"/>
+    </symbol>
+
+    <symbol id="phone" viewBox="0 0 24 24">
+      <path d="m5 3 4 1 1 5-3 2a16 16 0 0 0 6 6l2-3 5 1 1 4c-1 5-8 2-12-2S2 4 5 3Z"/>
+    </symbol>
+
+    <symbol id="mail" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" rx="2"/>
+      <path d="m3 7 9 6 9-6"/>
+    </symbol>
+
+    <symbol id="instagram" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <path d="M17.5 6.5h.01"/>
+    </symbol>
+
+    <symbol id="facebook" viewBox="0 0 24 24">
+      <path d="M14 21v-8h3l.5-4H14V7c0-1 .3-2 2-2h2V1.5A22 22 0 0 0 15 1c-3 0-5 2-5 5v3H7v4h3v8"/>
+    </symbol>
+
+    <symbol id="youtube" viewBox="0 0 24 24">
+      <rect x="2" y="5" width="20" height="14" rx="4"/>
+      <path d="m10 9 5 3-5 3V9Z"/>
+    </symbol>
+
+    <symbol id="book" viewBox="0 0 24 24">
+      <path d="M12 5c-3-2-6-2-10-1v15c4-1 7-1 10 1 3-2 6-2 10-1V4c-4-1-7-1-10 1Zm0 0v15"/>
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- SAME HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Little Rhythm home">
+        <span class="brand-mark">
+          <img src="images/logo.png" alt="" data-fallback>
+        </span>
+
+        <span class="brand-copy">
+          <strong>Little<span>Rhythm</span></strong>
+          <small>DANCE & MUSIC ACADEMY</small>
+        </span>
+      </a>
+
+      <nav
+        id="navigation"
+        class="navigation"
+        aria-label="Main navigation"
+      >
+        <div class="home-group">
+          <div class="home-control">
+            <a class="nav-link active" href="index.html">Home</a>
+
+            <button
+              id="homeToggle"
+              class="dropdown-toggle"
+              type="button"
+              aria-label="Show home pages"
+              aria-expanded="false"
+              aria-controls="homeDropdown"
+            >
+              <svg class="icon" aria-hidden="true">
+                <use href="#chevron"/>
+              </svg>
+            </button>
+          </div>
+
+          <div id="homeDropdown" class="home-dropdown" hidden>
+            <a href="index.html">Home 1 — Classic</a>
+            <a href="home2.html" class="active" aria-current="page">
+              Home 2 — Premium
+            </a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="programs.html">Programs</a>
+        <a class="nav-link" href="services.html">Services</a>
+        <a class="nav-link" href="instructors.html">Instructors</a>
+        <a class="nav-link" href="events.html">Events</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="dashboard.html">Dashboard</a>
+
+        <a class="button button-primary nav-cta" href="signup.html">
+          Join Now
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          class="icon-button preference-button"
+          id="themeToggle"
+          type="button"
+          aria-label="Switch to dark mode"
+          title="Switch to dark mode"
+        >
+          <svg class="icon" aria-hidden="true">
+            <use href="#moon"/>
+          </svg>
+        </button>
+
+        <button
+          class="icon-button preference-button"
+          id="directionToggle"
+          type="button"
+          aria-label="Switch to right-to-left layout"
+          title="Switch to right-to-left layout"
+          aria-pressed="false"
+        >
+          <svg class="icon" aria-hidden="true">
+            <use href="#direction"/>
+          </svg>
+        </button>
+
+        <a class="button button-primary header-cta" href="signup.html">
+          Join Now
+        </a>
+
+        <button
+          class="icon-button menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          <svg class="icon" aria-hidden="true">
+            <use href="#menu"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- 1. FULL-SCREEN EDITORIAL HERO -->
+    <section class="premium-hero" aria-labelledby="heroTitle">
+      <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+      <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+
+      <div class="container premium-hero-grid">
+        <div class="premium-hero-copy">
+          <span class="eyebrow hero-enter">
+            WHERE CURIOSITY TAKES THE LEAD
+          </span>
+
+          <h1 id="heroTitle" class="hero-enter">
+            Their imagination.<br>
+            Their rhythm.<br>
+            <em>Their moment.</em>
+          </h1>
+
+          <p class="hero-enter">
+            For the child who turns every room into a stage and every
+            sound into a song. Give their ideas somewhere beautiful
+            to grow.
+          </p>
+
+          <div class="button-row hero-enter">
+            <a class="button button-primary" href="programs.html">
+              Explore their possibilities
+              <svg class="icon directional" aria-hidden="true">
+                <use href="#arrow"/>
+              </svg>
+            </a>
+
+            <a class="button button-secondary" href="#creative-labs">
+              Step inside
+            </a>
+          </div>
+
+          <div class="hero-footnote hero-enter">
+            <span class="hero-small-icon" aria-hidden="true">✦</span>
+            Movement, melody, and a little everyday magic.
+          </div>
+        </div>
+
+        <div class="premium-art hero-enter">
+          <div class="editorial-photo">
+            <img
+              src="./images/guiter 2.jpg"
+              alt="Dancers creating expressive shapes on stage"
+              width="900"
+              height="1100"
+              fetchpriority="high"
+              data-fallback
+            >
+
+            <div class="photo-bottom">
+              <span>THE ART OF GROWING UP</span>
+              <strong>A world beyond ordinary.</strong>
+            </div>
+          </div>
+
+          <div class="art-ticket">
+            <svg class="icon" aria-hidden="true">
+              <use href="#sparkles"/>
+            </svg>
+            <span>Small discoveries.<br><strong>Wonderful beginnings.</strong></span>
+          </div>
+
+          <span class="art-note" aria-hidden="true">♫</span>
+          <span class="art-index" aria-hidden="true">01 / CREATE</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 2. CREATIVE LABS -->
+    <section
+      class="section section-alt"
+      id="creative-labs"
+      aria-labelledby="labsTitle"
+    >
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow">BEYOND THE USUAL LESSON</span>
+            <h2 id="labsTitle">A studio for<br><em>“what if?”</em></h2>
+          </div>
+
+          <p>
+            Creative activities connect movement and music in unexpected
+            ways, giving children space to experiment before they decide
+            what they love.
+          </p>
+        </div>
+
+        <div class="lab-grid">
+          <article class="lab-card lab-large reveal">
+            <div class="lab-art art-lilac" aria-hidden="true">
+              <span class="lab-symbol">Aa</span>
+              <span class="lab-orbit"></span>
+              <span class="art-word">IMAGINE / MOVE / TELL</span>
+            </div>
+
+            <div class="lab-copy">
+              <span class="card-kicker">01 / STORY IN MOTION</span>
+              <h3>Turn a story into a dance.</h3>
+              <p>
+                A forest becomes a movement. A character becomes a pose.
+                Children build a short story using expression, rhythm,
+                and their own ideas.
+              </p>
+              <a class="text-link" href="services.html">
+                Discover creative sessions
+                <svg class="icon directional" aria-hidden="true">
+                  <use href="#arrow"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="lab-card reveal">
+            <div class="lab-art art-rose" aria-hidden="true">
+              <span class="lab-symbol">♪</span>
+              <span class="lab-orbit"></span>
+              <span class="art-word">LISTEN / MIX / MAKE</span>
+            </div>
+
+            <div class="lab-copy">
+              <span class="card-kicker">02 / SOUND EXPLORERS</span>
+              <h3>Make something only they could.</h3>
+              <p>
+                Use claps, voices, everyday sounds, and simple patterns
+                to create a tiny soundtrack with a big personality.
+              </p>
+              <a class="text-link" href="programs.html">
+                Explore musical discovery
+                <svg class="icon directional" aria-hidden="true">
+                  <use href="#arrow"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. THE CLASS JOURNEY -->
+    <section class="section" aria-labelledby="journeyTitle">
+      <div class="container journey-grid">
+        <div class="journey-intro reveal">
+          <span class="eyebrow">A LITTLE LOOK INSIDE</span>
+          <h2 id="journeyTitle">
+            From “hello”<br>to <em>“I did it!”</em>
+          </h2>
+          <p>
+            A thoughtful class rhythm helps children settle in, try
+            something new, and leave with a moment to feel proud of.
+          </p>
+
+          <div class="journey-seal">
+            <svg class="icon" aria-hidden="true">
+              <use href="#heart"/>
+            </svg>
+            Space to try. Time to grow.
+          </div>
+        </div>
+
+        <ol class="journey-list">
+          <li class="journey-step reveal">
+            <span class="step-number">01</span>
+            <div>
+              <span class="card-kicker">ARRIVE & CONNECT</span>
+              <h3>Find a familiar face.</h3>
+              <p>
+                A welcoming check-in and playful warm-up make room for
+                different moods and energy levels.
+              </p>
+            </div>
+          </li>
+
+          <li class="journey-step reveal">
+            <span class="step-number">02</span>
+            <div>
+              <span class="card-kicker">DISCOVER & PRACTICE</span>
+              <h3>Try one new thing.</h3>
+              <p>
+                Break a movement or musical idea into small, manageable
+                steps with time to repeat and explore.
+              </p>
+            </div>
+          </li>
+
+          <li class="journey-step reveal">
+            <span class="step-number">03</span>
+            <div>
+              <span class="card-kicker">CREATE & COLLABORATE</span>
+              <h3>Add their own sparkle.</h3>
+              <p>
+                Use the new idea in a short sequence, a partner activity,
+                or a creative challenge.
+              </p>
+            </div>
+          </li>
+
+          <li class="journey-step reveal">
+            <span class="step-number">04</span>
+            <div>
+              <span class="card-kicker">REFLECT & CELEBRATE</span>
+              <h3>Notice the little wins.</h3>
+              <p>
+                Finish with a calm moment to share what felt different,
+                what was fun, and what to try next.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 4. INTERACTIVE DISCOVERY -->
+    <section
+      class="section discovery-section"
+      aria-labelledby="discoveryTitle"
+    >
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <div>
+            <span class="eyebrow">FOLLOW THEIR CURIOSITY</span>
+            <h2 id="discoveryTitle">
+              What catches<br><em>their imagination?</em>
+            </h2>
+          </div>
+          <p>
+            Choose an interest to explore a creative starting point.
+            Children can enjoy more than one.
+          </p>
+        </div>
+
+        <div class="discovery-box reveal">
+          <div
+            class="discovery-tabs"
+            role="tablist"
+            aria-label="Creative interests"
+          >
+            <button
+              id="tab-move"
+              class="discovery-tab"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              aria-controls="panel-move"
+              tabindex="0"
+            >Loves to move</button>
+
+            <button
+              id="tab-sound"
+              class="discovery-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-sound"
+              tabindex="-1"
+            >Notices every sound</button>
+
+            <button
+              id="tab-story"
+              class="discovery-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-story"
+              tabindex="-1"
+            >Invents new worlds</button>
+          </div>
+
+          <div
+            id="panel-move"
+            class="discovery-panel"
+            role="tabpanel"
+            aria-labelledby="tab-move"
+            tabindex="0"
+          >
+            <div class="discovery-mark" aria-hidden="true">↗</div>
+            <div>
+              <span class="card-kicker">START WITH MOVEMENT</span>
+              <h3>Let their energy tell a story.</h3>
+              <p>
+                Try a dance introduction with rhythm games, expressive
+                shapes, and short combinations. There is room for both
+                careful observers and enthusiastic movers.
+              </p>
+              <a class="button button-primary" href="programs.html">
+                Explore dance programs
+              </a>
+            </div>
+          </div>
+
+          <div
+            id="panel-sound"
+            class="discovery-panel"
+            role="tabpanel"
+            aria-labelledby="tab-sound"
+            tabindex="0"
+            hidden
+          >
+            <div class="discovery-mark" aria-hidden="true">♫</div>
+            <div>
+              <span class="card-kicker">START WITH LISTENING</span>
+              <h3>Follow the sounds they love.</h3>
+              <p>
+                Explore pitch, tempo, and simple patterns through voice
+                and beginner instruments. A familiar tune can become
+                the start of something entirely their own.
+              </p>
+              <a class="button button-primary" href="programs.html">
+                Explore music programs
+              </a>
+            </div>
+          </div>
+
+          <div
+            id="panel-story"
+            class="discovery-panel"
+            role="tabpanel"
+            aria-labelledby="tab-story"
+            tabindex="0"
+            hidden
+          >
+            <div class="discovery-mark" aria-hidden="true">✦</div>
+            <div>
+              <span class="card-kicker">START WITH IMAGINATION</span>
+              <h3>Give their ideas a new language.</h3>
+              <p>
+                Combine characters, movement, sound effects, and playful
+                prompts. Creative workshops give young storytellers new
+                ways to bring their worlds to life.
+              </p>
+              <a class="button button-primary" href="services.html">
+                Explore creative workshops
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. RHYTHM PLAYGROUND -->
+    <section class="section" aria-labelledby="playgroundTitle">
+      <div class="container rhythm-grid">
+        <div class="reveal rhythm-copy">
+          <span class="eyebrow">A MOMENT OF PLAY</span>
+          <h2 id="playgroundTitle">
+            Four beats.<br><em>Endless possibilities.</em>
+          </h2>
+          <p>
+            A rhythm can start with something as simple as a clap.
+            Try this little pattern together, then change the order
+            and make it yours.
+          </p>
+          <p>
+            Tap a pad to hear its sound. Sound begins only when you
+            interact with a pad.
+          </p>
+          <span class="rhythm-tip">
+            Try: clap → tap → clap → chime
+          </span>
+        </div>
+
+        <div class="rhythm-console reveal">
+          <div class="console-top">
+            <span>LITTLE RHYTHM / PLAY LAB</span>
+            <span class="console-dot" aria-hidden="true"></span>
+          </div>
+
+          <div class="rhythm-pads">
+            <button class="rhythm-pad" type="button" data-tone="clap">
+              <span aria-hidden="true">✳</span>
+              <strong>Clap</strong>
+              <small>Bright & crisp</small>
+            </button>
+
+            <button class="rhythm-pad" type="button" data-tone="tap">
+              <span aria-hidden="true">●</span>
+              <strong>Tap</strong>
+              <small>Soft & low</small>
+            </button>
+
+            <button class="rhythm-pad" type="button" data-tone="pop">
+              <span aria-hidden="true">◇</span>
+              <strong>Pop</strong>
+              <small>Short & playful</small>
+            </button>
+
+            <button class="rhythm-pad" type="button" data-tone="chime">
+              <span aria-hidden="true">✦</span>
+              <strong>Chime</strong>
+              <small>Light & clear</small>
+            </button>
+          </div>
+
+          <p class="console-status" id="soundStatus" role="status">
+            Your next little rhythm starts here.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. EVERYDAY CREATIVE HABITS -->
+    <section class="section section-alt" aria-labelledby="habitsTitle">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow">TAKE THE CREATIVITY HOME</span>
+            <h2 id="habitsTitle">
+              Small rituals.<br><em>Lovely discoveries.</em>
+            </h2>
+          </div>
+          <p>
+            Keep the joy going between classes with simple ideas that
+            fit into family life. No special equipment needed.
+          </p>
+        </div>
+
+        <div class="ritual-grid">
+          <article class="ritual-card reveal">
+            <span class="ritual-number">01 / LISTEN</span>
+            <svg class="icon ritual-icon" aria-hidden="true">
+              <use href="#music"/>
+            </svg>
+            <h3>The kitchen orchestra</h3>
+            <p>
+              Find three safe household objects with different sounds.
+              Take turns playing a pattern for the other person to copy.
+            </p>
+            <span class="ritual-label">A few playful minutes</span>
+          </article>
+
+          <article class="ritual-card reveal">
+            <span class="ritual-number">02 / MOVE</span>
+            <svg class="icon ritual-icon" aria-hidden="true">
+              <use href="#sparkles"/>
+            </svg>
+            <h3>The one-song adventure</h3>
+            <p>
+              Pick a favourite song. Move like the weather: a gentle
+              breeze, a little rain, then a wonderful burst of sunshine.
+            </p>
+            <span class="ritual-label">One song, many ideas</span>
+          </article>
+
+          <article class="ritual-card reveal">
+            <span class="ritual-number">03 / IMAGINE</span>
+            <svg class="icon ritual-icon" aria-hidden="true">
+              <use href="#book"/>
+            </svg>
+            <h3>A bedtime soundtrack</h3>
+            <p>
+              Add a soft sound or a small gesture to each character in
+              a story. Let your child decide how the next page sounds.
+            </p>
+            <span class="ritual-label">A quieter kind of creativity</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. THE CREATIVE NOTEBOOK -->
+    <section class="section" aria-labelledby="notebookTitle">
+      <div class="container notebook-grid">
+        <div class="notebook-art reveal" aria-hidden="true">
+          <div class="notebook-sheet">
+            <span class="notebook-date">MY CREATIVE NOTEBOOK</span>
+            <span class="notebook-script">Today,<br>I tried.</span>
+            <div class="notebook-lines">
+              <span>A new sound.</span>
+              <span>A different movement.</span>
+              <span>Something that felt like me.</span>
+            </div>
+            <span class="notebook-star">✧</span>
+          </div>
+          <span class="notebook-sticker">Every attempt<br>belongs here.</span>
+        </div>
+
+        <div class="notebook-copy reveal">
+          <span class="eyebrow">PROGRESS HAS MANY SHAPES</span>
+          <h2 id="notebookTitle">
+            Notice the moments<br><em>between milestones.</em>
+          </h2>
+          <p>
+            Remembering a sequence is one kind of progress. Asking a
+            question, trying again, or sharing an original idea can be
+            another.
+          </p>
+
+          <ul class="notebook-points">
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#check"/></svg>
+              <span><strong>A little reflection</strong> — What felt new today?</span>
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#check"/></svg>
+              <span><strong>A little ownership</strong> — What would I like to try?</span>
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#check"/></svg>
+              <span><strong>A little celebration</strong> — What made me smile?</span>
+            </li>
+          </ul>
+
+          <a class="text-link" href="about.html">
+            Explore our approach
+            <svg class="icon directional" aria-hidden="true">
+              <use href="#arrow"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. FIRST-VISIT QUESTIONS -->
+    <section class="section section-alt" aria-labelledby="questionsTitle">
+      <div class="container questions-grid">
+        <div class="questions-intro reveal">
+          <span class="eyebrow">BEFORE THE FIRST HELLO</span>
+          <h2 id="questionsTitle">
+            A few things<br><em>you might wonder.</em>
+          </h2>
+          <p>
+            Starting something new comes with questions. Here are a few
+            simple pointers before you speak with our team.
+          </p>
+          <a class="button button-secondary" href="contact.html">
+            Ask us a question
+            <svg class="icon directional" aria-hidden="true">
+              <use href="#arrow"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="question-list reveal">
+          <details class="question-item" open>
+            <summary>What if my child is still deciding?</summary>
+            <div class="question-answer">
+              <p>
+                Tell us what they enjoy at home, whether that is moving,
+                singing, making sounds, or imagining stories. We can
+                discuss suitable starting points and current options.
+              </p>
+            </div>
+          </details>
+
+          <details class="question-item">
+            <summary>Do they need to practise before starting?</summary>
+            <div class="question-answer">
+              <p>
+                Beginner learning starts with the basics. Ask our team
+                about the experience level and preparation needed for
+                the particular class you are considering.
+              </p>
+            </div>
+          </details>
+
+          <details class="question-item">
+            <summary>What should we bring to the first class?</summary>
+            <div class="question-answer">
+              <p>
+                Comfortable clothing and water are useful starting
+                points. Confirm footwear, instruments, and any
+                program-specific requirements with us before attending.
+              </p>
+            </div>
+          </details>
+
+          <details class="question-item">
+            <summary>How do we choose a suitable class?</summary>
+            <div class="question-answer">
+              <p>
+                Share your child’s age, interests, previous experience,
+                and availability. Contact the team to discuss suitable
+                groups and the latest class schedule.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. SAME FINAL CTA -->
+    <section class="section final-section" aria-labelledby="finalTitle">
+      <div class="container">
+        <div class="final-cta reveal">
+          <svg class="icon final-icon" aria-hidden="true">
+            <use href="#sparkles"/>
+          </svg>
+
+          <span class="eyebrow">
+            A NEW CHAPTER STARTS WITH A LITTLE CURIOSITY
+          </span>
+
+          <h2 id="finalTitle">
+            Let’s find what makes<br>their eyes <em>light up.</em>
+          </h2>
+
+          <p>
+            Explore a world of movement, melody, friendship,
+            and possibilities.
+          </p>
+
+          <a class="button button-primary" href="programs.html">
+            Discover their next adventure
+            <svg class="icon directional" aria-hidden="true">
+              <use href="#arrow"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SAME FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Little Rhythm home">
+          <span class="brand-mark">
+            <img src="images/logo.png" alt="" data-fallback>
+          </span>
+          <span class="brand-copy">
+            <strong>Little<span>Rhythm</span></strong>
+            <small>DANCE & MUSIC ACADEMY</small>
+          </span>
+        </a>
+
+        <p>
+          A joyful space where children discover their rhythm,
+          express themselves, and grow in confidence.
+        </p>
+
+        <div class="social-links" aria-label="Social media">
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <svg class="icon" aria-hidden="true"><use href="#instagram"/></svg>
+          </a>
+
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <svg class="icon" aria-hidden="true"><use href="#facebook"/></svg>
+          </a>
+
+          <a
+            href="https://www.youtube.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+          >
+            <svg class="icon" aria-hidden="true"><use href="#youtube"/></svg>
+          </a>
+
+          <a href="mailto:hello@littlerhythm.example" aria-label="Email us">
+            <svg class="icon" aria-hidden="true"><use href="#mail"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About us</a>
+        <a href="services.html">Our services</a>
+        <a href="instructors.html">Our instructors</a>
+        <a href="events.html">Events & recitals</a>
+        <a href="contact.html">Contact us</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Our Programs</h3>
+        <a href="programs.html#ballet">Ballet & contemporary</a>
+        <a href="programs.html#hiphop">Hip-hop & Bollywood</a>
+        <a href="programs.html#classical">Classical foundations</a>
+        <a href="programs.html#piano">Piano & keyboard</a>
+        <a href="programs.html#guitar">Guitar & violin</a>
+        <a href="programs.html#vocals">Vocals & percussion</a>
+      </div>
+
+      <div class="footer-column contact-column">
+        <h3>Contact Us</h3>
+
+        <div class="contact-item">
+          <svg class="icon" aria-hidden="true"><use href="#pin"/></svg>
+          <span>
+            123 Melody Lane, Creative District,<br>
+            Hyderabad, Telangana
+          </span>
+        </div>
+
+        <div class="contact-item">
+          <svg class="icon" aria-hidden="true"><use href="#phone"/></svg>
+          <span>+91 XXXXX XXXXX</span>
+        </div>
+
+        <a class="contact-item" href="mailto:hello@littlerhythm.example">
+          <svg class="icon" aria-hidden="true"><use href="#mail"/></svg>
+          <span>hello@littlerhythm.example</span>
+        </a>
+
+        <div class="contact-item">
+          <svg class="icon" aria-hidden="true"><use href="#clock"/></svg>
+          <span>Mon–Sat: 9:00 AM–7:00 PM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>
+        © <span id="year">2026</span> Little Rhythm.
+        All rights reserved.
+      </p>
+
+      <div>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
