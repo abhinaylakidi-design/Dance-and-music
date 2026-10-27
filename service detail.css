@@ -250,8 +250,8 @@ svg {
 
 .button-secondary {
   background: transparent;
-  border-color: var(--border);
-  color: var(--text);
+  border-color: var(--secondary);
+  color: var(--secondary);
 }
 
 .button .icon {
@@ -1574,8 +1574,9 @@ svg {
   }
 
   .button-secondary:hover {
-    background: var(--soft-primary);
-    border-color: var(--primary);
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--bg);
     transform: translateY(-2px);
   }
 

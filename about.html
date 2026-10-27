@@ -189,34 +189,19 @@
   </header>
 
   <main id="main">
-    <!-- 1. PREMIUM FULL-SCREEN HERO -->
-    <section class="about-hero" aria-labelledby="heroTitle">
-      <img
-        class="hero-backdrop"
-        src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=2400&q=85"
-        alt=""
-        width="2400"
-        height="1600"
-        fetchpriority="high"
-        data-fallback
-      >
-
-      <div class="hero-overlay"></div>
-      <span class="hero-orbit orbit-one" aria-hidden="true"></span>
-      <span class="hero-orbit orbit-two" aria-hidden="true"></span>
-
-      <div class="container hero-stage">
-
-        <div class="hero-statement">
+    <!-- 1. ABOUT HERO -->
+    <section class="hero about-hero" aria-labelledby="heroTitle">
+      <div class="container hero-grid">
+        <div class="hero-content">
           <span class="eyebrow">
             <svg class="icon" aria-hidden="true"><use href="#sparkles"/></svg>
             THE HEART BEHIND LITTLE RHYTHM
           </span>
 
           <h1 id="heroTitle">
-            Every child has<br>
-            a rhythm.<br>
-            <em>We help it bloom.</em>
+            Every child has a<br>
+            rhythm. We help it<br>
+            <em>bloom.</em>
           </h1>
 
           <p>
@@ -224,14 +209,55 @@
             beautiful confidence that comes from being yourself.
           </p>
 
-          <a class="button button-primary hero-button" href="#our-story">
-            Get to know us
-            <svg class="icon directional" aria-hidden="true">
-              <use href="#arrow"/>
-            </svg>
-          </a>
+          <div class="button-row">
+            <a class="button button-primary" href="#our-story">
+              Get to know us
+              <svg class="icon directional" aria-hidden="true">
+                <use href="#arrow"/>
+              </svg>
+            </a>
+            <a class="button button-secondary" href="programs.html">
+              Explore our programs
+            </a>
+          </div>
+
+          <div class="hero-details">
+            <span><i></i> Dance & music</span>
+            <span><i></i> Room to express</span>
+            <span><i></i> Support to grow</span>
+          </div>
         </div>
 
+        <div class="hero-art">
+          <div class="hero-image-wrap">
+            <img
+              class="hero-image"
+              src="./images/dance 3.jpg"
+              alt="Young dancers sharing a moment together in class"
+              fetchpriority="high"
+              width="1000"
+              height="1200"
+              data-fallback
+            >
+
+            <div class="image-caption">
+              <span class="caption-icon">
+                <svg class="icon" aria-hidden="true"><use href="#music"/></svg>
+              </span>
+              <div>
+                <strong>A little space to grow</strong>
+                <small>A joyful place for first steps, first notes, and everything they’ll become.</small>
+              </div>
+            </div>
+          </div>
+
+          <span class="floating-note note-one" aria-hidden="true">♪</span>
+          <span class="floating-note note-two" aria-hidden="true">♫</span>
+
+          <div class="floating-label">
+            <svg class="icon" aria-hidden="true"><use href="#sparkles"/></svg>
+            Our story
+          </div>
         </div>
       </div>
     </section>
@@ -256,7 +282,6 @@
             <span>Small beginnings.<br><strong>Beautiful discoveries.</strong></span>
           </div>
 
-          <span class="vertical-label" aria-hidden="true">THE LITTLE RHYTHM STORY</span>
         </div>
 
         <div class="story-copy reveal">
@@ -350,54 +375,7 @@
       </div>
     </section>
 
-    <!-- 4. OUR VALUES -->
-    <section class="section" aria-labelledby="valuesTitle">
-      <div class="container values-layout">
-        <div class="values-intro reveal">
-          <span class="eyebrow">WHAT WE BELIEVE</span>
-          <h2>Little values.<br><em>Lasting impact.</em></h2>
-          <p>
-            The atmosphere around a child matters as much as the skill
-            they are learning. These beliefs shape how we teach,
-            connect, and celebrate.
-          </p>
-          <div class="values-emblem" aria-hidden="true">
-            <svg class="icon"><use href="#heart"/></svg>
-            <span>GROW WITH JOY</span>
-          </div>
-        </div>
-
-        <div class="values-grid">
-          <article class="value-card reveal">
-            <span class="value-number">01</span>
-            <svg class="icon" aria-hidden="true"><use href="#sparkles"/></svg>
-            <h3>Curiosity first</h3>
-            <p>Questions, playful experiments, and new ideas belong in every class.</p>
-          </article>
-
-          <article class="value-card reveal">
-            <span class="value-number">02</span>
-            <svg class="icon" aria-hidden="true"><use href="#heart"/></svg>
-            <h3>Kindness always</h3>
-            <p>We model patience, respectful feedback, and care for one another.</p>
-          </article>
-
-          <article class="value-card reveal">
-            <span class="value-number">03</span>
-            <svg class="icon" aria-hidden="true"><use href="#music"/></svg>
-            <h3>Individual expression</h3>
-            <p>Different personalities and creative voices make our community richer.</p>
-          </article>
-
-          <article class="value-card reveal">
-            <span class="value-number">04</span>
-            <svg class="icon" aria-hidden="true"><use href="#award"/></svg>
-            <h3>Progress over perfection</h3>
-            <p>We notice the effort, small improvements, and courage behind each attempt.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- 5. OUR LEARNING APPROACH -->
     <section class="section section-alt" aria-labelledby="approachTitle">
@@ -612,33 +590,38 @@
       </div>
     </section>
 
-    <!-- 8. SAME FINAL CTA -->
+    <!-- ABOUT PAGE CTA -->
     <section class="section final-section" aria-labelledby="finalTitle">
       <div class="container">
-        <div class="final-cta reveal">
+        <div class="final-cta final-cta--about reveal">
           <svg class="icon final-icon" aria-hidden="true">
             <use href="#sparkles"/>
           </svg>
 
           <span class="eyebrow">
-            A NEW CHAPTER STARTS WITH A LITTLE CURIOSITY
+            THE PEOPLE BEHIND THE POSSIBILITIES
           </span>
 
           <h2 id="finalTitle">
-            Let’s find what makes<br>their eyes <em>light up.</em>
+            A caring team makes room<br>for every kind of <em>rhythm.</em>
           </h2>
 
           <p>
-            Explore a world of movement, melody, friendship,
-            and possibilities.
+            Get to know the teachers who help young performers
+            feel welcome, supported, and ready to grow.
           </p>
 
-          <a class="button button-primary" href="programs.html">
-            Discover their next adventure
-            <svg class="icon directional" aria-hidden="true">
-              <use href="#arrow"/>
-            </svg>
-          </a>
+          <div class="final-cta-actions">
+            <a class="button button-primary" href="instructors.html">
+              Meet the instructors
+              <svg class="icon directional" aria-hidden="true">
+                <use href="#arrow"/>
+              </svg>
+            </a>
+            <a class="button button-secondary" href="programs.html">
+              Explore programs
+            </a>
+          </div>
         </div>
       </div>
     </section>

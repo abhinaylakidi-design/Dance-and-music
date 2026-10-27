@@ -231,8 +231,8 @@ svg {
 
 .button-secondary {
   background: transparent;
-  border-color: var(--border);
-  color: var(--text);
+  border-color: var(--secondary);
+  color: var(--secondary);
 }
 
 .button .icon {
@@ -626,9 +626,9 @@ svg {
 }
 
 .hero-outline {
-  border-color: rgb(255 255 255 / 48%);
+  border-color: var(--secondary);
   color: #fff;
-  background: rgb(255 255 255 / 5%);
+  background: transparent;
 }
 
 .hero-note {
@@ -1101,6 +1101,124 @@ svg {
   margin-block-start: 28px;
 }
 
+.final-cta .final-cta-actions .button {
+  margin-block-start: 0;
+}
+
+.final-cta .final-cta-actions .button-secondary {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.final-cta .final-cta-actions .button-secondary:hover {
+  border-color: var(--secondary);
+  background: var(--secondary);
+  color: var(--bg);
+}
+
+.final-cta--instructors {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 2px;
+  padding: 18px 24px;
+  border: 1px solid var(--border);
+  border-block-start: 6px solid var(--secondary);
+  border-radius: 32px;
+  background: var(--soft-secondary);
+  color: var(--text);
+  text-align: center;
+}
+
+.final-cta--instructors .final-icon {
+  grid-column: 1;
+  width: 42px;
+  height: 42px;
+  margin: 0 auto;
+  padding: 9px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--bg);
+  color: var(--secondary);
+}
+
+.final-cta--instructors .eyebrow,
+.final-cta--instructors h2,
+.final-cta--instructors p {
+  grid-column: 1;
+  color: var(--text);
+  text-align: center;
+}
+
+.final-cta--instructors .eyebrow {
+  color: var(--secondary);
+}
+
+.final-cta--instructors h2 {
+  margin-block: 0;
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+}
+
+.final-cta--instructors h2 em {
+  color: var(--secondary);
+}
+
+.final-cta--instructors p {
+  max-width: 530px;
+  margin-inline: auto;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.final-cta--instructors .final-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  grid-column: 1;
+  margin-block-start: 2px;
+}
+
+.final-cta--instructors .button-primary {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: var(--bg);
+}
+
+.final-cta--instructors .button-primary:hover {
+  border-color: var(--secondary);
+}
+
+@media (max-width: 700px) {
+  .final-cta--instructors {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .final-cta--instructors .final-icon {
+    grid-column: 1;
+    grid-row: auto;
+    margin-inline: auto;
+  }
+
+  .final-cta--instructors .eyebrow,
+  .final-cta--instructors h2,
+  .final-cta--instructors p,
+  .final-cta--instructors .final-cta-actions {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .final-cta--instructors p {
+    margin-inline: auto;
+  }
+
+  .final-cta--instructors .final-cta-actions {
+    justify-self: center;
+  }
+}
+
 /* FOOTER — HOMEPAGE LAYOUT */
 
 .site-footer {
@@ -1279,14 +1397,16 @@ svg {
   }
 
   .button-secondary:hover {
-    background: var(--soft-primary);
-    border-color: var(--primary);
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--bg);
     transform: translateY(-2px);
   }
 
   .hero-outline:hover {
-    background: rgb(255 255 255 / 15%);
-    border-color: #fff;
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: #fff;
     transform: translateY(-2px);
   }
 

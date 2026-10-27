@@ -250,8 +250,8 @@ svg {
 
 .button-secondary {
   background: transparent;
-  border-color: var(--border);
-  color: var(--text);
+  border-color: var(--secondary);
+  color: var(--secondary);
 }
 
 .button .icon {
@@ -839,6 +839,10 @@ svg {
   background: var(--soft-primary);
 }
 
+.card-picture img.program-card-image {
+  object-fit: cover;
+}
+
 .card-number {
   position: absolute;
   inset-block-start: 16px;
@@ -1404,6 +1408,91 @@ svg {
   margin-block-start: 28px;
 }
 
+.final-cta .final-cta-actions .button {
+  margin-block-start: 0;
+}
+
+.final-cta .final-cta-actions .button-secondary {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.final-cta .final-cta-actions .button-secondary:hover {
+  border-color: var(--secondary);
+  background: var(--secondary);
+  color: var(--bg);
+}
+
+.final-cta--home {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0 32px;
+  padding: clamp(32px, 6vw, 72px);
+  border: 0;
+  border-radius: 24px;
+  background: linear-gradient(115deg, var(--soft-primary), var(--soft-secondary));
+  text-align: start;
+}
+
+.final-cta--home .final-icon {
+  position: absolute;
+  inset-block-start: 24px;
+  inset-inline-end: 28px;
+  margin: 0;
+}
+
+.final-cta--home .eyebrow,
+.final-cta--home h2,
+.final-cta--home p {
+  grid-column: 1;
+}
+
+.final-cta--home h2 {
+  margin-block: 12px;
+}
+
+.final-cta--home p {
+  margin-inline: 0;
+}
+
+.final-cta--home .final-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  grid-column: 2;
+  grid-row: 2 / span 2;
+  align-self: center;
+}
+
+@media (max-width: 650px) {
+  .final-cta--home {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .final-cta--home .final-icon {
+    position: static;
+    margin: 0 auto;
+  }
+
+  .final-cta--home .eyebrow,
+  .final-cta--home h2,
+  .final-cta--home p,
+  .final-cta--home .final-cta-actions {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .final-cta--home p {
+    margin-inline: auto;
+  }
+
+  .final-cta--home .final-cta-actions {
+    justify-self: center;
+  }
+}
+
 /* FOOTER */
 
 .site-footer {
@@ -1574,8 +1663,9 @@ svg {
   }
 
   .button-secondary:hover {
-    background: var(--soft-primary);
-    border-color: var(--primary);
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--bg);
     transform: translateY(-2px);
   }
 

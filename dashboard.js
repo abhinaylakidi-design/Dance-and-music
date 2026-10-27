@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const notificationToggle = $("#notificationToggle");
   const notificationPanel = $("#notificationPanel");
+  const familyMenuToggle = $("#familyMenuToggle");
+  const familyDetailsPanel = $("#familyDetailsPanel");
 
   const storageKeys = {
     theme: "little-rhythm-theme",
@@ -735,6 +737,10 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateHeaderProfile() {
     $("#headerProfileName").textContent = profile.name;
     $("#headerAvatar").textContent = getInitials();
+    $("#headerParentName").textContent = profile.name;
+    $("#headerParentEmail").textContent = profile.email;
+    $("#headerChildName").textContent = profile.child;
+    $("#headerChildAge").textContent = profile.age;
   }
 
   function profilePage() {
@@ -926,6 +932,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     closeSidebar();
     closeNotifications();
+    closeFamilyDetails();
   }
 
   function navigateTo(page) {
@@ -1071,6 +1078,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!target.closest(".notification-wrapper")) {
       closeNotifications();
     }
+
+    if (!target.closest(".family-menu-wrapper")) {
+      closeFamilyDetails();
+    }
   });
 
   /* LIGHT / DARK */
@@ -1200,6 +1211,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function closeFamilyDetails(restoreFocus = false) {
+    familyDetailsPanel.hidden = true;
+    familyMenuToggle.setAttribute("aria-expanded", "false");
+
+    if (restoreFocus) {
+      familyMenuToggle.focus();
+    }
+  }
+
+  familyMenuToggle.addEventListener("click", () => {
+    const open = familyDetailsPanel.hidden;
+
+    closeNotifications();
+    familyDetailsPanel.hidden = !open;
+    familyMenuToggle.setAttribute("aria-expanded", String(open));
+  });
+
   function updateNotificationState() {
     $("#notificationDot").hidden = !notificationsUnread;
 
@@ -1217,6 +1245,7 @@ document.addEventListener("DOMContentLoaded", () => {
   notificationToggle.addEventListener("click", () => {
     const open = notificationPanel.hidden;
 
+    closeFamilyDetails();
     notificationPanel.hidden = !open;
     notificationToggle.setAttribute("aria-expanded", String(open));
   });
@@ -1240,6 +1269,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (event.key === "Escape") {
       if (!notificationPanel.hidden) {
         closeNotifications(true);
+      }
+
+      if (!familyDetailsPanel.hidden) {
+        closeFamilyDetails(true);
       }
 
       if (document.body.classList.contains("sidebar-open")) {

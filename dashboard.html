@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Parent Dashboard | Little Rhythm</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
 
   <meta
     name="description"
@@ -231,19 +232,69 @@
             </section>
           </div>
 
-          <button
-            class="profile-button"
-            type="button"
-            data-page="profile"
-            aria-label="Open family profile"
-          >
-            <span class="avatar" id="headerAvatar">AP</span>
+          <div class="family-menu-wrapper">
+            <button
+              class="profile-button"
+              id="familyMenuToggle"
+              type="button"
+              aria-label="Show parent, child, and plan details"
+              aria-expanded="false"
+              aria-controls="familyDetailsPanel"
+            >
+              <span class="avatar" id="headerAvatar">AP</span>
 
-            <span class="profile-copy">
-              <strong id="headerProfileName">Avery Parker</strong>
-              <small>Parent account</small>
-            </span>
-          </button>
+              <span class="profile-copy">
+                <strong id="headerProfileName">Avery Parker</strong>
+                <small>Parent account</small>
+              </span>
+
+              <span class="family-menu-chevron" aria-hidden="true">⌄</span>
+            </button>
+
+            <section
+              class="family-details-panel"
+              id="familyDetailsPanel"
+              aria-labelledby="familyDetailsHeading"
+              hidden
+            >
+              <h2 id="familyDetailsHeading">Family details</h2>
+
+              <dl class="family-details-list">
+                <div>
+                  <dt>Parent</dt>
+                  <dd id="headerParentName">Avery Parker</dd>
+                </div>
+                <div>
+                  <dt>Email</dt>
+                  <dd id="headerParentEmail">avery@example.com</dd>
+                </div>
+                <div>
+                  <dt>Child</dt>
+                  <dd id="headerChildName">Jamie Parker</dd>
+                </div>
+                <div>
+                  <dt>Age</dt>
+                  <dd id="headerChildAge">8</dd>
+                </div>
+              </dl>
+
+              <section class="family-plan" aria-labelledby="familyPlanHeading">
+                <h3 id="familyPlanHeading">Jamie’s plan</h3>
+                <ul class="family-plan-list">
+                  <li>Creative Dance</li>
+                  <li>Piano Explorers</li>
+                </ul>
+              </section>
+
+              <button
+                class="text-button family-edit-button"
+                type="button"
+                data-page="profile"
+              >
+                Edit family profile
+              </button>
+            </section>
+          </div>
         </div>
       </header>
 

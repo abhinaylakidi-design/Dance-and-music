@@ -250,8 +250,8 @@ svg {
 
 .button-secondary {
   background: transparent;
-  border-color: var(--border);
-  color: var(--text);
+  border-color: var(--secondary);
+  color: var(--secondary);
 }
 
 .button .icon {
@@ -1404,6 +1404,84 @@ svg {
   margin-block-start: 28px;
 }
 
+.final-cta .final-cta-actions .button {
+  margin-block-start: 0;
+}
+
+.final-cta .final-cta-actions .button-secondary {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.final-cta .final-cta-actions .button-secondary:hover {
+  border-color: var(--secondary);
+  background: var(--secondary);
+  color: var(--bg);
+}
+
+.final-cta--services {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0 32px;
+  padding: clamp(30px, 5vw, 58px);
+  border: 0;
+  border-block: 1px solid var(--border);
+  border-radius: 0;
+  background: linear-gradient(90deg, var(--soft-secondary), var(--background));
+  text-align: start;
+}
+
+.final-cta--services .final-icon {
+  grid-column: 1 / -1;
+  justify-self: start;
+  margin: 0 0 12px;
+  color: var(--secondary);
+}
+
+.final-cta--services .eyebrow,
+.final-cta--services h2,
+.final-cta--services p {
+  grid-column: 1;
+}
+
+.final-cta--services h2 {
+  margin-block: 8px;
+}
+
+.final-cta--services p {
+  margin-inline: 0;
+}
+
+.final-cta--services .final-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  grid-column: 2;
+  grid-row: 2 / span 2;
+  align-self: center;
+}
+
+@media (max-width: 650px) {
+  .final-cta--services {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .final-cta--services .final-icon,
+  .final-cta--services .eyebrow,
+  .final-cta--services h2,
+  .final-cta--services p,
+  .final-cta--services .final-cta-actions {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .final-cta--services .final-cta-actions {
+    justify-self: start;
+    margin-block-start: 8px;
+  }
+}
+
 /* FOOTER */
 
 .site-footer {
@@ -1574,8 +1652,9 @@ svg {
   }
 
   .button-secondary:hover {
-    background: var(--soft-primary);
-    border-color: var(--primary);
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--bg);
     transform: translateY(-2px);
   }
 

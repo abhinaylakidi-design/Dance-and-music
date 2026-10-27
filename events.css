@@ -239,8 +239,8 @@ svg {
 
 .button-secondary {
   background: transparent;
-  border-color: var(--border);
-  color: var(--text);
+  border-color: var(--secondary);
+  color: var(--secondary);
 }
 
 .button .icon {
@@ -1288,6 +1288,112 @@ svg {
   margin-block-start: 28px;
 }
 
+.final-cta .final-cta-actions .button {
+  margin-block-start: 0;
+}
+
+.final-cta .final-cta-actions .button-secondary {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.final-cta .final-cta-actions .button-secondary:hover {
+  border-color: var(--secondary);
+  background: var(--secondary);
+  color: var(--bg);
+}
+
+.final-cta--events {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 4px 32px;
+  padding: clamp(32px, 5vw, 60px);
+  border: 0;
+  border-radius: 28px;
+  background: var(--soft-primary);
+  color: var(--text);
+  text-align: start;
+}
+
+.final-cta--events .final-icon {
+  position: absolute;
+  inset-block-start: 22px;
+  inset-inline-end: 24px;
+  margin: 0;
+  color: var(--primary);
+  opacity: .7;
+}
+
+.final-cta--events .eyebrow,
+.final-cta--events h2,
+.final-cta--events p {
+  grid-column: 1;
+  color: var(--text);
+}
+
+.final-cta--events h2 {
+  margin-block: 10px;
+}
+
+.final-cta--events h2 em {
+  color: var(--secondary);
+}
+
+.final-cta--events p {
+  margin-inline: 0;
+  color: var(--muted);
+}
+
+.final-cta--events .final-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  grid-column: 2;
+  grid-row: 2 / span 2;
+  align-self: center;
+}
+
+.final-cta--events .button-primary {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #fff;
+}
+
+.final-cta--events .button-primary:hover {
+  border-color: var(--secondary);
+  background: var(--secondary);
+  color: #fff;
+}
+
+@media (max-width: 650px) {
+  .final-cta--events {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .final-cta--events .final-icon {
+    position: static;
+    margin: 0 auto;
+  }
+
+  .final-cta--events .eyebrow,
+  .final-cta--events h2,
+  .final-cta--events p,
+  .final-cta--events .final-cta-actions {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .final-cta--events p {
+    margin-inline: auto;
+  }
+
+  .final-cta--events .final-cta-actions {
+    justify-self: center;
+  }
+}
+
 /* SAME FOOTER */
 
 .site-footer {
@@ -1442,8 +1548,9 @@ svg {
   }
 
   .button-secondary:hover {
-    background: var(--soft-primary);
-    border-color: var(--primary);
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--bg);
     transform: translateY(-2px);
   }
 

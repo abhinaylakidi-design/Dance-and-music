@@ -386,10 +386,113 @@ small {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 0;
-  padding-inline-start: 7px;
-  border: 0;
+  padding: 6px 10px 6px 7px;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  background: var(--surface);
   text-align: start;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.profile-button:hover,
+.profile-button[aria-expanded="true"] {
+  border-color: var(--primary);
+  background: var(--soft-primary);
+  box-shadow: 0 4px 14px rgb(35 24 49 / 8%);
+}
+
+.family-menu-wrapper {
+  position: relative;
+}
+
+.family-menu-chevron {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 180ms ease;
+}
+
+.profile-button[aria-expanded="true"] .family-menu-chevron {
+  transform: rotate(180deg);
+}
+
+.family-details-panel {
+  position: absolute;
+  inset-block-start: 52px;
+  inset-inline-end: 0;
+  z-index: 20;
+  width: 290px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.family-details-panel h2 {
+  margin-bottom: 14px;
+  font-size: 20px;
+}
+
+.family-details-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+.family-details-list > div {
+  min-width: 0;
+}
+
+.family-details-list dt {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.family-details-list dd {
+  overflow-wrap: anywhere;
+  margin: 2px 0 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.family-plan {
+  margin-top: 18px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: var(--background);
+}
+
+.family-plan h3 {
+  margin: 0 0 10px;
+  font-size: 12px;
+}
+
+.family-plan-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.family-plan-list li {
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: var(--soft-primary);
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.family-edit-button {
+  width: 100%;
+  margin-top: 16px;
 }
 
 .avatar {
@@ -1109,6 +1212,13 @@ progress::-moz-progress-bar {
     inset-block-start: 70px;
     inset-inline-end: 15px;
     width: min(325px, calc(100vw - 30px));
+  }
+
+  .family-details-panel {
+    position: fixed;
+    inset-block-start: 70px;
+    inset-inline-end: 15px;
+    width: min(290px, calc(100vw - 30px));
   }
 }
 

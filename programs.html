@@ -218,17 +218,14 @@
           <div class="hero-composition">
             <figure class="hero-photo">
               <img
-                src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1100&q=85"
+                src="./images/dance.jpg"
                 alt="Expressive dancers performing together on stage"
                 width="900"
                 height="1100"
                 fetchpriority="high"
                 data-fallback
               >
-              <figcaption>
-                <span>01 / MOVEMENT</span>
-                <strong>Small steps. Beautiful beginnings.</strong>
-              </figcaption>
+             
             </figure>
 
             <div class="hero-seal">
@@ -253,65 +250,7 @@
 
     </section>
 
-    <!-- 2. PROGRAM FINDER -->
-    <section class="section" id="finder" aria-labelledby="finderTitle">
-      <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <span class="eyebrow">START WITH WHAT THEY LOVE</span>
-            <h2 id="finderTitle">A little help finding<br><em>their first spark.</em></h2>
-          </div>
-          <p>
-            Choose an interest and age group to explore suitable starting
-            points. Our team can help with placement and class availability.
-          </p>
-        </div>
-
-        <form class="finder-panel reveal" id="programFinder">
-          <div class="finder-intro">
-            <span class="feature-icon">
-              <svg class="icon" aria-hidden="true"><use href="#sparkles"/></svg>
-            </span>
-            <div>
-              <h3>Find their creative fit</h3>
-              <p>Two small choices. A world to discover.</p>
-            </div>
-          </div>
-
-          <div class="finder-fields">
-            <label for="interest">
-              Their interest
-              <select id="interest" name="interest">
-                <option value="all">Dance & music</option>
-                <option value="dance">Dance & movement</option>
-                <option value="music">Music & melody</option>
-              </select>
-            </label>
-
-            <label for="age">
-              Their age group
-              <select id="age" name="age">
-                <option value="all">All ages, 3–16</option>
-                <option value="3-5">Ages 3–5</option>
-                <option value="6-9">Ages 6–9</option>
-                <option value="10-16">Ages 10–16</option>
-              </select>
-            </label>
-
-            <button class="button button-primary" type="submit">
-              Show programs
-              <svg class="icon directional" aria-hidden="true"><use href="#arrow"/></svg>
-            </button>
-          </div>
-
-          <p class="finder-result" id="finderResult" role="status" aria-live="polite">
-            Explore all 12 dance and music programs below.
-          </p>
-          <button class="reset-button" type="reset">Reset filters</button>
-        </form>
-      </div>
-    </section>
-
+   
     <!-- 3. DANCE PROGRAMS -->
     <section class="section section-alt" id="dance" aria-labelledby="danceTitle">
       <div class="container">
@@ -328,9 +267,8 @@
 
         <div class="program-grid">
           <article class="program-card reveal" id="ballet" data-category="dance" data-min="4" data-max="8">
-            <div class="program-art art-ballet">
-              <span class="art-number">01</span>
-              <span class="art-symbol" aria-hidden="true">✧</span>
+            <div class="program-art art-ballet has-image">
+              <img src="./images/ballet 1.jpg" alt="Young ballet dancers practicing together" loading="lazy" data-fallback>
               <span class="age-tag">Ages 4–8</span>
               <span class="art-label">BALANCE / GRACE</span>
             </div>
@@ -351,9 +289,8 @@
           </article>
 
           <article class="program-card reveal" id="hiphop" data-category="dance" data-min="6" data-max="16">
-            <div class="program-art art-hiphop">
-              <span class="art-number">02</span>
-              <span class="art-symbol" aria-hidden="true">↗</span>
+            <div class="program-art art-hiphop has-image">
+              <img src="./images/hip hop 1.png" alt="Young hip-hop dancers practicing choreography" loading="lazy" data-fallback>
               <span class="age-tag">Ages 6–16</span>
               <span class="art-label">GROOVE / PERSONALITY</span>
             </div>
@@ -374,9 +311,8 @@
           </article>
 
           <article class="program-card reveal" id="contemporary" data-category="dance" data-min="8" data-max="16">
-            <div class="program-art art-contemporary">
-              <span class="art-number">03</span>
-              <span class="art-symbol" aria-hidden="true">〰</span>
+            <div class="program-art art-contemporary has-image">
+              <img src="./images/contempory 2.jpg" alt="Contemporary dancer practicing an expressive pose" loading="lazy" data-fallback>
               <span class="age-tag">Ages 8–16</span>
               <span class="art-label">FLOW / EXPRESSION</span>
             </div>
@@ -397,9 +333,8 @@
           </article>
 
           <article class="program-card reveal" id="bollywood" data-category="dance" data-min="5" data-max="16">
-            <div class="program-art art-bollywood">
-              <span class="art-number">04</span>
-              <span class="art-symbol" aria-hidden="true">✺</span>
+            <div class="program-art art-bollywood has-image">
+              <img src="./images/dance 2.jpg" alt="Children performing a lively group dance" loading="lazy" data-fallback>
               <span class="age-tag">Ages 5–16</span>
               <span class="art-label">ENERGY / EXPRESSION</span>
             </div>
@@ -420,9 +355,8 @@
           </article>
 
           <article class="program-card reveal" id="classical" data-category="dance" data-min="6" data-max="16">
-            <div class="program-art art-classical">
-              <span class="art-number">05</span>
-              <span class="art-symbol" aria-hidden="true">❋</span>
+            <div class="program-art art-classical has-image">
+              <img src="./images/classical 1.jpg" alt="Students practicing Indian classical dance gestures" loading="lazy" data-fallback>
               <span class="age-tag">Ages 6–16</span>
               <span class="art-label">TRADITION / TECHNIQUE</span>
             </div>
@@ -443,9 +377,8 @@
           </article>
 
           <article class="program-card reveal" id="creative-movement" data-category="dance" data-min="3" data-max="5">
-            <div class="program-art art-creative">
-              <span class="art-number">06</span>
-              <span class="art-symbol" aria-hidden="true">∞</span>
+            <div class="program-art art-creative has-image">
+              <img src="./images/small moves.jpg" alt="Children exploring playful movement together" loading="lazy" data-fallback>
               <span class="age-tag">Ages 3–5</span>
               <span class="art-label">PLAY / DISCOVERY</span>
             </div>
@@ -488,8 +421,9 @@
 
         <div class="music-grid">
           <article class="music-card reveal" id="piano" data-category="music" data-min="5" data-max="16">
-            <div class="instrument-art piano-art" aria-hidden="true">
-              <span>♬</span><small>01 / KEYS</small>
+            <div class="instrument-art piano-art">
+              <img src="./images/piano1.jpg" alt="Piano teacher giving a lesson to children" loading="lazy" data-fallback>
+              <small>KEYS</small>
             </div>
             <div class="music-body">
               <span class="card-kicker">AGES 5–16</span>
@@ -500,8 +434,9 @@
           </article>
 
           <article class="music-card reveal" id="guitar" data-category="music" data-min="7" data-max="16">
-            <div class="instrument-art" aria-hidden="true">
-              <span>𝄞</span><small>02 / STRINGS</small>
+            <div class="instrument-art">
+              <img src="./images/guiter 1.jpg" alt="A child getting a guitar lesson from a musician" loading="lazy" data-fallback>
+              <small>STRINGS</small>
             </div>
             <div class="music-body">
               <span class="card-kicker">AGES 7–16</span>
@@ -512,8 +447,9 @@
           </article>
 
           <article class="music-card reveal" id="violin" data-category="music" data-min="6" data-max="16">
-            <div class="instrument-art secondary-art" aria-hidden="true">
-              <span>♪</span><small>03 / MELODY</small>
+            <div class="instrument-art secondary-art">
+              <img src="./images/violen.jpg" alt="A young musician playing a violin" loading="lazy" data-fallback>
+              <small>MELODY</small>
             </div>
             <div class="music-body">
               <span class="card-kicker">AGES 6–16</span>
@@ -524,8 +460,9 @@
           </article>
 
           <article class="music-card reveal" id="vocals" data-category="music" data-min="5" data-max="16">
-            <div class="instrument-art secondary-art" aria-hidden="true">
-              <span>♫</span><small>04 / VOICE</small>
+            <div class="instrument-art secondary-art">
+              <img src="./images/vocals 1.jpg" alt="Children gathered around a piano in a music room" loading="lazy" data-fallback>
+              <small>VOICE</small>
             </div>
             <div class="music-body">
               <span class="card-kicker">AGES 5–16</span>
@@ -536,8 +473,9 @@
           </article>
 
           <article class="music-card reveal" id="percussion" data-category="music" data-min="6" data-max="16">
-            <div class="instrument-art" aria-hidden="true">
-              <span>♩</span><small>05 / RHYTHM</small>
+            <div class="instrument-art">
+              <img src="./images/drums (1).jpg" alt="A child learning to play the drums" loading="lazy" data-fallback>
+              <small>RHYTHM</small>
             </div>
             <div class="music-body">
               <span class="card-kicker">AGES 6–16</span>
@@ -548,8 +486,9 @@
           </article>
 
           <article class="music-card reveal" id="early-music" data-category="music" data-min="3" data-max="5">
-            <div class="instrument-art secondary-art" aria-hidden="true">
-              <span>✧</span><small>06 / DISCOVERY</small>
+            <div class="instrument-art secondary-art">
+              <img src="./images/musical.jpg" alt="Children taking part in a kindergarten music lesson" loading="lazy" data-fallback>
+              <small>DISCOVERY</small>
             </div>
             <div class="music-body">
               <span class="card-kicker">AGES 3–5</span>
@@ -566,64 +505,7 @@
       </div>
     </section>
 
-    <!-- 5. AGE PATHWAYS -->
-    <section class="section section-alt" id="pathways" aria-labelledby="pathwaysTitle">
-      <div class="container">
-        <div class="section-heading centered reveal">
-          <span class="eyebrow">GROWING AT THEIR OWN PACE</span>
-          <h2 id="pathwaysTitle">The right beginning.<br><em>Room for what comes next.</em></h2>
-          <p>
-            Age guides the starting point. Interests, readiness, and experience
-            help us shape the next step.
-          </p>
-        </div>
-
-        <div class="three-grid">
-          <article class="pathway-card reveal">
-            <span class="pathway-number" aria-hidden="true">01</span>
-            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#heart"/></svg></span>
-            <span class="card-kicker">AGES 3–5 / DISCOVER</span>
-            <h3>Little beginnings</h3>
-            <p>Short, playful activities build familiarity with rhythm, movement, and being part of a group.</p>
-            <ul class="program-points">
-              <li>Imagination before perfection</li>
-              <li>Simple listening and turn-taking</li>
-              <li>Gentle introductions to new skills</li>
-            </ul>
-            <a class="text-link age-shortcut" href="#finder" data-age="3-5">Find their beginning <svg class="icon directional" aria-hidden="true"><use href="#arrow"/></svg></a>
-          </article>
-
-          <article class="pathway-card reveal">
-            <span class="pathway-number" aria-hidden="true">02</span>
-            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#book"/></svg></span>
-            <span class="card-kicker">AGES 6–9 / EXPLORE</span>
-            <h3>Growing curiosity</h3>
-            <p>Children connect playful exploration with clear foundations and achievable creative challenges.</p>
-            <ul class="program-points">
-              <li>Foundational technique and practice</li>
-              <li>Creative tasks and collaboration</li>
-              <li>Small goals worth celebrating</li>
-            </ul>
-            <a class="text-link age-shortcut" href="#finder" data-age="6-9">Explore their options <svg class="icon directional" aria-hidden="true"><use href="#arrow"/></svg></a>
-          </article>
-
-          <article class="pathway-card reveal">
-            <span class="pathway-number" aria-hidden="true">03</span>
-            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#award"/></svg></span>
-            <span class="card-kicker">AGES 10–16 / EXPRESS</span>
-            <h3>A voice of their own</h3>
-            <p>Developing learners refine skills, explore personal expression, and take greater ownership of practice.</p>
-            <ul class="program-points">
-              <li>Progressive creative challenges</li>
-              <li>Individual expression and teamwork</li>
-              <li>Performance preparation and reflection</li>
-            </ul>
-            <a class="text-link age-shortcut" href="#finder" data-age="10-16">Discover their next step <svg class="icon directional" aria-hidden="true"><use href="#arrow"/></svg></a>
-          </article>
-        </div>
-      </div>
-    </section>
-
+    
     <!-- 6. LEARNING JOURNEY -->
     <section class="section" id="journey" aria-labelledby="journeyTitle">
       <div class="container journey-layout">
@@ -703,24 +585,35 @@
       </div>
     </section>
 
-    <!-- 8. SAME FINAL CTA LAYOUT -->
+    <!-- PROGRAMS PAGE CTA -->
     <section class="section final-section" aria-labelledby="finalTitle">
       <div class="container">
-        <div class="final-cta reveal">
+        <div class="final-cta final-cta--programs reveal">
           <svg class="icon final-icon" aria-hidden="true"><use href="#sparkles"/></svg>
 
-          <span class="eyebrow">A NEW CHAPTER STARTS WITH A LITTLE CURIOSITY</span>
+          <span class="eyebrow">A GOOD FIT STARTS WITH THEIR INTERESTS</span>
 
           <h2 id="finalTitle">
-            Let’s find what makes<br>their eyes <em>light up.</em>
+            Pick a path.<br>Let curiosity <em>lead.</em>
           </h2>
 
-          <p>Explore a world of movement, melody, friendship, and possibilities.</p>
+          <p>Share what your child loves, and we’ll help you find a class that feels right.</p>
 
-          <a class="button button-primary" href="#finder">
-            Discover their next adventure
-            <svg class="icon directional" aria-hidden="true"><use href="#arrow"/></svg>
-          </a>
+          <ul class="final-program-paths" aria-label="Explore program types">
+            <li>Move</li>
+            <li>Make music</li>
+            <li>Perform</li>
+          </ul>
+
+          <div class="final-cta-actions">
+            <a class="button button-primary" href="#finder">
+              Match a class
+              <svg class="icon directional" aria-hidden="true"><use href="#arrow"/></svg>
+            </a>
+            <a class="button button-secondary" href="contact.html">
+              Ask a question
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -199,24 +199,71 @@
   </header>
 
   <main id="main">
-    <section class="premium-hero">
-      <div class="container premium-grid">
-        <div>
-        <span
-            class="eyebrow">MADE FOR THEIR NEXT LITTLE LEAP</span>
-          <h1>More ways to grow.<br>More room to <em>shine.</em></h1>
-          <p>From their very first beat to a moment on stage, find a creative experience that meets your child where
-            they are.</p>
-          <div class="button-row"><a class="button button-primary" href="#services">Explore our services ↗</a><a
-              class="button button-secondary" href="#gallery">A glimpse of the joy</a></div>
-          <div class="hero-details"><span>Ages 3–16</span><span>Dance & music</span><span>Thoughtful guidance</span>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">
+            <svg class="icon" aria-hidden="true"><use href="#sparkles"/></svg>
+            MADE FOR THEIR NEXT LITTLE LEAP
+          </span>
+
+          <h1 id="heroTitle">
+            More ways to grow.<br>
+            More room to <em>shine.</em>
+          </h1>
+
+          <p>
+            From their very first beat to a moment on stage, find a
+            creative experience that meets your child where they are.
+          </p>
+
+          <div class="button-row">
+            <a class="button button-primary" href="#services">
+              Explore our services
+              <svg class="icon directional" aria-hidden="true"><use href="#arrow"/></svg>
+            </a>
+            <a class="button button-secondary" href="#gallery">
+              A glimpse of the joy
+            </a>
+          </div>
+
+          <div class="hero-details">
+            <span><i></i> Ages 3–16</span>
+            <span><i></i> Dance & music</span>
+            <span><i></i> Thoughtful guidance</span>
           </div>
         </div>
-        <div class="editorial-image"><img
-            src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1400&q=85"
-            alt="Dancers sharing an expressive performance" data-fallback fetchpriority="high">
-          <div class="editorial-label"><span class="eyebrow">A LITTLE RHYTHM, EVERY DAY</span><strong>Small
-              steps.<br>Beautiful possibilities.</strong></div><span class="orbit" aria-hidden="true">♫</span>
+
+        <div class="hero-art">
+          <div class="hero-image-wrap">
+            <img
+              class="hero-image"
+              src="./images/hip hop 3.jpg"
+              alt="Dancers sharing an expressive performance"
+              fetchpriority="high"
+              width="1000"
+              height="1200"
+              data-fallback
+            >
+
+            <div class="image-caption">
+              <span class="caption-icon">
+                <svg class="icon" aria-hidden="true"><use href="#music"/></svg>
+              </span>
+              <div>
+                <strong>A little rhythm, every day</strong>
+                <small>Small steps. Beautiful possibilities.</small>
+              </div>
+            </div>
+          </div>
+
+          <span class="floating-note note-one" aria-hidden="true">♪</span>
+          <span class="floating-note note-two" aria-hidden="true">♫</span>
+
+          <div class="floating-label">
+            <svg class="icon" aria-hidden="true"><use href="#sparkles"/></svg>
+            Made for little dreamers
+          </div>
         </div>
       </div>
     </section>
@@ -298,23 +345,17 @@
             academy’s own work.</p>
         </div>
         <div class="work-gallery">
-          <figure><img
-              src="./images/guiter.jpg"
-              alt="Expressive dancers on stage" loading="lazy" data-fallback>
+          <figure><img src="./images/hip hop 1.png" alt="Expressive dancers on stage" loading="lazy" data-fallback>
             <figcaption>
               <h3>The joy of movement</h3>
             </figcaption>
           </figure>
-          <figure><img
-              src="./images/vocals 1.jpg"
-              alt="A collaborative learning space" loading="lazy" data-fallback>
+          <figure><img src="./images/vocals 1.jpg" alt="A collaborative learning space" loading="lazy" data-fallback>
             <figcaption>
               <h3>Space to discover</h3>
             </figcaption>
           </figure>
-          <figure><img
-              src="./images/small moves.jpg"
-              alt="Dancers moving together" loading="lazy" data-fallback>
+          <figure><img src="./images/ballet2.jpg" alt="Dancers moving together" loading="lazy" data-fallback>
             <figcaption>
               <h3>Growing together</h3>
             </figcaption>
@@ -360,28 +401,33 @@
     </section>
     <section class="section final-section" aria-labelledby="finalTitle">
       <div class="container">
-        <div class="final-cta reveal">
+        <div class="final-cta final-cta--services reveal">
           <svg class="icon final-icon" aria-hidden="true">
-            <use href="#sparkles"/>
+            <use href="#sparkles" />
           </svg>
 
-          <span class="eyebrow">LET’S FIND THEIR HAPPY PLACE</span>
+          <span class="eyebrow">A LITTLE GUIDANCE GOES A LONG WAY</span>
 
           <h2 id="finalTitle">
-            Their next chapter<br>starts with <em>a little rhythm.</em>
+            Let’s find a service<br>that fits <em>your family.</em>
           </h2>
 
           <p>
-            Tell us what makes your child light up. We’ll help you find
-            a comfortable place to begin.
+            Ask about classes, workshops, studio visits, or support
+            finding a suitable starting point.
           </p>
 
-          <a class="button button-primary" id="serviceEnquiry" href="contact.html">
-            Let’s talk
-            <svg class="icon directional" aria-hidden="true">
-              <use href="#arrow"/>
-            </svg>
-          </a>
+          <div class="final-cta-actions">
+            <a class="button button-primary" id="serviceEnquiry" href="contact.html">
+              Talk with our team
+              <svg class="icon directional" aria-hidden="true">
+                <use href="#arrow" />
+              </svg>
+            </a>
+            <a class="button button-secondary" href="#trial">
+              Explore trial sessions
+            </a>
+          </div>
         </div>
       </div>
     </section>
