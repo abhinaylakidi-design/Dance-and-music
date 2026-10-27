@@ -34,7 +34,7 @@
   color-scheme: dark;
 }
 
-/* BASE */
+
 
 *,
 *::before,
@@ -191,7 +191,7 @@ svg {
   transform: translateY(0);
 }
 
-/* PAGE ELEMENTS */
+
 
 .eyebrow {
   display: inline-flex;
@@ -331,7 +331,7 @@ svg {
   height: 25px;
 }
 
-/* HEADER — HOMEPAGE LAYOUT */
+
 
 .site-header {
   position: sticky;
@@ -526,7 +526,7 @@ svg {
   display: none;
 }
 
-/* 1. PREMIUM HERO */
+
 
 .mentor-hero {
   position: relative;
@@ -739,7 +739,7 @@ svg {
   }
 }
 
-/* 2. APPROACH */
+
 
 .value-card,
 .profile-card,
@@ -786,7 +786,7 @@ svg {
   font-size: .9rem;
 }
 
-/* 3 & 4. INSTRUCTOR CARDS */
+
 
 .profile-card {
   overflow: hidden;
@@ -870,7 +870,7 @@ svg {
   margin-block-start: auto;
 }
 
-/* 5. LESSON */
+
 
 .lesson-layout {
   display: grid;
@@ -956,7 +956,7 @@ svg {
   font-size: .87rem;
 }
 
-/* 6. PARTNERSHIP */
+
 
 .partnership-card {
   display: flex;
@@ -988,7 +988,7 @@ svg {
   font-weight: 700;
 }
 
-/* 7. FAQ */
+
 
 .faq-layout {
   display: grid;
@@ -1063,7 +1063,7 @@ svg {
   font-size: .9rem;
 }
 
-/* 8. FINAL CTA — HOMEPAGE LAYOUT */
+
 
 .section.final-section {
   padding-block: 64px;
@@ -1219,7 +1219,7 @@ svg {
   }
 }
 
-/* FOOTER — HOMEPAGE LAYOUT */
+
 
 .site-footer {
   padding-block-start: 64px;
@@ -1319,7 +1319,7 @@ svg {
   color: var(--muted);
 }
 
-/* REVEAL ANIMATIONS */
+
 
 .reveal-enabled .reveal {
   opacity: 0;
@@ -1356,7 +1356,7 @@ svg {
   background: var(--soft-primary);
 }
 
-/* RTL */
+
 
 [dir="rtl"] .directional {
   transform: scaleX(-1);
@@ -1373,7 +1373,7 @@ svg {
     linear-gradient(0deg, rgb(15 12 21 / 78%), transparent 60%);
 }
 
-/* HOVER EFFECTS */
+
 
 @media (hover: hover) and (pointer: fine) {
   .nav-link:hover,
@@ -1466,7 +1466,7 @@ svg {
   box-shadow: var(--shadow);
 }
 
-/* LAPTOP */
+
 
 @media (max-width: 1250px) {
   .container {
@@ -1546,7 +1546,7 @@ svg {
   }
 }
 
-/* TABLET */
+
 
 @media (max-width: 850px) {
   .section {
@@ -1630,7 +1630,7 @@ svg {
   }
 }
 
-/* MOBILE */
+
 
 @media (max-width: 560px) {
   :root {
@@ -1836,7 +1836,7 @@ svg {
   }
 }
 
-/* REDUCED MOTION */
+
 
 @media (prefers-reduced-motion: reduce) {
   html {

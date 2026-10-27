@@ -42,7 +42,7 @@
   color-scheme: dark;
 }
 
-/* BASE */
+
 
 *,
 *::before,
@@ -205,7 +205,7 @@ svg {
   transform: translateY(0);
 }
 
-/* SHARED ELEMENTS */
+
 
 .eyebrow {
   display: inline-flex;
@@ -350,7 +350,7 @@ svg {
   height: 25px;
 }
 
-/* HEADER */
+
 
 .site-header {
   position: sticky;
@@ -545,7 +545,7 @@ svg {
   display: none;
 }
 
-/* HERO */
+
 
 .hero {
   min-height: calc(100svh - var(--header-height));
@@ -730,7 +730,7 @@ svg {
   }
 }
 
-/* ABOUT */
+
 
 .about-grid {
   display: grid;
@@ -803,7 +803,7 @@ svg {
   color: var(--primary);
 }
 
-/* DANCE CARDS */
+
 
 .image-card,
 .music-card,
@@ -957,7 +957,7 @@ svg {
   color: var(--secondary);
 }
 
-/* MUSIC */
+
 
 .music-layout {
   display: grid;
@@ -1048,7 +1048,7 @@ svg {
   margin-block-start: 14px;
 }
 
-/* LEARNING NOTES */
+
 
 .learning-note {
   margin-block-start: 34px;
@@ -1078,7 +1078,7 @@ svg {
   font-size: .93rem;
 }
 
-/* SERVICES */
+
 
 .service-card {
   position: relative;
@@ -1115,7 +1115,7 @@ svg {
   font-size: .8rem;
 }
 
-/* AGE PATHWAYS */
+
 
 .pathway-heading {
   margin-block-start: 60px;
@@ -1173,7 +1173,7 @@ svg {
   font-weight: 700;
 }
 
-/* PERFORMANCES */
+
 
 .performance-heading {
   max-width: 780px;
@@ -1245,7 +1245,7 @@ svg {
   transition: translate .3s;
 }
 
-/* INSTRUCTORS */
+
 
 .instructor-layout {
   display: grid;
@@ -1295,7 +1295,7 @@ svg {
   font-size: .85rem;
 }
 
-/* EVENTS */
+
 
 .event-card {
   display: flex;
@@ -1366,7 +1366,7 @@ svg {
   flex-shrink: 0;
 }
 
-/* FINAL CTA */
+
 
 .section.final-section {
   padding-block: 64px;
@@ -1494,7 +1494,7 @@ svg {
   }
 }
 
-/* FOOTER */
+
 
 .site-footer {
   padding-block-start: 64px;
@@ -1594,7 +1594,7 @@ svg {
   color: var(--muted);
 }
 
-/* ANIMATIONS */
+
 
 .reveal-enabled .reveal {
   opacity: 0;
@@ -1626,14 +1626,14 @@ svg {
   transition-delay: .15s;
 }
 
-/* IMAGE FALLBACK */
+
 
 .asset-fallback {
   object-fit: contain !important;
   background: var(--soft-primary);
 }
 
-/* RTL */
+
 
 [dir="rtl"] .directional {
   transform: scaleX(-1);
@@ -1644,7 +1644,7 @@ svg {
   letter-spacing: -.025em;
 }
 
-/* HOVER EFFECTS */
+
 
 @media (hover: hover) and (pointer: fine) {
   .nav-link:hover,
@@ -1732,7 +1732,7 @@ svg {
   box-shadow: var(--shadow);
 }
 
-/* LAPTOP */
+
 
 @media (max-width: 1250px) {
   .container {
@@ -1826,7 +1826,7 @@ svg {
   }
 }
 
-/* TABLET */
+
 
 @media (max-width: 850px) {
   .section {
@@ -1925,7 +1925,7 @@ svg {
   }
 }
 
-/* MOBILE */
+
 
 @media (max-width: 767px) {
   .header-actions .header-cta {
@@ -2206,7 +2206,7 @@ svg {
   }
 }
 
-/* REDUCED MOTION */
+
 
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -2226,9 +2226,9 @@ svg {
   }
 }
 
-/* LITTLE RHYTHM — HOME 2 PREMIUM */
 
-/* HERO */
+
+
 
 .premium-hero {
   position: relative;
@@ -2453,7 +2453,7 @@ svg {
   animation: scrollNudge 2s ease-in-out infinite;
 }
 
-/* CREATIVE LABS */
+
 
 .lab-grid {
   display: grid;
@@ -2534,7 +2534,7 @@ svg {
   margin-block-start: 24px;
 }
 
-/* JOURNEY */
+
 
 .journey-grid {
   display: grid;
@@ -2621,7 +2621,7 @@ svg {
   font-size: .92rem;
 }
 
-/* DISCOVERY TABS */
+
 
 .discovery-section {
   background:
@@ -2711,7 +2711,7 @@ svg {
   margin-block-start: 25px;
 }
 
-/* RHYTHM PLAYGROUND */
+
 
 .rhythm-grid {
   display: grid;
@@ -2821,7 +2821,7 @@ svg {
   font-size: .75rem;
 }
 
-/* HOME RITUALS */
+
 
 .ritual-grid {
   display: grid;
@@ -2892,7 +2892,7 @@ svg {
   font-weight: 700;
 }
 
-/* NOTEBOOK */
+
 
 .notebook-grid {
   display: grid;
@@ -2996,7 +2996,7 @@ svg {
   color: var(--text);
 }
 
-/* QUESTIONS */
+
 
 .questions-grid {
   display: grid;
@@ -3073,7 +3073,7 @@ svg {
   font-size: .9rem;
 }
 
-/* PREMIUM MOTION */
+
 
 @keyframes premiumEntrance {
   from {
@@ -3201,7 +3201,7 @@ svg {
   }
 }
 
-/* RESPONSIVE */
+
 
 @media (max-width: 1250px) {
   .premium-hero-grid {
@@ -3497,7 +3497,7 @@ svg {
   }
 }
 
-/* ACCESSIBILITY */
+
 
 @media (prefers-reduced-motion: reduce) {
   .hero-enter,

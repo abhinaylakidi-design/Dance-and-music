@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     direction: "little-rhythm-direction"
   };
 
-  /* STORAGE */
+
 
   function readStorage(key) {
     try {
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       localStorage.setItem(key, value);
     } catch {
-      // Preferences continue to work without browser storage.
+
     }
   }
 
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     button?.querySelector("use")?.setAttribute("href", `#${name}`);
   }
 
-  /* LIGHT / DARK MODE */
+
 
   function applyTheme(theme) {
     const isDark = theme === "dark";
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* RTL / LTR */
+
 
   function applyDirection(direction) {
     const isRTL = direction === "rtl";
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
     writeStorage(storageKeys.direction, next);
   });
 
-  /* HOME DROPDOWN */
+
 
   function setDropdown(open, restoreFocus = false) {
     homeToggle?.setAttribute("aria-expanded", String(open));
@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* MOBILE NAVIGATION */
+
 
   function setMenu(open, restoreFocus = false) {
     const shouldOpen = open && !desktopMedia.matches;
@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* ESCAPE & KEYBOARD FOCUS */
+
 
   document.addEventListener("keydown", (event) => {
     const dropdownOpen =
@@ -277,7 +277,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* ACTIVE NAVIGATION */
+
 
   function pageName(url) {
     const path = new URL(url, window.location.href).pathname;
@@ -303,7 +303,7 @@ document.addEventListener("DOMContentLoaded", () => {
     homeGroup?.querySelector(".nav-link")?.classList.add("active");
   }
 
-  /* SECTION REVEAL ANIMATIONS */
+
 
   const reveals = document.querySelectorAll(".reveal");
   let revealObserver = null;
@@ -348,7 +348,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* IMAGE FALLBACK */
+
 
   const fallbackImage =
     "data:image/svg+xml;charset=UTF-8," +
@@ -386,7 +386,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* FOOTER YEAR */
+
 
   const year = document.getElementById("year");
 

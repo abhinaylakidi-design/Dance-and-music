@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     direction: "little-rhythm-direction"
   };
 
-  /* STORAGE */
+
 
   function readStorage(key) {
     try {
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       localStorage.setItem(key, value);
     } catch {
-      // Preferences still work without storage.
+
     }
   }
 
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     button?.querySelector("use")?.setAttribute("href", `#${name}`);
   }
 
-  /* LIGHT / DARK */
+
 
   function applyTheme(theme) {
     const isDark = theme === "dark";
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* RTL / LTR */
+
 
   function applyDirection(direction) {
     const isRTL = direction === "rtl";
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
     writeStorage(storageKeys.direction, next);
   });
 
-  /* HOME DROPDOWN */
+
 
   function setDropdown(open, restoreFocus = false) {
     homeToggle?.setAttribute("aria-expanded", String(open));
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* MOBILE NAVIGATION */
+
 
   function setMenu(open, restoreFocus = false) {
     navigation?.classList.toggle("is-open", open);
@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* ESCAPE / FOCUS */
+
 
   document.addEventListener("keydown", (event) => {
     const dropdownOpen =
@@ -244,7 +244,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* ACTIVE NAVIGATION */
+
 
   function pageName(url) {
     const path = new URL(url, window.location.href).pathname;
@@ -269,7 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
     homeGroup?.querySelector(".nav-link")?.classList.add("active");
   }
 
-  /* REVEAL ANIMATIONS */
+
 
   const reveals = document.querySelectorAll(".reveal");
   let revealObserver = null;
@@ -305,7 +305,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* PROGRAM FINDER */
+
 
   const finder = document.getElementById("programFinder");
   const interestSelect = document.getElementById("interest");
@@ -337,7 +337,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const categoryMatches =
         interest === "all" || card.dataset.category === interest;
 
-      // Age ranges match when they overlap.
+
       const ageMatches = minAge <= upperAge && maxAge >= lowerAge;
       const visible = categoryMatches && ageMatches;
 
@@ -379,7 +379,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   finder?.addEventListener("reset", () => {
-    // Let the browser reset the select values first.
+
     requestAnimationFrame(filterPrograms);
   });
 
@@ -393,7 +393,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* SHOW A DIRECTLY LINKED PROGRAM IF FILTERS HID IT */
+
 
   function revealHashTarget() {
     if (!window.location.hash) return;
@@ -427,7 +427,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("hashchange", revealHashTarget);
   revealHashTarget();
 
-  /* IMAGE FALLBACK */
+
 
   const fallbackImage =
     "data:image/svg+xml;charset=UTF-8," +
@@ -464,7 +464,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* FOOTER YEAR */
+
 
   const year = document.getElementById("year");
 

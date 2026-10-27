@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let sessionEnded = false;
   let toastTimer;
 
-  /* STORAGE */
+
 
   function readStorage(key) {
     try {
@@ -68,7 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* SAMPLE DATA */
 
   const defaultProfile = {
     name: "Avery Parker",
@@ -234,7 +233,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  /* SHARED RENDER HELPERS */
 
   function metricCard(label, value, note) {
     return `
@@ -319,7 +317,6 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   }
 
-  /* OVERVIEW */
 
   function overviewPage() {
     const practiceMinutes = 60 + completedPractice.length * 5;
@@ -402,7 +399,6 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   }
 
-  /* CLASSES */
 
   function classesPage() {
     return `
@@ -521,7 +517,6 @@ document.addEventListener("DOMContentLoaded", () => {
     $("#classEmptyState").hidden = matchingClasses.length > 0;
   }
 
-  /* LEARNING PROGRESS */
 
   function progressPage() {
     return `
@@ -586,7 +581,6 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   }
 
-  /* PAYMENTS */
 
   function paymentsPage() {
     return `
@@ -667,7 +661,6 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   }
 
-  /* RESOURCES */
 
   function resourcesPage() {
     return `
@@ -722,7 +715,6 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   }
 
-  /* PROFILE */
 
   function getInitials() {
     return profile.name
@@ -877,7 +869,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* PAGE NAVIGATION */
 
   const pageRenderers = {
     overview: overviewPage,
@@ -956,7 +947,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* DOWNLOADS */
 
   function downloadText(filename, content) {
     const blob = new Blob([content], {
@@ -1021,7 +1011,6 @@ document.addEventListener("DOMContentLoaded", () => {
     downloadText(`little-rhythm-activity-${index + 1}.txt`, text);
   }
 
-  /* CLICK ACTIONS */
 
   document.addEventListener("click", (event) => {
     const target = event.target;
@@ -1084,7 +1073,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* LIGHT / DARK */
 
   const systemTheme = window.matchMedia(
     "(prefers-color-scheme: dark)"
@@ -1130,7 +1118,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* RTL / LTR */
 
   function applyDirection(direction) {
     const rtl = direction === "rtl";
@@ -1157,7 +1144,6 @@ document.addEventListener("DOMContentLoaded", () => {
     writeStorage(storageKeys.direction, next);
   });
 
-  /* MOBILE SIDEBAR */
 
   function closeSidebar(restoreFocus = false) {
     document.body.classList.remove("sidebar-open");
@@ -1200,7 +1186,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-  /* NOTIFICATIONS */
 
   function closeNotifications(restoreFocus = false) {
     notificationPanel.hidden = true;
@@ -1259,7 +1244,6 @@ document.addEventListener("DOMContentLoaded", () => {
     showToast("All notifications marked as read.");
   });
 
-  /* KEYBOARD ACCESSIBILITY */
 
   document.addEventListener("keydown", (event) => {
     if (sessionEnded) {
@@ -1304,7 +1288,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* DEMO LOGOUT */
 
   const logoutDialog = $("#logoutDialog");
 
@@ -1357,7 +1340,6 @@ document.addEventListener("DOMContentLoaded", () => {
     $("#loggedOutHeading").focus();
   });
 
-  /* TOAST */
 
   function showToast(message) {
     const toast = $("#toast");
@@ -1372,7 +1354,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 4500);
   }
 
-  /* INITIALIZE */
 
   $("#year").textContent = new Date().getFullYear();
 

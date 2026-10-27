@@ -34,7 +34,7 @@
   color-scheme: dark;
 }
 
-/* BASE */
+
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -132,7 +132,7 @@ svg { display: inline-block; }
 
 .skip-link:focus { transform: translateY(0); }
 
-/* COMMON ELEMENTS */
+
 
 .eyebrow {
   display: inline-flex;
@@ -250,7 +250,7 @@ svg { display: inline-block; }
 
 .feature-icon .icon { width: 25px; height: 25px; }
 
-/* SAME HEADER */
+
 
 .site-header {
   position: sticky;
@@ -414,7 +414,7 @@ svg { display: inline-block; }
 
 .menu-toggle, .nav-cta { display: none; }
 
-/* 1. PREMIUM HERO */
+
 
 .program-hero {
   position: relative;
@@ -641,7 +641,7 @@ svg { display: inline-block; }
   vertical-align: middle;
 }
 
-/* 2. FINDER */
+
 
 .finder-panel {
   padding: 32px;
@@ -692,7 +692,7 @@ svg { display: inline-block; }
   text-underline-offset: 4px;
 }
 
-/* 3. DANCE */
+
 
 .program-grid {
   display: grid;
@@ -851,7 +851,7 @@ svg { display: inline-block; }
 
 .program-body .text-link { margin-block-start: auto; padding-block-start: 8px; }
 
-/* 4. MUSIC */
+
 
 .music-grid {
   display: grid;
@@ -939,7 +939,7 @@ svg { display: inline-block; }
   text-align: center;
 }
 
-/* 5. PATHWAYS */
+
 
 .pathway-card { position: relative; overflow: hidden; padding: 30px; }
 
@@ -959,7 +959,7 @@ svg { display: inline-block; }
 .pathway-card > p { font-size: .9rem; }
 .pathway-card .text-link { margin-block-start: 8px; font-size: .8rem; }
 
-/* 6. JOURNEY */
+
 
 .journey-layout {
   display: grid;
@@ -1023,7 +1023,7 @@ svg { display: inline-block; }
 .journey-step h3 { margin-block: 9px 12px; }
 .journey-step p { font-size: .9rem; }
 
-/* 7. FAQ */
+
 
 .faq-layout {
   display: grid;
@@ -1072,7 +1072,7 @@ svg { display: inline-block; }
 
 .faq-item[open] p { animation: enter-up .3s both; }
 
-/* 8. SAME FINAL CTA */
+
 
 .section.final-section { padding-block: 64px; }
 
@@ -1202,7 +1202,7 @@ svg { display: inline-block; }
   }
 }
 
-/* SAME FOOTER */
+
 
 .site-footer {
   padding-block-start: 64px;
@@ -1288,7 +1288,7 @@ svg { display: inline-block; }
   color: var(--muted);
 }
 
-/* ANIMATIONS */
+
 
 .reveal-enabled .reveal {
   opacity: 0;
@@ -1322,13 +1322,13 @@ svg { display: inline-block; }
   to { transform: scaleY(1); }
 }
 
-/* RTL */
+
 
 [dir="rtl"] .directional { transform: scaleX(-1); }
 [dir="rtl"] h1, [dir="rtl"] h2 { letter-spacing: -.025em; }
 [dir="rtl"] .hero-photo { transform: rotate(-3deg); }
 
-/* HOVER */
+
 
 @media (hover: hover) and (pointer: fine) {
   .nav-link:hover,
@@ -1396,7 +1396,7 @@ svg { display: inline-block; }
   box-shadow: var(--shadow);
 }
 
-/* LAPTOP */
+
 
 @media (max-width: 1250px) {
   .container { width: min(1240px, calc(100% - 48px)); }
@@ -1443,7 +1443,7 @@ svg { display: inline-block; }
   .footer-grid { gap: 25px; }
 }
 
-/* TABLET */
+
 
 @media (max-width: 900px) {
   .program-grid, .music-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -1482,7 +1482,7 @@ svg { display: inline-block; }
   .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 35px; }
 }
 
-/* MOBILE */
+
 
 @media (max-width: 767px) {
   .header-actions .header-cta { display: none; }
@@ -1598,7 +1598,7 @@ svg { display: inline-block; }
   .sound-bars { display: none; }
 }
 
-/* REDUCED MOTION */
+
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

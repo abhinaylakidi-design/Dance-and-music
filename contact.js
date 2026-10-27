@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     direction: "little-rhythm-direction"
   };
 
-  /* STORAGE */
+
 
   function readStorage(key) {
     try {
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       localStorage.setItem(key, value);
     } catch {
-      // Controls continue working without storage.
+
     }
   }
 
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     button?.querySelector("use")?.setAttribute("href", `#${name}`);
   }
 
-  /* LIGHT / DARK */
+
 
   function applyTheme(theme) {
     const isDark = theme === "dark";
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* RTL / LTR */
+
 
   function applyDirection(direction) {
     const isRTL = direction === "rtl";
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     writeStorage(storageKeys.direction, next);
   });
 
-  /* HOME DROPDOWN */
+
 
   function setDropdown(open, restoreFocus = false) {
     homeToggle?.setAttribute("aria-expanded", String(open));
@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* MOBILE NAVIGATION */
+
 
   function setMenu(open, restoreFocus = false) {
     navigation?.classList.toggle("is-open", open);
@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (event.matches) setMenu(false);
   });
 
-  /* ESCAPE AND FOCUS */
+
 
   document.addEventListener("keydown", (event) => {
     const dropdownOpen =
@@ -231,7 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* ACTIVE LINKS */
+
 
   function pageName(url) {
     const path = new URL(url, window.location.href).pathname;
@@ -256,7 +256,7 @@ document.addEventListener("DOMContentLoaded", () => {
     homeGroup?.querySelector(".nav-link")?.classList.add("active");
   }
 
-  /* SECTION REVEALS */
+
 
   const reveals = document.querySelectorAll(".reveal");
 
@@ -283,7 +283,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* ENQUIRY FORM — EMAIL DRAFT */
+
 
   const form = document.getElementById("contactForm");
   const formStatus = document.getElementById("formStatus");
@@ -299,7 +299,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return String(data.get(name) || "").trim();
     }
 
-    // Validate meaningful text after trimming whitespace.
+
     for (const name of ["parentName", "message"]) {
       const field = form.elements.namedItem(name);
 
@@ -310,7 +310,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // Replace this with your academy's actual email address.
+
     const recipient = "hello@littlerhythm.example";
 
     const subject = `Little Rhythm enquiry — ${value("interest")}`;
@@ -352,7 +352,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (formStatus) formStatus.textContent = "";
   });
 
-  /* IMAGE FALLBACK */
+
 
   const fallbackImage =
     "data:image/svg+xml;charset=UTF-8," +
@@ -387,7 +387,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* FOOTER YEAR */
+
 
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();

@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     direction: "little-rhythm-direction"
   };
 
-  /* STORAGE */
+
 
   function readStorage(key) {
     try {
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       localStorage.setItem(key, value);
     } catch {
-      // Controls remain usable without storage.
+
     }
   }
 
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ?.setAttribute("href", `#${name}`);
   }
 
-  /* LIGHT / DARK MODE */
+
 
   function applyTheme(theme) {
     const isDark = theme === "dark";
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* RTL / LTR */
+
 
   function applyDirection(direction) {
     const isRTL = direction === "rtl";
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
     writeStorage(storageKeys.direction, next);
   });
 
-  /* HOME DROPDOWN */
+
 
   function setDropdown(open, restoreFocus = false) {
     homeToggle?.setAttribute("aria-expanded", String(open));
@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* MOBILE NAVIGATION */
+
 
   function setMenu(open, restoreFocus = false) {
     navigation?.classList.toggle("is-open", open);
@@ -216,7 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* ESCAPE & FOCUS MANAGEMENT */
+
 
   document.addEventListener("keydown", (event) => {
     const dropdownOpen =
@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* ACTIVE NAVIGATION */
+
 
   function pageName(url) {
     return (
@@ -292,7 +292,7 @@ document.addEventListener("DOMContentLoaded", () => {
     homeGroup?.querySelector(".nav-link")?.classList.add("active");
   }
 
-  /* SECTION REVEALS */
+
 
   const reveals = document.querySelectorAll(".reveal");
   let revealObserver;
@@ -327,7 +327,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* ACCESSIBLE DISCOVERY TABS */
+
 
   const tabList = document.querySelector(".discovery-tabs");
   const tabs = [...document.querySelectorAll(".discovery-tab")];
@@ -393,7 +393,7 @@ document.addEventListener("DOMContentLoaded", () => {
     activateTab(tabs[nextIndex], true);
   });
 
-  /* RHYTHM PLAYGROUND */
+
 
   let audioContext;
   const padTimers = new WeakMap();
@@ -512,7 +512,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* IMAGE FALLBACK */
+
 
   const fallbackImage =
     "data:image/svg+xml;charset=UTF-8," +
@@ -565,7 +565,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* FOOTER YEAR */
+
 
   const year = document.getElementById("year");
 

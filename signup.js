@@ -33,11 +33,11 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       localStorage.setItem(key, value);
     } catch {
-      // Controls still work when storage is unavailable.
+
     }
   }
 
-  /* LIGHT / DARK MODE */
+
 
   function applyTheme(theme) {
     const isDark = theme === "dark";
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* RTL / LTR */
+
 
   function applyDirection(direction) {
     const isRTL = direction === "rtl";
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
     writeStorage(storageKeys.direction, next);
   });
 
-  /* PASSWORD VISIBILITY */
+
 
   document.querySelectorAll("[data-password]").forEach((button) => {
     const input = document.getElementById(button.dataset.password);
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* SIGN-UP VALIDATION */
+
 
   function validatePasswords() {
     if (!password || !confirmPassword) return;
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 
-  /* FORM SUBMISSION */
+
 
   form?.addEventListener("input", () => {
     status.textContent = "";
@@ -181,28 +181,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!form.reportValidity()) return;
 
-    // Replace this message with your authentication API request.
-    // Never save passwords in localStorage.
+
+
 
     status.textContent = form.hasAttribute("data-signup")
       ? "Sign-up is not connected yet. No account has been created."
       : "Sign-in is not connected yet. Please connect your authentication service.";
   });
 
-  /* GOOGLE / APPLE */
+
 
   document.querySelectorAll("[data-provider]").forEach((button) => {
     button.addEventListener("click", () => {
       const provider = button.dataset.provider;
 
-      // Connect your provider's OAuth flow here.
+
 
       status.textContent =
         `${provider} authentication is not connected yet.`;
     });
   });
 
-  /* PASSWORD RECOVERY */
+
 
   document.getElementById("forgotPassword")?.addEventListener(
     "click",

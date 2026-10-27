@@ -33,7 +33,7 @@
   color-scheme: dark;
 }
 
-/* BASE */
+
 
 * {
   box-sizing: border-box;
@@ -165,7 +165,7 @@ small {
   inset-block-start: 12px;
 }
 
-/* LAYOUT */
+
 
 .dashboard-layout {
   display: grid;
@@ -189,7 +189,7 @@ small {
   background: var(--surface);
 }
 
-/* BRAND */
+
 
 .brand {
   display: flex;
@@ -228,7 +228,7 @@ small {
   font-weight: 400;
 }
 
-/* SIDEBAR */
+
 
 .sidebar-caption {
   display: flex;
@@ -313,7 +313,7 @@ small {
   text-align: start;
 }
 
-/* HEADER */
+
 
 .dashboard-header {
   display: flex;
@@ -517,7 +517,7 @@ small {
   font-size: 10px;
 }
 
-/* NOTIFICATIONS */
+
 
 .notification-wrapper {
   position: relative;
@@ -568,7 +568,7 @@ small {
   margin-top: 15px;
 }
 
-/* MAIN CONTENT */
+
 
 main {
   width: 100%;
@@ -607,7 +607,7 @@ main {
   font-size: 10px;
 }
 
-/* SHARED COMPONENTS */
+
 
 .card {
   min-width: 0;
@@ -758,7 +758,7 @@ main {
   font-size: 12px;
 }
 
-/* CLASSES */
+
 
 .class-item {
   display: flex;
@@ -831,7 +831,7 @@ select {
   min-width: 240px;
 }
 
-/* TABLES */
+
 
 .table-wrapper {
   overflow-x: auto;
@@ -870,7 +870,7 @@ tbody tr:last-child td {
   text-align: center;
 }
 
-/* PROGRESS */
+
 
 .progress-item {
   margin-bottom: 22px;
@@ -940,7 +940,7 @@ progress::-moz-progress-bar {
   background: var(--secondary);
 }
 
-/* RESOURCES */
+
 
 .resources-grid {
   display: grid;
@@ -979,7 +979,7 @@ progress::-moz-progress-bar {
   border: 1px solid var(--border);
 }
 
-/* PROFILE */
+
 
 .profile-form {
   display: grid;
@@ -1007,7 +1007,7 @@ progress::-moz-progress-bar {
   font-size: 12px;
 }
 
-/* FOOTER, DIALOG, TOAST */
+
 
 .dashboard-footer {
   padding-top: 30px;
@@ -1048,7 +1048,7 @@ progress::-moz-progress-bar {
   margin: 10vh auto;
 }
 
-/* RESPONSIVE */
+
 
 @media (max-width: 1150px) {
   :root {

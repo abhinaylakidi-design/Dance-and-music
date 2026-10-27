@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     direction: "little-rhythm-direction"
   };
 
-  /* STORAGE */
+
 
   function readStorage(key) {
     try {
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       localStorage.setItem(key, value);
     } catch {
-      // Controls continue working without browser storage.
+
     }
   }
 
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ?.setAttribute("href", `#${name}`);
   }
 
-  /* LIGHT / DARK MODE */
+
 
   function applyTheme(theme) {
     const isDark = theme === "dark";
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* RTL / LTR */
+
 
   function applyDirection(direction) {
     const isRTL = direction === "rtl";
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
     writeStorage(storageKeys.direction, next);
   });
 
-  /* HOME DROPDOWN */
+
 
   function setDropdown(open, restoreFocus = false) {
     homeToggle?.setAttribute(
@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* MOBILE NAVIGATION */
+
 
   function setMenu(open, restoreFocus = false) {
     const shouldOpen = Boolean(open && !desktopMedia.matches);
@@ -248,7 +248,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* ESCAPE & KEYBOARD FOCUS */
+
 
   document.addEventListener("keydown", (event) => {
     const dropdownOpen =
@@ -301,7 +301,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* ACTIVE NAVIGATION */
+
 
   function pageName(url) {
     const path = new URL(
@@ -335,7 +335,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ?.classList.add("active");
   }
 
-  /* SECTION REVEALS */
+
 
   const reveals = document.querySelectorAll(".reveal");
 
@@ -371,7 +371,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* IMAGE FALLBACK */
+
 
   const fallbackImage =
     "data:image/svg+xml;charset=UTF-8," +
@@ -434,7 +434,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-  /* FOOTER YEAR */
+
 
   const year = document.getElementById("year");
 

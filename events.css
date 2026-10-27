@@ -42,7 +42,7 @@
   color-scheme: dark;
 }
 
-/* BASE */
+
 
 *,
 *::before,
@@ -199,7 +199,7 @@ svg {
   transform: translateY(0);
 }
 
-/* BUTTONS & SECTION ELEMENTS */
+
 
 .eyebrow {
   display: inline-flex;
@@ -333,7 +333,7 @@ svg {
   gap: 24px;
 }
 
-/* SAME HEADER */
+
 
 .site-header {
   position: sticky;
@@ -528,7 +528,7 @@ svg {
   display: none;
 }
 
-/* 1. PREMIUM HERO */
+
 
 .event-hero {
   position: relative;
@@ -709,7 +709,7 @@ svg {
   50% { transform: translateY(-8px); }
 }
 
-/* 2. EVENT CALENDAR */
+
 
 .filter-bar {
   display: flex;
@@ -875,7 +875,7 @@ svg {
   font-size: .79rem;
 }
 
-/* 3. DANCE */
+
 
 .split-layout {
   display: grid;
@@ -980,7 +980,7 @@ svg {
   font-size: .86rem;
 }
 
-/* 4. RECITALS */
+
 
 .recital-layout {
   display: grid;
@@ -1064,7 +1064,7 @@ svg {
   font-size: .87rem;
 }
 
-/* 5. WORKSHOPS */
+
 
 .workshop-card {
   position: relative;
@@ -1137,7 +1137,7 @@ svg {
   padding-block-start: 10px;
 }
 
-/* 6. FAMILY */
+
 
 .family-layout {
   display: grid;
@@ -1182,7 +1182,7 @@ svg {
   color: var(--primary);
 }
 
-/* 7. FAQ */
+
 
 .faq-layout {
   display: grid;
@@ -1250,7 +1250,7 @@ svg {
   font-size: .88rem;
 }
 
-/* 8. SAME FINAL CTA */
+
 
 .section.final-section {
   padding-block: 64px;
@@ -1394,7 +1394,7 @@ svg {
   }
 }
 
-/* SAME FOOTER */
+
 
 .site-footer {
   padding-block-start: 64px;
@@ -1494,7 +1494,7 @@ svg {
   color: var(--muted);
 }
 
-/* REVEAL ANIMATIONS */
+
 
 .reveal-enabled .reveal {
   opacity: 0;
@@ -1517,7 +1517,7 @@ svg {
   background: var(--soft-primary);
 }
 
-/* RTL */
+
 
 [dir="rtl"] .directional {
   transform: scaleX(-1);
@@ -1528,7 +1528,7 @@ svg {
   letter-spacing: -.025em;
 }
 
-/* HOVER EFFECTS */
+
 
 @media (hover: hover) and (pointer: fine) {
   .nav-link:hover,
@@ -1625,7 +1625,7 @@ svg {
   box-shadow: var(--shadow);
 }
 
-/* LAPTOP */
+
 
 @media (max-width: 1250px) {
   .container {
@@ -1701,7 +1701,7 @@ svg {
   }
 }
 
-/* TABLET */
+
 
 @media (max-width: 850px) {
   .section {
@@ -1738,7 +1738,7 @@ svg {
   }
 }
 
-/* MOBILE */
+
 
 @media (max-width: 767px) {
   .header-actions .header-cta {
@@ -2011,7 +2011,7 @@ svg {
   }
 }
 
-/* REDUCED MOTION */
+
 
 @media (prefers-reduced-motion: reduce) {
   html {

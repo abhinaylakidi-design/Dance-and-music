@@ -34,7 +34,7 @@
   color-scheme: dark;
 }
 
-/* BASE */
+
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -141,7 +141,7 @@ svg { display: inline-block; }
 
 .skip-link:focus { transform: translateY(0); }
 
-/* SHARED ELEMENTS */
+
 
 .eyebrow {
   display: inline-flex;
@@ -265,7 +265,7 @@ svg { display: inline-block; }
 
 .feature-icon .icon { width: 25px; height: 25px; }
 
-/* SAME HEADER */
+
 
 .site-header {
   position: sticky;
@@ -435,7 +435,7 @@ svg { display: inline-block; }
 
 .menu-toggle, .nav-cta { display: none; }
 
-/* 1. HERO */
+
 
 .contact-hero {
   min-height: calc(100svh - var(--header-height));
@@ -588,7 +588,7 @@ svg { display: inline-block; }
   animation: floatNote 6s ease-in-out infinite;
 }
 
-/* 2. CONTACT OPTIONS */
+
 
 .contact-card, .hours-card, .step-card {
   min-width: 0;
@@ -604,7 +604,7 @@ svg { display: inline-block; }
 .contact-card p { font-size: .94rem; }
 .contact-card .text-link { margin-block-start: auto; padding-block-start: 25px; }
 
-/* 3. ENQUIRY */
+
 
 .enquiry-grid {
   display: grid;
@@ -737,7 +737,7 @@ svg { display: inline-block; }
 .form-status { margin-block-start: 14px; font-size: .85rem; color: var(--primary); }
 .form-status:empty { display: none; }
 
-/* 4. VISIT */
+
 
 .visit-grid {
   display: grid;
@@ -802,7 +802,7 @@ svg { display: inline-block; }
 .visit-address p { font-size: .9rem; }
 .visit-copy > .button { margin-block-start: 28px; }
 
-/* 5. HOURS */
+
 
 .hours-list { margin-block: 25px; }
 
@@ -820,7 +820,7 @@ svg { display: inline-block; }
 .small-copy { font-size: .84rem; }
 .hours-card .check-list { margin-block-end: 0; }
 
-/* 6. STEPS */
+
 
 .step-card { position: relative; overflow: hidden; padding-block-start: 40px; }
 
@@ -838,7 +838,7 @@ svg { display: inline-block; }
 .step-card h3 { margin-block: 13px 17px; }
 .step-card p { font-size: .92rem; }
 
-/* 7. FAQ */
+
 
 .faq-grid {
   display: grid;
@@ -894,7 +894,7 @@ svg { display: inline-block; }
 
 .faq-list details[open] p { animation: answerIn .3s ease both; }
 
-/* 8. SAME FINAL CTA */
+
 
 .section.final-section { padding-block: 64px; }
 
@@ -1006,7 +1006,7 @@ svg { display: inline-block; }
   }
 }
 
-/* SAME FOOTER */
+
 
 .site-footer {
   padding-block-start: 64px;
@@ -1096,7 +1096,7 @@ svg { display: inline-block; }
   color: var(--muted);
 }
 
-/* ANIMATIONS */
+
 
 .reveal-enabled .reveal {
   opacity: 0;
@@ -1132,7 +1132,7 @@ svg { display: inline-block; }
 [dir="rtl"] .directional { transform: scaleX(-1); }
 [dir="rtl"] h1, [dir="rtl"] h2 { letter-spacing: -.025em; }
 
-/* HOVER */
+
 
 @media (hover: hover) and (pointer: fine) {
   .nav-link:hover,
@@ -1180,7 +1180,7 @@ svg { display: inline-block; }
   }
 }
 
-/* LAPTOP */
+
 
 @media (max-width: 1250px) {
   .container { width: min(1240px, calc(100% - 48px)); }
@@ -1228,7 +1228,7 @@ svg { display: inline-block; }
   .footer-grid { gap: 25px; }
 }
 
-/* TABLET */
+
 
 @media (max-width: 850px) {
   .section { padding-block: 72px; }
@@ -1267,7 +1267,7 @@ svg { display: inline-block; }
   }
 }
 
-/* MOBILE */
+
 
 @media (max-width: 560px) {
   :root { --header-height: 76px; }
@@ -1353,7 +1353,7 @@ svg { display: inline-block; }
   .header-actions { width: 100%; justify-content: center; }
 }
 
-/* REDUCED MOTION */
+
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

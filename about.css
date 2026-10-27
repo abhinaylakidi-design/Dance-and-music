@@ -34,7 +34,7 @@
   color-scheme: dark;
 }
 
-/* BASE */
+
 
 *,
 *::before,
@@ -190,7 +190,7 @@ svg {
   transform: translateY(0);
 }
 
-/* COMMON ELEMENTS */
+
 
 .eyebrow {
   display: inline-flex;
@@ -302,7 +302,7 @@ svg {
   height: 25px;
 }
 
-/* HEADER — SAME AS HOME */
+
 
 .site-header {
   position: sticky;
@@ -497,7 +497,7 @@ svg {
   display: none;
 }
 
-/* 1. HERO */
+
 
 .about-hero {
   display: flex;
@@ -789,7 +789,7 @@ svg {
   }
 }
 
-/* 2. STORY */
+
 
 .story-grid {
   display: grid;
@@ -895,7 +895,7 @@ svg {
   color: var(--primary);
 }
 
-/* 3. PURPOSE */
+
 
 .purpose-grid {
   display: grid;
@@ -955,7 +955,7 @@ svg {
   letter-spacing: .12em;
 }
 
-/* 4. VALUES */
+
 
 .values-layout {
   display: grid;
@@ -1022,7 +1022,7 @@ svg {
   font-size: .88rem;
 }
 
-/* 5. APPROACH */
+
 
 .learning-path {
   display: grid;
@@ -1093,7 +1093,7 @@ svg {
   color: var(--text);
 }
 
-/* 6. EDUCATORS */
+
 
 .educators-layout {
   display: grid;
@@ -1185,7 +1185,7 @@ svg {
   letter-spacing: .13em;
 }
 
-/* 7. COMMUNITY */
+
 
 .community-grid {
   display: grid;
@@ -1272,7 +1272,7 @@ svg {
   margin-block-start: 8px;
 }
 
-/* 8. FINAL CTA — SAME AS HOME */
+
 
 .section.final-section {
   padding-block: 64px;
@@ -1374,7 +1374,7 @@ svg {
   }
 }
 
-/* FOOTER — SAME AS HOME */
+
 
 .site-footer {
   padding-block-start: 64px;
@@ -1474,7 +1474,7 @@ svg {
   color: var(--muted);
 }
 
-/* REVEAL ANIMATIONS */
+
 
 .reveal-enabled .reveal {
   opacity: 0;
@@ -1523,14 +1523,14 @@ svg {
   }
 }
 
-/* IMAGE FALLBACK */
+
 
 .asset-fallback {
   object-fit: contain !important;
   background: var(--soft-primary);
 }
 
-/* RTL */
+
 
 [dir="rtl"] .directional {
   transform: scaleX(-1);
@@ -1545,7 +1545,7 @@ svg {
   padding-inline: 68px 30px;
 }
 
-/* HOVER EFFECTS */
+
 
 @media (hover: hover) and (pointer: fine) {
   .nav-link:hover,
@@ -1622,7 +1622,7 @@ svg {
   box-shadow: var(--shadow);
 }
 
-/* LAPTOP */
+
 
 @media (max-width: 1250px) {
   .container {
@@ -1698,7 +1698,7 @@ svg {
   }
 }
 
-/* TABLET */
+
 
 @media (max-width: 850px) {
   .section {
@@ -1758,7 +1758,7 @@ svg {
   }
 }
 
-/* MOBILE */
+
 
 @media (max-width: 560px) {
   :root {
@@ -1964,7 +1964,7 @@ svg {
 
 }
 
-/* REDUCED MOTION */
+
 
 @media (prefers-reduced-motion: reduce) {
   html {
