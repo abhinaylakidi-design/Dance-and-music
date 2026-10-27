@@ -19,7 +19,58 @@
   s.image = serviceHeroImages[s.id];
   const enquiry = 'contact.html?service=' + encodeURIComponent(s.id);
   const amount = s.price === null ? 'Let’s talk' : s.price === 0 ? 'Included' : '₹' + s.price.toLocaleString('en-IN');
-  target.innerHTML = `<section class="premium-hero"><div class="container premium-grid"><div><span class="eyebrow">${s.title.toUpperCase()}</span><h1>${s.line.split('. ').map((x, i) => i ? '<em>' + x + '</em>' : x + '.<br>').join('')}</h1><p>${s.desc}</p><div class="button-row"><a class="button button-primary" href="#pricing">Explore pricing ↗</a><a class="button button-secondary" href="#experience">Discover the experience</a></div><div class="hero-details"><span>${s.age}</span><span>${s.duration}</span><span>${s.format}</span></div></div><div class="editorial-image"><img src="${s.image}" alt="Creative learning inspiration for ${s.title}" data-fallback fetchpriority="high"><div class="editorial-label"><span class="eyebrow">THEIR JOURNEY, THOUGHTFULLY GUIDED</span><strong>${s.title}</strong></div><span class="orbit" aria-hidden="true">♪</span></div></div></section>
+  target.innerHTML = `<section class="hero" aria-labelledby="heroTitle">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="eyebrow">
+          <svg class="icon" aria-hidden="true"><use href="#sparkles"/></svg>
+          ${s.title.toUpperCase()}
+        </span>
+        <h1 id="heroTitle">${s.line.split('. ').map((x, i) => i ? '<em>' + x + '</em>' : x + '.<br>').join('')}</h1>
+        <p>${s.desc}</p>
+        <div class="button-row">
+          <a class="button button-primary" href="#pricing">
+            Explore pricing
+            <svg class="icon directional" aria-hidden="true"><use href="#arrow"/></svg>
+          </a>
+          <a class="button button-secondary" href="#experience">Discover the experience</a>
+        </div>
+        <div class="hero-details">
+          <span><i></i>${s.age}</span>
+          <span><i></i>${s.duration}</span>
+          <span><i></i>${s.format}</span>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-image-wrap">
+          <img
+            class="hero-image"
+            src="${s.image}"
+            alt="Children enjoying ${s.title.toLowerCase()}"
+            width="1000"
+            height="1200"
+            fetchpriority="high"
+            data-fallback
+          >
+          <div class="image-caption">
+            <span class="caption-icon">
+              <svg class="icon" aria-hidden="true"><use href="#music"/></svg>
+            </span>
+            <div>
+              <strong>${s.title}</strong>
+              <small>Dance · Music · Discovery</small>
+            </div>
+          </div>
+        </div>
+        <span class="floating-note note-one" aria-hidden="true">♪</span>
+        <span class="floating-note note-two" aria-hidden="true">♫</span>
+        <div class="floating-label">
+          <svg class="icon" aria-hidden="true"><use href="#sparkles"/></svg>
+          Made for little dreamers
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="section" id="experience"><div class="container detail-layout"><div class="detail-copy"><span class="eyebrow">THE EXPERIENCE</span><h2>A little structure.<br><em>A lot of discovery.</em></h2><p>${s.desc}</p><ol class="journey-list">${s.steps.map(t => `<li>${t}</li>`).join('')}</ol></div><aside class="info-card"><span class="eyebrow">AT A GLANCE</span><h3>${s.title}</h3><dl><div><dt>Who it’s for</dt><dd>${s.age}</dd></div><div><dt>Session duration</dt><dd>${s.duration}</dd></div><div><dt>Format</dt><dd>${s.format}</dd></div></dl><p class="pricing-note">Timetables and suitability are confirmed before enrollment.</p></aside></div></section>
   <section class="section section-alt"><div class="container"><div class="detail-heading"><span class="eyebrow">WHY CHOOSE ${s.title.toUpperCase()}</span><h2>Thoughtful details.<br><em>Meaningful little steps.</em></h2></div><div class="benefits">${s.why.map((t, i) => `<article class="benefit"><span>0${i + 1}</span><h3>${t}</h3><p>${s.steps[i]} gives this experience a clear, encouraging focus.</p></article>`).join('')}</div></div></section>
   <section class="section" id="pricing"><div class="container pricing-layout"><div class="detail-heading"><span class="eyebrow">A CLEAR NEXT STEP</span><h2>Make room for<br><em>${s.title.toLowerCase()}.</em></h2><p>Explore the sample plan, then speak with our team about availability and the right fit.</p><p class="pricing-note">Illustrative pricing for this website template. Confirm final fees, taxes, schedules, and cancellation terms with the academy before booking.</p></div><article class="pricing-card"><span class="pill">${s.format}</span><h3 style="margin-top:22px">${s.title}</h3><div class="price">${amount} <small>${s.price === null ? 'Custom proposal' : s.price === 0 ? 'with enrollment' : '/ ' + s.unit}</small></div><p>${s.duration} · ${s.age}</p><ul>${s.steps.map(t => `<li>${t}</li>`).join('')}</ul><a class="button button-primary" href="${enquiry}">Enquire about ${s.title} ↗</a><p class="pricing-note">An enquiry does not confirm a booking or take payment.</p></article></div></section>
